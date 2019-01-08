@@ -54,6 +54,8 @@
         - 1、**写法一：相对路径**
         - 2、写法二：**绝对路径**
     - 相对路径和绝对路径的总结
+    - img标签的其他属性
+    - 热点问题
 
 <!-- /MarkdownTOC -->
 
@@ -89,6 +91,7 @@ web标准总结：
 浏览器是网页运行的平台，常用的浏览器有IE、火狐（Firefox）、谷歌（Chrome）、猎豹浏览器、Safari和Opera等。如下图所示：
 
 ![](http://img.smyhvae.com/20170628_1352.png)
+
 
 浏览器内核：
 
@@ -1116,3 +1119,97 @@ aaa/../bbb/1.jpg
 - 绝对路径，就是http://开头的路径。
 
 - 绝对不允许使用file://开头的东西，这个是完全错误的！
+
+### img标签的其他属性
+
+
+ - `width`：宽度
+ - `height`：高度
+ - `Align`：指图片的水平对齐方式，属性值可以是：left、center、right
+ - `title`：**提示性文本**。公有属性。也就是鼠标悬停时出现的文本。
+ - `border`：给图片加边框（描边），单位是像素，边框的颜色是黑色
+ - `Hspace`：指图片左右的边距
+ - `Vspace`：指图片上下的边距
+
+ - `Alt`：当图片显示不出来的时候，代替图片显示的内容。alt是英语 alternate “替代”的意思。（有的浏览器不支持）
+
+举例：
+```html
+<img src="images/1.jpg" width="300" height="`188" title="这是美女">
+```
+效果：
+
+![Paste_Image.png](http://img.smyhvae.com/2015-10-01-cnblogs_html_20.png)
+
+`Alt`属性效果演示：
+
+![Paste_Image.png](http://img.smyhvae.com/2015-10-01-cnblogs_html_21.png)
+
+ - 图片的`align`属性：**图片和周围文字的相对位置**。属性取值可以是：bottom（默认）、center、top、left、right。
+我们来分别看一下这`align`属性的这几个属性值的区别。
+1、`align=""`，图片和文字低端对齐。即默认情况下的显示效果：
+
+![](http://img.smyhvae.com/2015-10-02-cnblogs_html_19.png)
+
+2、`align="center"`：图片和文字水平方向上居中对齐。显示效果：
+
+![](http://img.smyhvae.com/2015-10-02-cnblogs_html_21.png)
+
+3、`align="top"`：图片与文字顶端对齐。显示效果：
+
+![](http://img.smyhvae.com/2015-10-02-cnblogs_html_22.png)
+
+4、`align="left"`：图片在文字的左边。显示效果：
+
+![](http://img.smyhvae.com/2015-10-02-cnblogs_html_23.png)
+
+5、`align="right"`：图片在文字的右边。显示效果：
+
+![](http://img.smyhvae.com/2015-10-02-cnblogs_html_24.png)
+
+**注意事项：**
+（1）如果要想保证图片等比例缩放，请只设置width和height中其中一个。
+（2）如果想实现图文混排的效果，请使用align属性，取值为left或right。
+
+<br>
+
+### 热点问题
+
+指的是对图片的**局部区域**加超链接。
+我们知道，如果给图片加一个超链接，那个点击这个图片的任意区域，都会跳转到新的位置。举例：
+```html
+<a href="网页2.html"><img src="2.jpg"></a>
+```
+上方代码表明：给图片加一个超链接，那个点击这个图片的任意区域，都会跳转到新的位置。
+现在，我只想对图片的局部区域加超链接，该怎么做呢？这里的难点在于坐标的确定，此时需要用到Dreamweaver。
+
+![Paste_Image.png](http://img.smyhvae.com/2015-10-01-cnblogs_html_22.png)
+
+上图中，切换到“设计”标签，然后：
+
+![Paste_Image.png](http://img.smyhvae.com/2015-10-01-cnblogs_html_23.png)
+
+上图中，点击菜单栏`插入-图像`，导入图片：
+
+![Paste_Image.png](http://img.smyhvae.com/2015-10-01-cnblogs_html_24.png)
+
+，在图片上点击右键，选择`属性`，弹出属性面板：
+
+![Paste_Image.png](http://img.smyhvae.com/2015-10-01-cnblogs_html_25.png)
+
+上图中，我们可以利用红框部分的`地图`绘制需要添加超链接的区域。箭头处表示的是要链接到的文件。蓝框部分表示打开新页面的方式，蓝狂部分的`new`是没有下划线的，它和`_blank`的含义是一样的。
+
+![Paste_Image.png](http://img.smyhvae.com/2015-10-01-cnblogs_html_26.png)
+局部区域的热点设置完毕后，上图显示，红框部分就是多出的代码，也正是我们需要的代码。多出的代码如下：
+```html
+<img src="file:///C|/Users/smyhvae/Desktop/html/1.jpg" alt="" width="488" height="730" usemap="#Map"/>
+<map name="Map">
+  <area shape="circle" coords="227,374,63" href="file:///C|/Users/smyhvae/Desktop/html/网页2.html" target="_blank">
+</map>
+```
+上方代码中，第一行的`usemap="#Map"`表示我要引用名为`Map`的地图。
+然后第02至第04行就给出了地图的定义。
+效果演示：
+
+![3.gif](http://img.smyhvae.com/3.gif)
+
