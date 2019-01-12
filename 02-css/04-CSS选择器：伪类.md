@@ -283,3 +283,69 @@ a标签有4种伪类（即对应四种状态），要求背诵。如下：
 
 ![](http://img.smyhvae.com/2015-10-03-css-02.gif)
 
+利用这个`hover`属性，我们同样对表格做一个样式的设置：
+表格举例：
+
+```html
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+
+	/*整个表格的样式*/
+  	table{
+		width: 300px;
+		height: 200px;
+		border: 1px solid blue;
+		/*border-collapse属性：对表格的线进行折叠*/
+		border-collapse: collapse;
+  	}
+
+	/*鼠标悬停时，让当前行显示#868686这种灰色*/
+  	table tr:hover{
+  		background: #868686;
+  	}
+
+	/*每个单元格的样式*/
+  	table td{
+  		border:1px solid red;
+  	}
+
+  </style>
+ </head>
+ <body>
+
+  <table>
+  <tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+  </tr>
+  <tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+  </tr>
+  </table>
+
+ </body>
+</html>
+```
+
+效果：
+
+![](http://img.smyhvae.com/2015-10-03-css-04.gif)
