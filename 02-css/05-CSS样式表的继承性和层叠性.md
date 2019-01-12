@@ -425,10 +425,5 @@ ul li:last-child
 
 ![](http://img.smyhvae.com/20170727_0903.png)
 
-
-
 权重问题大总结，最后有个例子，比较难，暂时略掉。
-
-
-
 
