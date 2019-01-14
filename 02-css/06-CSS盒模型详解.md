@@ -1,20 +1,20 @@
 <!-- MarkdownTOC -->
 
-- 盒子模型
-	- 前言
-	- 盒子中的区域
-	- 标准盒模型和IE盒模型
-	- ``标签也有margin
-	- 认识width、height
-	- 认识padding
-		- padding区域也有颜色
-		- padding有四个方向
-		- 一些题目
-		- 一些元素，默认带有padding
-	- 认识border
-		- border-style
-		- border拆分
-		- 举例：利用border属性画一个三角形（小技巧）
+- [盒子模型](#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B)
+	- [前言](#%E5%89%8D%E8%A8%80)
+	- [盒子中的区域](#%E7%9B%92%E5%AD%90%E4%B8%AD%E7%9A%84%E5%8C%BA%E5%9F%9F)
+	- [标准盒模型和IE盒模型](#%E6%A0%87%E5%87%86%E7%9B%92%E6%A8%A1%E5%9E%8B%E5%92%8Cie%E7%9B%92%E6%A8%A1%E5%9E%8B)
+	- [``标签也有margin](#%E6%A0%87%E7%AD%BE%E4%B9%9F%E6%9C%89margin)
+	- [认识width、height](#%E8%AE%A4%E8%AF%86width%E3%80%81height)
+	- [认识padding](#%E8%AE%A4%E8%AF%86padding)
+		- [padding区域也有颜色](#padding%E5%8C%BA%E5%9F%9F%E4%B9%9F%E6%9C%89%E9%A2%9C%E8%89%B2)
+		- [padding有四个方向](#padding%E6%9C%89%E5%9B%9B%E4%B8%AA%E6%96%B9%E5%90%91)
+		- [一些题目](#%E4%B8%80%E4%BA%9B%E9%A2%98%E7%9B%AE)
+		- [一些元素，默认带有padding](#%E4%B8%80%E4%BA%9B%E5%85%83%E7%B4%A0%EF%BC%8C%E9%BB%98%E8%AE%A4%E5%B8%A6%E6%9C%89padding)
+	- [认识border](#%E8%AE%A4%E8%AF%86border)
+		- [border-style](#border-style)
+		- [border拆分](#border%E6%8B%86%E5%88%86)
+		- [举例：利用border属性画一个三角形（小技巧）](#%E4%B8%BE%E4%BE%8B%EF%BC%9A%E5%88%A9%E7%94%A8border%E5%B1%9E%E6%80%A7%E7%94%BB%E4%B8%80%E4%B8%AA%E4%B8%89%E8%A7%92%E5%BD%A2%EF%BC%88%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BC%89)
 
 <!-- /MarkdownTOC -->
 
