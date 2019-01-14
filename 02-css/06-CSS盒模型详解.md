@@ -516,7 +516,6 @@ border-left-width: 0;
 
 ![](http://img.smyhvae.com/20170728_1645.png)
 
-
 （3）最后设置border的左边和右边为白色：
 
 ![](http://img.smyhvae.com/20170728_1649.png)
