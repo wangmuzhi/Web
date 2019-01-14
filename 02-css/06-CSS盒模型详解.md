@@ -521,6 +521,4 @@ border-left-width: 0;
 
 ![](http://img.smyhvae.com/20170728_1649.png)
 
-
 这样，一个三角形就画好了。
-
