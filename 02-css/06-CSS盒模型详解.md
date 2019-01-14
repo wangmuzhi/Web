@@ -1,3 +1,22 @@
+<!-- MarkdownTOC -->
+
+- 盒子模型
+	- 前言
+	- 盒子中的区域
+	- 标准盒模型和IE盒模型
+	- ``标签也有margin
+	- 认识width、height
+	- 认识padding
+		- padding区域也有颜色
+		- padding有四个方向
+		- 一些题目
+		- 一些元素，默认带有padding
+	- 认识border
+		- border-style
+		- border拆分
+		- 举例：利用border属性画一个三角形（小技巧）
+
+<!-- /MarkdownTOC -->
 
 ## 盒子模型
 
@@ -22,12 +41,9 @@
 ![](http://img.smyhvae.com/20170727_2128.png)
 
 
-
-
 代码演示：
 
 ![](http://img.smyhvae.com/20170727_2326.png)
-
 
 
 上面这个盒子，width:200px; height:200px; 但是真实占有的宽高是302*302。 这是因为还要加上padding、border。
