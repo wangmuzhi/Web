@@ -1,10 +1,4 @@
 
-
-> 本文最初发表于[博客园](http://www.cnblogs.com/smyhvae/p/8413602.html)，并在[GitHub](https://github.com/smyhvae/Web)上持续更新**前端的系列文章**。欢迎在GitHub上关注我，一起入门和进阶前端。
-
-> 以下是正文。
-
-
 ## 绑定事件的两种方式/DOM事件的级别
 
 我们在上一篇文章 [DOM操作详解](http://www.cnblogs.com/smyhvae/p/8366012.html) 中已经讲过事件的概念。这里讲一下注册事件的两种方式，我们以onclick事件为例。
