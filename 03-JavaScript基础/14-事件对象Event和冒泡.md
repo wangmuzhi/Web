@@ -1,29 +1,14 @@
-<!-- MarkdownTOC -->
 
-- [绑定事件的两种方式/DOM事件的级别](#%E7%BB%91%E5%AE%9A%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8Fdom%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%BA%A7%E5%88%AB)
-    - [DOM0的写法：onclick](#dom0%E7%9A%84%E5%86%99%E6%B3%95%EF%BC%9Aonclick)
-    - [DOM2的写法：addEventListener](#dom2%E7%9A%84%E5%86%99%E6%B3%95%EF%BC%9Aaddeventlistener)
-- [事件对象](#%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1)
-    - [event 属性](#event-%E5%B1%9E%E6%80%A7)
-- [Event举例](#event%E4%B8%BE%E4%BE%8B)
-    - [举例1：鼠标跟随](#%E4%B8%BE%E4%BE%8B1%EF%BC%9A%E9%BC%A0%E6%A0%87%E8%B7%9F%E9%9A%8F)
-- [event应用举例：获取鼠标距离所在盒子的距离](#event%E5%BA%94%E7%94%A8%E4%B8%BE%E4%BE%8B%EF%BC%9A%E8%8E%B7%E5%8F%96%E9%BC%A0%E6%A0%87%E8%B7%9D%E7%A6%BB%E6%89%80%E5%9C%A8%E7%9B%92%E5%AD%90%E7%9A%84%E8%B7%9D%E7%A6%BB)
-- [小窗口拖拽案例](#%E5%B0%8F%E7%AA%97%E5%8F%A3%E6%8B%96%E6%8B%BD%E6%A1%88%E4%BE%8B)
-- [DOM事件流](#dom%E4%BA%8B%E4%BB%B6%E6%B5%81)
-    - [事件捕获](#%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7)
-    - [事件冒泡](#%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1)
-    - [不是所有的事件都能冒泡](#%E4%B8%8D%E6%98%AF%E6%89%80%E6%9C%89%E7%9A%84%E4%BA%8B%E4%BB%B6%E9%83%BD%E8%83%BD%E5%86%92%E6%B3%A1)
-    - [阻止冒泡的方法](#%E9%98%BB%E6%AD%A2%E5%86%92%E6%B3%A1%E7%9A%84%E6%96%B9%E6%B3%95)
-- [事件委托](#%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98)
 
-<!-- /MarkdownTOC -->
+> 本文最初发表于[博客园](http://www.cnblogs.com/smyhvae/p/8413602.html)，并在[GitHub](https://github.com/smyhvae/Web)上持续更新**前端的系列文章**。欢迎在GitHub上关注我，一起入门和进阶前端。
 
-<a id="%E7%BB%91%E5%AE%9A%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8Fdom%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%BA%A7%E5%88%AB"></a>
+> 以下是正文。
+
+
 ## 绑定事件的两种方式/DOM事件的级别
 
 我们在上一篇文章 [DOM操作详解](http://www.cnblogs.com/smyhvae/p/8366012.html) 中已经讲过事件的概念。这里讲一下注册事件的两种方式，我们以onclick事件为例。
 
-<a id="dom0%E7%9A%84%E5%86%99%E6%B3%95%EF%BC%9Aonclick"></a>
 ### DOM0的写法：onclick
 
 
@@ -66,7 +51,6 @@
 
 我们可以看到，这种绑定事件的方式，会层叠掉之前的事件。
 
-<a id="dom2%E7%9A%84%E5%86%99%E6%B3%95%EF%BC%9Aaddeventlistener"></a>
 ### DOM2的写法：addEventListener
 
 
@@ -121,7 +105,6 @@
 
 我们可以看到，这种绑定事件的方式，不会层叠掉之前的事件。
 
-<a id="%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1"></a>
 ## 事件对象
 
 在触发DOM上的某个事件时，会产生一个事件对象event，这个对象中包含着所有与事件有关的信息。比如鼠标操作时候，会添加鼠标位置的相关信息到事件对象中。
@@ -174,7 +157,6 @@
 ```
 
 
-<a id="event-%E5%B1%9E%E6%80%A7"></a>
 ### event 属性
 
 event 有很多属性，比如：
@@ -185,10 +167,8 @@ event 有很多属性，比如：
 
 - 鼠标在页面的位置 = 被卷去的部分+可视区域部分。
 
-<a id="event%E4%B8%BE%E4%BE%8B"></a>
 ## Event举例
 
-<a id="%E4%B8%BE%E4%BE%8B1%EF%BC%9A%E9%BC%A0%E6%A0%87%E8%B7%9F%E9%9A%8F"></a>
 ### 举例1：鼠标跟随
 
 代码实现：
@@ -288,7 +268,6 @@ event 有很多属性，比如：
 
 ![](http://img.smyhvae.com/20180203_1810.gif)
 
-<a id="event%E5%BA%94%E7%94%A8%E4%B8%BE%E4%BE%8B%EF%BC%9A%E8%8E%B7%E5%8F%96%E9%BC%A0%E6%A0%87%E8%B7%9D%E7%A6%BB%E6%89%80%E5%9C%A8%E7%9B%92%E5%AD%90%E7%9A%84%E8%B7%9D%E7%A6%BB"></a>
 ## event应用举例：获取鼠标距离所在盒子的距离
 
 关键点：
@@ -558,12 +537,10 @@ function scroll() {  // 开始封装自己的scrollTop
 
 ![](http://img.smyhvae.com/20180203_1920.gif)
 
-<a id="%E5%B0%8F%E7%AA%97%E5%8F%A3%E6%8B%96%E6%8B%BD%E6%A1%88%E4%BE%8B"></a>
 ## 小窗口拖拽案例
 
 暂略。
 
-<a id="dom%E4%BA%8B%E4%BB%B6%E6%B5%81"></a>
 ## DOM事件流
 
 事件传播的三个阶段是：事件捕获、事件冒泡和目标。
@@ -581,7 +558,6 @@ function scroll() {  // 开始封装自己的scrollTop
 PS：这个概念类似于 Android 里的 **touch 事件传递**。
 
 
-<a id="%E4%BA%8B%E4%BB%B6%E6%8D%95%E8%8E%B7"></a>
 ### 事件捕获
 
 addEventListener可以捕获事件：
@@ -670,7 +646,6 @@ PS2：JS中涉及到DOM对象时，有两个对象最常用：window、doucument
 
 
 
-<a id="%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1"></a>
 ### 事件冒泡
 
 **事件冒泡**: 当一个元素上的事件被触发的时候（比如说鼠标点击了一个按钮），同样的事件将会在那个元素的所有**祖先元素**中被触发。这一过程被称为事件冒泡；这个事件从原始元素开始一直冒泡到DOM树的最上层。
@@ -716,7 +691,6 @@ IE6.0：
 
 - div -> body -> html -> document
 
-<a id="%E4%B8%8D%E6%98%AF%E6%89%80%E6%9C%89%E7%9A%84%E4%BA%8B%E4%BB%B6%E9%83%BD%E8%83%BD%E5%86%92%E6%B3%A1"></a>
 ### 不是所有的事件都能冒泡
 
 以下事件不冒泡：blur、focus、load、unload、onmouseenter、onmouseleave。意思是，事件不会往父元素那里传递。
@@ -740,7 +714,6 @@ IE6.0：
     }
 ```
 
-<a id="%E9%98%BB%E6%AD%A2%E5%86%92%E6%B3%A1%E7%9A%84%E6%96%B9%E6%B3%95"></a>
 ### 阻止冒泡的方法
 
 w3c的方法：（火狐、谷歌、IE11）
@@ -775,7 +748,6 @@ event.cancelBubble = true
 
 上方代码中，我们对box3进行了阻止冒泡，产生的效果是：事件不会继续传递到 father、grandfather、body了。
 
-<a id="%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98"></a>
 ## 事件委托
 
 事件委托，通俗地来讲，就是把一个元素响应事件（click、keydown......）的函数委托到另一个元素。
@@ -845,3 +817,12 @@ event.cancelBubble = true
 
 - [JavaScript 事件委托详解](https://zhuanlan.zhihu.com/p/26536815)
 
+
+
+## 我的公众号
+
+想学习<font color=#0000ff>**代码之外的软技能**</font>？不妨关注我的微信公众号：**生命团队**（id：`vitateam`）。
+
+扫一扫，你将发现另一个全新的世界，而这将是一场美丽的意外：
+
+![](http://img.smyhvae.com/2016040102.jpg)
