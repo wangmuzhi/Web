@@ -1,8 +1,4 @@
 
-
-> 本文首发于[博客园](http://www.cnblogs.com/smyhvae/p/8310295.html)，并在[GitHub](https://github.com/smyhvae/Web)上持续更新**前端的系列文章**。欢迎在GitHub上关注我，一起入门和进阶前端。
-
-
 ## 代码块
 
 用`{}`包围起来的代码，就是代码块。
@@ -233,7 +229,7 @@ switch语句也叫条件分支语句。
 		...
 		...
 
-		default：	
+		default：
 			语句体 n+1;
 			break;
 	}
@@ -338,17 +334,4 @@ switch语句也叫条件分支语句。
 ```
 
 上方代码的解释：从这个例子可以看出：switch语句结束与default无关。
-
-
-
-## 我的公众号
-
-想学习<font color=#0000ff>**代码之外的技能**</font>？不妨关注我的微信公众号：**千古壹号**（id：`qianguyihao`）。
-
-扫一扫，你将发现另一个全新的世界，而这将是一场美丽的意外：
-
-![](http://img.smyhvae.com/2016040102.jpg)
-
-
-
 
