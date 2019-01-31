@@ -1,5 +1,11 @@
+<!-- MarkdownTOC -->
 
+- [this](#this)
+- [arguments（待定）](#arguments%EF%BC%88%E5%BE%85%E5%AE%9A%EF%BC%89)
 
+<!-- /MarkdownTOC -->
+
+<a id="this"></a>
 ## this
 
 解析器在调用函数每次都会向函数内部传递进一个隐含的参数，这个隐含的参数就是this，this指向的是一个对象，这个对象我们称为函数执行的 上下文对象。
@@ -89,6 +95,7 @@
 
 ES6中的箭头函数并不会使用上面四条标准的绑定规则，而是会继承外层函数调用的this绑定（无论this绑定到什么）。
 
+<a id="arguments%EF%BC%88%E5%BE%85%E5%AE%9A%EF%BC%89"></a>
 ## arguments（待定）
 
 在调用函数时，浏览器每次都会传递进两个隐含的参数：
@@ -130,5 +137,3 @@ arguments里边有一个属性叫做callee，这个属性对应一个函数对�
 
     fun("hello");
 ```
-
-
