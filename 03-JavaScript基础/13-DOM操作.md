@@ -899,11 +899,3 @@ DOM对象的属性和HTML的标签属性几乎是一致的。例如：src、titl
 
 ![](http://img.smyhvae.com/20180128_1939.png)
 
-
-## 我的公众号
-
-想学习<font color=#0000ff>**代码之外的软技能**</font>？不妨关注我的微信公众号：**生命团队**（id：`vitateam`）。
-
-扫一扫，你将发现另一个全新的世界，而这将是一场美丽的意外：
-
-![](http://img.smyhvae.com/2016040102.jpg)
