@@ -266,13 +266,3 @@ window.navigator 的一些属性可以获取客户端的一些信息。
 
 ![](http://img.smyhvae.com/20180201_2146.png)
 
-
-## 我的公众号
-
-想学习<font color=#0000ff>**代码之外的软技能**</font>？不妨关注我的微信公众号：**生命团队**（id：`vitateam`）。
-
-扫一扫，你将发现另一个全新的世界，而这将是一场美丽的意外：
-
-![](http://img.smyhvae.com/2016040102.jpg)
-
-
