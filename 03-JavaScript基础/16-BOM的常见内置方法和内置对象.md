@@ -1,8 +1,22 @@
+<!-- MarkdownTOC -->
 
+- [BOM的介绍](#bom%E7%9A%84%E4%BB%8B%E7%BB%8D)
+    - [JavaScript的组成](#javascript%E7%9A%84%E7%BB%84%E6%88%90)
+    - [什么是BOM](#%E4%BB%80%E4%B9%88%E6%98%AFbom)
+- [弹出系统对话框](#%E5%BC%B9%E5%87%BA%E7%B3%BB%E7%BB%9F%E5%AF%B9%E8%AF%9D%E6%A1%86)
+- [打开窗口、关闭窗口](#%E6%89%93%E5%BC%80%E7%AA%97%E5%8F%A3%E3%80%81%E5%85%B3%E9%97%AD%E7%AA%97%E5%8F%A3)
+- [location对象](#location%E5%AF%B9%E8%B1%A1)
+    - [location对象的属性](#location%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7)
+    - [location对象的方法](#location%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95)
+- [navigator对象](#navigator%E5%AF%B9%E8%B1%A1)
+- [history对象](#history%E5%AF%B9%E8%B1%A1)
 
+<!-- /MarkdownTOC -->
 
+<a id="bom%E7%9A%84%E4%BB%8B%E7%BB%8D"></a>
 ## BOM的介绍
 
+<a id="javascript%E7%9A%84%E7%BB%84%E6%88%90"></a>
 ### JavaScript的组成
 
 JavaScript基础分为三个部分：
@@ -13,6 +27,7 @@ JavaScript基础分为三个部分：
 
 - **BOM**：浏览器对象模型，操作**浏览器部分功能**的API。比如让浏览器自动滚动。
 
+<a id="%E4%BB%80%E4%B9%88%E6%98%AFbom"></a>
 ### 什么是BOM
 
 BOM：Browser Object Model，浏览器对象模型。
@@ -37,6 +52,7 @@ BOM：Browser Object Model，浏览器对象模型。
 
 下面讲一下 **BOM 的常见内置方法和内置对象**。
 
+<a id="%E5%BC%B9%E5%87%BA%E7%B3%BB%E7%BB%9F%E5%AF%B9%E8%AF%9D%E6%A1%86"></a>
 ## 弹出系统对话框
 
 比如说，`alert(1)`是`window.alert(1)`的简写，因为它是window的子方法。
@@ -50,6 +66,7 @@ BOM：Browser Object Model，浏览器对象模型。
 
 ```
 
+<a id="%E6%89%93%E5%BC%80%E7%AA%97%E5%8F%A3%E3%80%81%E5%85%B3%E9%97%AD%E7%AA%97%E5%8F%A3"></a>
 ## 打开窗口、关闭窗口
 
 1、打开窗口：
@@ -161,10 +178,12 @@ BOM：Browser Object Model，浏览器对象模型。
 ```
 
 
+<a id="location%E5%AF%B9%E8%B1%A1"></a>
 ## location对象
 
 `window.location`可以简写成location。location相当于浏览器地址栏，可以将url解析成独立的片段。
 
+<a id="location%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7"></a>
 ### location对象的属性
 
 - **href**：跳转
@@ -215,6 +234,7 @@ BOM：Browser Object Model，浏览器对象模型。
 ```
 
 
+<a id="location%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95"></a>
 ### location对象的方法
 
 - location.assign()：改变浏览器地址栏的地址，并记录到历史中
@@ -226,6 +246,7 @@ BOM：Browser Object Model，浏览器对象模型。
 - location.reload()：重新加载
 
 
+<a id="navigator%E5%AF%B9%E8%B1%A1"></a>
 ## navigator对象
 
 window.navigator 的一些属性可以获取客户端的一些信息。
@@ -246,6 +267,7 @@ window.navigator 的一些属性可以获取客户端的一些信息。
 ![](http://img.smyhvae.com/20180201_2140.png)
 
 
+<a id="history%E5%AF%B9%E8%B1%A1"></a>
 ## history对象
 
 1、历史记录管理
