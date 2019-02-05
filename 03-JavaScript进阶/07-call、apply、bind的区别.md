@@ -1,7 +1,20 @@
+<!-- MarkdownTOC -->
+
+- [call\(\)和apply\(\)](#call%E5%92%8Capply)
+    - [介绍](#%E4%BB%8B%E7%BB%8D)
+    - [显式绑定this](#%E6%98%BE%E5%BC%8F%E7%BB%91%E5%AE%9Athis)
+    - [第一个参数的传递](#%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%82%E6%95%B0%E7%9A%84%E4%BC%A0%E9%80%92)
+    - [call\(\)和apply\(\)的区别](#call%E5%92%8Capply%E7%9A%84%E5%8C%BA%E5%88%AB)
+    - [call\(\)和apply\(\)的作用](#call%E5%92%8Capply%E7%9A%84%E4%BD%9C%E7%94%A8)
+- [bind\(\)](#bind)
+
+<!-- /MarkdownTOC -->
 
 
+<a id="call%E5%92%8Capply"></a>
 ## call()和apply()
 
+<a id="%E4%BB%8B%E7%BB%8D"></a>
 ### 介绍
 
 这两个方法都是函数对象的方法，需要通过函数对象来调用。
@@ -15,6 +28,7 @@
 
 
 
+<a id="%E6%98%BE%E5%BC%8F%E7%BB%91%E5%AE%9Athis"></a>
 ### 显式绑定this
 
 JS提供的绝大多数函数以及我们自己创建的所有函数，都可以使用call 和apply方法。
@@ -37,6 +51,7 @@ JS提供的绝大多数函数以及我们自己创建的所有函数，都可以
 ```
 
 
+<a id="%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%82%E6%95%B0%E7%9A%84%E4%BC%A0%E9%80%92"></a>
 ### 第一个参数的传递
 
 1、thisObj不传或者为null、undefined时，函数中的this会指向window对象（非严格模式）。
@@ -49,6 +64,7 @@ JS提供的绝大多数函数以及我们自己创建的所有函数，都可以
 
 
 
+<a id="call%E5%92%8Capply%E7%9A%84%E5%8C%BA%E5%88%AB"></a>
 ### call()和apply()的区别
 
 
@@ -90,6 +106,7 @@ call()和apply()方法都可以将实参在对象之后依次传递，但是appl
 看到区别了吗，call后面的实参与say方法中是一一对应的，而apply传实参时，要封装成一个数组，数组中的元素是和say方法中一一对应的，这就是两者最大的区别。
 
 
+<a id="call%E5%92%8Capply%E7%9A%84%E4%BD%9C%E7%94%A8"></a>
 ### call()和apply()的作用
 
 - 改变this的指向
@@ -98,6 +115,7 @@ call()和apply()方法都可以将实参在对象之后依次传递，但是appl
 
 
 
+<a id="bind"></a>
 ## bind()
 
 - 都能改变this的指向
@@ -121,8 +139,4 @@ bind()传参的方式和call()一样。
 
 
 - [JS中改变this指向的方法](http://www.xiaoxiaohan.com/js/38.html)
-
-
-
-
 
