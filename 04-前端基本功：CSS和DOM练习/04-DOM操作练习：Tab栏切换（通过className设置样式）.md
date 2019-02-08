@@ -1,3 +1,12 @@
+<!-- MarkdownTOC -->
+
+- [举例引入：鼠标悬停时，current元素的背景变色](#%E4%B8%BE%E4%BE%8B%E5%BC%95%E5%85%A5%EF%BC%9A%E9%BC%A0%E6%A0%87%E6%82%AC%E5%81%9C%E6%97%B6%EF%BC%8Ccurrent%E5%85%83%E7%B4%A0%E7%9A%84%E8%83%8C%E6%99%AF%E5%8F%98%E8%89%B2)
+- [tab切换：初步的代码](#tab%E5%88%87%E6%8D%A2%EF%BC%9A%E5%88%9D%E6%AD%A5%E7%9A%84%E4%BB%A3%E7%A0%81)
+- [tab切换：改进版代码（函数封装）](#tab%E5%88%87%E6%8D%A2%EF%BC%9A%E6%94%B9%E8%BF%9B%E7%89%88%E4%BB%A3%E7%A0%81%EF%BC%88%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85%EF%BC%89)
+    - [方式一：给current标签设置index值【推荐的代码】](#%E6%96%B9%E5%BC%8F%E4%B8%80%EF%BC%9A%E7%BB%99current%E6%A0%87%E7%AD%BE%E8%AE%BE%E7%BD%AEindex%E5%80%BC%E3%80%90%E6%8E%A8%E8%8D%90%E7%9A%84%E4%BB%A3%E7%A0%81%E3%80%91)
+    - [方式二：通过attribute设置index的值](#%E6%96%B9%E5%BC%8F%E4%BA%8C%EF%BC%9A%E9%80%9A%E8%BF%87attribute%E8%AE%BE%E7%BD%AEindex%E7%9A%84%E5%80%BC)
+
+<!-- /MarkdownTOC -->
 
 
 京东网页上，可以看到下面这种tab栏的切换：
@@ -6,6 +15,7 @@
 
 我们把模型抽象出来，实现一下。
 
+<a id="%E4%B8%BE%E4%BE%8B%E5%BC%95%E5%85%A5%EF%BC%9A%E9%BC%A0%E6%A0%87%E6%82%AC%E5%81%9C%E6%97%B6%EF%BC%8Ccurrent%E5%85%83%E7%B4%A0%E7%9A%84%E8%83%8C%E6%99%AF%E5%8F%98%E8%89%B2"></a>
 ## 举例引入：鼠标悬停时，current元素的背景变色
 
 > 本段我们先举一个例子，因为这里用到了**排他思想**（先干掉 all，然后保留我一个）。对于理解tab切换，很有帮助。
@@ -86,6 +96,7 @@
 
 ![](http://img.smyhvae.com/20180128_1740.gif)
 
+<a id="tab%E5%88%87%E6%8D%A2%EF%BC%9A%E5%88%9D%E6%AD%A5%E7%9A%84%E4%BB%A3%E7%A0%81"></a>
 ## tab切换：初步的代码
 
 代码如下：
@@ -240,8 +251,10 @@
 
 为了多个tab栏彼此独立，我们就需要通过**封装函数**的方式把他们抽取出来，于是就有了下面的改进版代码。
 
+<a id="tab%E5%88%87%E6%8D%A2%EF%BC%9A%E6%94%B9%E8%BF%9B%E7%89%88%E4%BB%A3%E7%A0%81%EF%BC%88%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85%EF%BC%89"></a>
 ## tab切换：改进版代码（函数封装）
 
+<a id="%E6%96%B9%E5%BC%8F%E4%B8%80%EF%BC%9A%E7%BB%99current%E6%A0%87%E7%AD%BE%E8%AE%BE%E7%BD%AEindex%E5%80%BC%E3%80%90%E6%8E%A8%E8%8D%90%E7%9A%84%E4%BB%A3%E7%A0%81%E3%80%91"></a>
 ### 方式一：给current标签设置index值【推荐的代码】
 
 完整版代码实现：
@@ -393,6 +406,7 @@
 
 这样做比较难理解，根据上一段的规律，当然还有一种容易理解的方法是：**给liArr[i]增加index属性时，通过attribute的方式**，因为这种方式增加的属性是可以显示在标签上的。也就有了下面的方式二。
 
+<a id="%E6%96%B9%E5%BC%8F%E4%BA%8C%EF%BC%9A%E9%80%9A%E8%BF%87attribute%E8%AE%BE%E7%BD%AEindex%E7%9A%84%E5%80%BC"></a>
 ### 方式二：通过attribute设置index的值
 
 基于上面方式一中的代码，我们修改一下js部分的代码，其他部分的代码保持不变。js部分的代码如下：
