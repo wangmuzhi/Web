@@ -1,6 +1,21 @@
+<!-- MarkdownTOC -->
 
+- [DOM操作练习](#dom%E6%93%8D%E4%BD%9C%E7%BB%83%E4%B9%A0)
+    - [举例1：点击按钮时，显示和隐藏盒子。](#%E4%B8%BE%E4%BE%8B1%EF%BC%9A%E7%82%B9%E5%87%BB%E6%8C%89%E9%92%AE%E6%97%B6%EF%BC%8C%E6%98%BE%E7%A4%BA%E5%92%8C%E9%9A%90%E8%97%8F%E7%9B%92%E5%AD%90%E3%80%82)
+    - [举例2：美女相册](#%E4%B8%BE%E4%BE%8B2%EF%BC%9A%E7%BE%8E%E5%A5%B3%E7%9B%B8%E5%86%8C)
+    - [举例3：鼠标悬停时，显示二维码大图](#%E4%B8%BE%E4%BE%8B3%EF%BC%9A%E9%BC%A0%E6%A0%87%E6%82%AC%E5%81%9C%E6%97%B6%EF%BC%8C%E6%98%BE%E7%A4%BA%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%A4%A7%E5%9B%BE)
+- [表单元素的属性](#%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E7%9A%84%E5%B1%9E%E6%80%A7)
+    - [举例1：禁用文本框/解禁文本框](#%E4%B8%BE%E4%BE%8B1%EF%BC%9A%E7%A6%81%E7%94%A8%E6%96%87%E6%9C%AC%E6%A1%86%E8%A7%A3%E7%A6%81%E6%96%87%E6%9C%AC%E6%A1%86)
+    - [举例2：文本框获取焦点/失去焦点](#%E4%B8%BE%E4%BE%8B2%EF%BC%9A%E6%96%87%E6%9C%AC%E6%A1%86%E8%8E%B7%E5%8F%96%E7%84%A6%E7%82%B9%E5%A4%B1%E5%8E%BB%E7%84%A6%E7%82%B9)
+    - [举例3：用户注册信息错误时，输入框失去焦点后，高亮显示。](#%E4%B8%BE%E4%BE%8B3%EF%BC%9A%E7%94%A8%E6%88%B7%E6%B3%A8%E5%86%8C%E4%BF%A1%E6%81%AF%E9%94%99%E8%AF%AF%E6%97%B6%EF%BC%8C%E8%BE%93%E5%85%A5%E6%A1%86%E5%A4%B1%E5%8E%BB%E7%84%A6%E7%82%B9%E5%90%8E%EF%BC%8C%E9%AB%98%E4%BA%AE%E6%98%BE%E7%A4%BA%E3%80%82)
+    - [举例4：全选和反选](#%E4%B8%BE%E4%BE%8B4%EF%BC%9A%E5%85%A8%E9%80%89%E5%92%8C%E5%8F%8D%E9%80%89)
+
+<!-- /MarkdownTOC -->
+
+<a id="dom%E6%93%8D%E4%BD%9C%E7%BB%83%E4%B9%A0"></a>
 ## DOM操作练习
 
+<a id="%E4%B8%BE%E4%BE%8B1%EF%BC%9A%E7%82%B9%E5%87%BB%E6%8C%89%E9%92%AE%E6%97%B6%EF%BC%8C%E6%98%BE%E7%A4%BA%E5%92%8C%E9%9A%90%E8%97%8F%E7%9B%92%E5%AD%90%E3%80%82"></a>
 ### 举例1：点击按钮时，显示和隐藏盒子。
 
 代码实现：
@@ -81,6 +96,7 @@
 
 20180127_1518.gif
 
+<a id="%E4%B8%BE%E4%BE%8B2%EF%BC%9A%E7%BE%8E%E5%A5%B3%E7%9B%B8%E5%86%8C"></a>
 ### 举例2：美女相册
 
 这里推荐一个网站：
@@ -232,6 +248,7 @@
 
 - [2018-01-27-美女相册demo.rar](http://download.csdn.net/download/smyhvae/10227161)
 
+<a id="%E4%B8%BE%E4%BE%8B3%EF%BC%9A%E9%BC%A0%E6%A0%87%E6%82%AC%E5%81%9C%E6%97%B6%EF%BC%8C%E6%98%BE%E7%A4%BA%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%A4%A7%E5%9B%BE"></a>
 ### 举例3：鼠标悬停时，显示二维码大图
 
 ```html
@@ -319,11 +336,13 @@
 20180127_1800.gif
 
 
+<a id="%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E7%9A%84%E5%B1%9E%E6%80%A7"></a>
 ## 表单元素的属性
 
 表单元素的属性包括：type、value、checked、selected、disabled等。
 
 
+<a id="%E4%B8%BE%E4%BE%8B1%EF%BC%9A%E7%A6%81%E7%94%A8%E6%96%87%E6%9C%AC%E6%A1%86%E8%A7%A3%E7%A6%81%E6%96%87%E6%9C%AC%E6%A1%86"></a>
 ### 举例1：禁用文本框/解禁文本框
 
 
@@ -382,6 +401,7 @@
 
 
 
+<a id="%E4%B8%BE%E4%BE%8B2%EF%BC%9A%E6%96%87%E6%9C%AC%E6%A1%86%E8%8E%B7%E5%8F%96%E7%84%A6%E7%82%B9%E5%A4%B1%E5%8E%BB%E7%84%A6%E7%82%B9"></a>
 ### 举例2：文本框获取焦点/失去焦点
 
 细心的读者会发现，京东和淘宝的搜索框，获取焦点时，提示文字的体验是不同的。
@@ -489,6 +509,7 @@ placeholder: <input type="text" placeholder="我是placeholder"/>
 如上方所示，我们还可以用placeholder来做，但是IE678并不支持，所以不建议使用。
 
 
+<a id="%E4%B8%BE%E4%BE%8B3%EF%BC%9A%E7%94%A8%E6%88%B7%E6%B3%A8%E5%86%8C%E4%BF%A1%E6%81%AF%E9%94%99%E8%AF%AF%E6%97%B6%EF%BC%8C%E8%BE%93%E5%85%A5%E6%A1%86%E5%A4%B1%E5%8E%BB%E7%84%A6%E7%82%B9%E5%90%8E%EF%BC%8C%E9%AB%98%E4%BA%AE%E6%98%BE%E7%A4%BA%E3%80%82"></a>
 ### 举例3：用户注册信息错误时，输入框失去焦点后，高亮显示。
 
 代码实现：
@@ -543,6 +564,7 @@ placeholder: <input type="text" placeholder="我是placeholder"/>
 20180127_2035.gif
 
 
+<a id="%E4%B8%BE%E4%BE%8B4%EF%BC%9A%E5%85%A8%E9%80%89%E5%92%8C%E5%8F%8D%E9%80%89"></a>
 ### 举例4：全选和反选
 
 
