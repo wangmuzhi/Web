@@ -1,4 +1,18 @@
+<!-- MarkdownTOC -->
 
+- [style属性的设置和获取](#style%E5%B1%9E%E6%80%A7%E7%9A%84%E8%AE%BE%E7%BD%AE%E5%92%8C%E8%8E%B7%E5%8F%96)
+- [style属性的注意事项](#style%E5%B1%9E%E6%80%A7%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)
+- [style的常用属性](#style%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7)
+- [style属性的举例](#style%E5%B1%9E%E6%80%A7%E7%9A%84%E4%B8%BE%E4%BE%8B)
+    - [举例1：改变div的大小和透明度](#%E4%B8%BE%E4%BE%8B1%EF%BC%9A%E6%94%B9%E5%8F%98div%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%92%8C%E9%80%8F%E6%98%8E%E5%BA%A6)
+    - [举例2：当前输入的文本框高亮显示](#%E4%B8%BE%E4%BE%8B2%EF%BC%9A%E5%BD%93%E5%89%8D%E8%BE%93%E5%85%A5%E7%9A%84%E6%96%87%E6%9C%AC%E6%A1%86%E9%AB%98%E4%BA%AE%E6%98%BE%E7%A4%BA)
+    - [举例3：高级隔行变色、高亮显示](#%E4%B8%BE%E4%BE%8B3%EF%BC%9A%E9%AB%98%E7%BA%A7%E9%9A%94%E8%A1%8C%E5%8F%98%E8%89%B2%E3%80%81%E9%AB%98%E4%BA%AE%E6%98%BE%E7%A4%BA)
+- [js 访问css属性](#js-%E8%AE%BF%E9%97%AEcss%E5%B1%9E%E6%80%A7)
+    - [获取css的样式](#%E8%8E%B7%E5%8F%96css%E7%9A%84%E6%A0%B7%E5%BC%8F)
+
+<!-- /MarkdownTOC -->
+
+<a id="style%E5%B1%9E%E6%80%A7%E7%9A%84%E8%AE%BE%E7%BD%AE%E5%92%8C%E8%8E%B7%E5%8F%96"></a>
 ## style属性的设置和获取
 
 在DOM当中，如果想设置样式，有两种形式：
@@ -45,6 +59,7 @@
 
 上图显示，因为border属性不是行内样式，所以无法通过style对象获取。
 
+<a id="style%E5%B1%9E%E6%80%A7%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"></a>
 ## style属性的注意事项
 
 style属性需要注意以下几点：
@@ -84,6 +99,7 @@ style属性需要注意以下几点：
 
 ![](http://img.smyhvae.com/20180129_1410.png)
 
+<a id="style%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7"></a>
 ## style的常用属性
 
 style的常用属性包括：
@@ -109,6 +125,7 @@ style的常用属性包括：
 - CSS中：background-color
 
 
+<a id="style%E5%B1%9E%E6%80%A7%E7%9A%84%E4%B8%BE%E4%BE%8B"></a>
 ## style属性的举例
 
 我们针对上面列举的几个style的样式，来举几个例子：
@@ -131,6 +148,7 @@ style的常用属性包括：
 
 
 
+<a id="%E4%B8%BE%E4%BE%8B1%EF%BC%9A%E6%94%B9%E5%8F%98div%E7%9A%84%E5%A4%A7%E5%B0%8F%E5%92%8C%E9%80%8F%E6%98%8E%E5%BA%A6"></a>
 ### 举例1：改变div的大小和透明度
 
 代码举例：
@@ -155,6 +173,7 @@ style的常用属性包括：
 ```
 
 
+<a id="%E4%B8%BE%E4%BE%8B2%EF%BC%9A%E5%BD%93%E5%89%8D%E8%BE%93%E5%85%A5%E7%9A%84%E6%96%87%E6%9C%AC%E6%A1%86%E9%AB%98%E4%BA%AE%E6%98%BE%E7%A4%BA"></a>
 ### 举例2：当前输入的文本框高亮显示
 
 代码实现：
@@ -207,6 +226,7 @@ style的常用属性包括：
 
 
 
+<a id="%E4%B8%BE%E4%BE%8B3%EF%BC%9A%E9%AB%98%E7%BA%A7%E9%9A%94%E8%A1%8C%E5%8F%98%E8%89%B2%E3%80%81%E9%AB%98%E4%BA%AE%E6%98%BE%E7%A4%BA"></a>
 ### 举例3：高级隔行变色、高亮显示
 
 ```html
@@ -406,6 +426,7 @@ style的常用属性包括：
 ![](http://img.smyhvae.com/20180129_1525.gif)
 
 
+<a id="js-%E8%AE%BF%E9%97%AEcss%E5%B1%9E%E6%80%A7"></a>
 ## js 访问css属性
 
 访问行内的css样式，有两种方式：
@@ -429,6 +450,7 @@ style的常用属性包括：
 方式二最大的优点是：可以给属性传递参数。
 
 
+<a id="%E8%8E%B7%E5%8F%96css%E7%9A%84%E6%A0%B7%E5%BC%8F"></a>
 ### 获取css的样式
 
 上面的内容中，我们通过`box1.style.属性`只能获得**行内样式**的属性。可如果我们想获取**内嵌或者外链**的样式，该怎么办呢？
