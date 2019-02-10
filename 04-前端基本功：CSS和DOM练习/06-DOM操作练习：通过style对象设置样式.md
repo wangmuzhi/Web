@@ -490,9 +490,7 @@ style的常用属性包括：
 </html>
 ```
 
-
 打印结果：
 
 
 ![](http://img.smyhvae.com/20180204_1425.png)
-
