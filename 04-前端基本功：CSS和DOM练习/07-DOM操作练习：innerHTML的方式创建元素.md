@@ -1,5 +1,13 @@
+<!-- MarkdownTOC -->
 
+- [动态创建DOM元素的三种方式](#%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BAdom%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F)
+- [innerHTML举例：在线用户的获取](#innerhtml%E4%B8%BE%E4%BE%8B%EF%BC%9A%E5%9C%A8%E7%BA%BF%E7%94%A8%E6%88%B7%E7%9A%84%E8%8E%B7%E5%8F%96)
+- [innerHTML举例2：模拟百度搜索的下方提示](#innerhtml%E4%B8%BE%E4%BE%8B2%EF%BC%9A%E6%A8%A1%E6%8B%9F%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2%E7%9A%84%E4%B8%8B%E6%96%B9%E6%8F%90%E7%A4%BA)
+- [动态操作表格](#%E5%8A%A8%E6%80%81%E6%93%8D%E4%BD%9C%E8%A1%A8%E6%A0%BC)
 
+<!-- /MarkdownTOC -->
+
+<a id="%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BAdom%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F"></a>
 ## 动态创建DOM元素的三种方式
 
 - `document.write();` 不常用，因为容易覆盖原来的页面。
@@ -105,6 +113,7 @@ document.write();
 ```
 
 
+<a id="innerhtml%E4%B8%BE%E4%BE%8B%EF%BC%9A%E5%9C%A8%E7%BA%BF%E7%94%A8%E6%88%B7%E7%9A%84%E8%8E%B7%E5%8F%96"></a>
 ## innerHTML举例：在线用户的获取
 
 现在要做下面这样一个页面：
@@ -342,6 +351,7 @@ document.write();
 
 
 
+<a id="innerhtml%E4%B8%BE%E4%BE%8B2%EF%BC%9A%E6%A8%A1%E6%8B%9F%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2%E7%9A%84%E4%B8%8B%E6%96%B9%E6%8F%90%E7%A4%BA"></a>
 ## innerHTML举例2：模拟百度搜索的下方提示
 
 要求实现的效果如下：
@@ -469,6 +479,7 @@ document.write();
 
 
 
+<a id="%E5%8A%A8%E6%80%81%E6%93%8D%E4%BD%9C%E8%A1%A8%E6%A0%BC"></a>
 ## 动态操作表格
 
 
