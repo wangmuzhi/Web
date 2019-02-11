@@ -54,7 +54,6 @@ setTimeout()的道理是一样的。
 代码举例：
 
 
-
 ```html
 <script>
     var num = 1;
