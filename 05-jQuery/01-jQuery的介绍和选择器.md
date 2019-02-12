@@ -1,7 +1,41 @@
+<!-- MarkdownTOC -->
+
+- [jQuery 的介绍](#jquery-%E7%9A%84%E4%BB%8B%E7%BB%8D)
+    - [引入 jQuery 的原因](#%E5%BC%95%E5%85%A5-jquery-%E7%9A%84%E5%8E%9F%E5%9B%A0)
+    - [什么是 jQuery](#%E4%BB%80%E4%B9%88%E6%98%AF-jquery)
+    - [学习jQuery，主要是学什么](#%E5%AD%A6%E4%B9%A0jquery%EF%BC%8C%E4%B8%BB%E8%A6%81%E6%98%AF%E5%AD%A6%E4%BB%80%E4%B9%88)
+    - [jQuery初体验](#jquery%E5%88%9D%E4%BD%93%E9%AA%8C)
+    - [jQuery 的两大特点](#jquery-%E7%9A%84%E4%B8%A4%E5%A4%A7%E7%89%B9%E7%82%B9)
+- [jQuery 的使用](#jquery-%E7%9A%84%E4%BD%BF%E7%94%A8)
+    - [使用 jQuery 的基本步骤](#%E4%BD%BF%E7%94%A8-jquery-%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4)
+    - [jQuery 的版本](#jquery-%E7%9A%84%E7%89%88%E6%9C%AC)
+- [jQuery 的入口函数和 `$` 符号](#jquery-%E7%9A%84%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%E5%92%8C-%24-%E7%AC%A6%E5%8F%B7)
+    - [入口函数（重要）](#%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89)
+    - [jQuery的`$`符号](#jquery%E7%9A%84%24%E7%AC%A6%E5%8F%B7)
+- [js中的DOM对象 和 jQuery对象 比较（重点，难点）](#js%E4%B8%AD%E7%9A%84dom%E5%AF%B9%E8%B1%A1-%E5%92%8C-jquery%E5%AF%B9%E8%B1%A1-%E6%AF%94%E8%BE%83%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%8C%E9%9A%BE%E7%82%B9%EF%BC%89)
+    - [二者的区别](#%E4%BA%8C%E8%80%85%E7%9A%84%E5%8C%BA%E5%88%AB)
+    - [二者的相互转换](#%E4%BA%8C%E8%80%85%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2)
+    - [举例：隔行变色](#%E4%B8%BE%E4%BE%8B%EF%BC%9A%E9%9A%94%E8%A1%8C%E5%8F%98%E8%89%B2)
+- [jQuery 选择器](#jquery-%E9%80%89%E6%8B%A9%E5%99%A8)
+    - [1、jQuery 的基本选择器](#1%E3%80%81jquery-%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E5%99%A8)
+    - [2、层级选择器](#2%E3%80%81%E5%B1%82%E7%BA%A7%E9%80%89%E6%8B%A9%E5%99%A8)
+    - [3、基本过滤选择器](#3%E3%80%81%E5%9F%BA%E6%9C%AC%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8)
+    - [4、属性选择器](#4%E3%80%81%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8)
+    - [5、筛选选择器](#5%E3%80%81%E7%AD%9B%E9%80%89%E9%80%89%E6%8B%A9%E5%99%A8)
+- [举例](#%E4%B8%BE%E4%BE%8B)
+    - [举例1：鼠标悬停时，弹出下拉菜单【重要】](#%E4%B8%BE%E4%BE%8B1%EF%BC%9A%E9%BC%A0%E6%A0%87%E6%82%AC%E5%81%9C%E6%97%B6%EF%BC%8C%E5%BC%B9%E5%87%BA%E4%B8%8B%E6%8B%89%E8%8F%9C%E5%8D%95%E3%80%90%E9%87%8D%E8%A6%81%E3%80%91)
+    - [举例2：鼠标悬停时变色](#%E4%B8%BE%E4%BE%8B2%EF%BC%9A%E9%BC%A0%E6%A0%87%E6%82%AC%E5%81%9C%E6%97%B6%E5%8F%98%E8%89%B2)
+    - [举例3：突出显示](#%E4%B8%BE%E4%BE%8B3%EF%BC%9A%E7%AA%81%E5%87%BA%E6%98%BE%E7%A4%BA)
+    - [举例4：手风琴效果](#%E4%B8%BE%E4%BE%8B4%EF%BC%9A%E6%89%8B%E9%A3%8E%E7%90%B4%E6%95%88%E6%9E%9C)
+    - [举例5：淘宝精品服饰广告](#%E4%B8%BE%E4%BE%8B5%EF%BC%9A%E6%B7%98%E5%AE%9D%E7%B2%BE%E5%93%81%E6%9C%8D%E9%A5%B0%E5%B9%BF%E5%91%8A)
+
+<!-- /MarkdownTOC -->
 
 
+<a id="jquery-%E7%9A%84%E4%BB%8B%E7%BB%8D"></a>
 ## jQuery 的介绍
 
+<a id="%E5%BC%95%E5%85%A5-jquery-%E7%9A%84%E5%8E%9F%E5%9B%A0"></a>
 ### 引入 jQuery 的原因
 
 在用 js 写代码时，会遇到一些问题：
@@ -24,6 +58,7 @@
 
 jQuery的出现，可以解决以上问题。
 
+<a id="%E4%BB%80%E4%B9%88%E6%98%AF-jquery"></a>
 ### 什么是 jQuery
 
 jQuery 是 js 的一个库，封装了我们开发过程中常用的一些功能，方便我们调用，提高开发效率。
@@ -38,12 +73,14 @@ js库是把我们常用的功能放到一个单独的文件中，我们用的时
 
 - 中文汉化API文档：<http://www.css88.com/jqapi-1.9/>
 
+<a id="%E5%AD%A6%E4%B9%A0jquery%EF%BC%8C%E4%B8%BB%E8%A6%81%E6%98%AF%E5%AD%A6%E4%BB%80%E4%B9%88"></a>
 ### 学习jQuery，主要是学什么
 
 初期，主要学习如何使用jQuery操作DOM，其实就是学习jQuery封装好的那些API。
 
 这些API的共同特点是：几乎全都是方法。所以，在使用jQuery的API时，都是方法调用，也就是说要加小括号()，小括号里面是相应的参数，参数不同，功能不同。
 
+<a id="jquery%E5%88%9D%E4%BD%93%E9%AA%8C"></a>
 ### jQuery初体验
 
 现在用原生 js 来写下面这一段代码：
@@ -114,6 +151,7 @@ js库是把我们常用的功能放到一个单独的文件中，我们用的时
     </script>
 ```
 
+<a id="jquery-%E7%9A%84%E4%B8%A4%E5%A4%A7%E7%89%B9%E7%82%B9"></a>
 ### jQuery 的两大特点
 
 （1）**链式编程**：比如`.show()`和`.html()`可以连写成`.show().html()`。
@@ -133,8 +171,10 @@ js库是把我们常用的功能放到一个单独的文件中，我们用的时
 
 
 
+<a id="jquery-%E7%9A%84%E4%BD%BF%E7%94%A8"></a>
 ## jQuery 的使用
 
+<a id="%E4%BD%BF%E7%94%A8-jquery-%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"></a>
 ### 使用 jQuery 的基本步骤
 
 （1）引包
@@ -149,6 +189,7 @@ js库是把我们常用的功能放到一个单独的文件中，我们用的时
 
 主要，导包的代码一定要放在js代码的最上面。
 
+<a id="jquery-%E7%9A%84%E7%89%88%E6%9C%AC"></a>
 ### jQuery 的版本
 
 jQuery 有两个大版本：
@@ -173,9 +214,11 @@ PS：开发版本一般用1.10以上。
 - 平时开发过程中，可以使用任意一个版本；但是，项目上线的时候，推荐使用压缩版。
 
 
+<a id="jquery-%E7%9A%84%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%E5%92%8C-%24-%E7%AC%A6%E5%8F%B7"></a>
 ## jQuery 的入口函数和 `$` 符号
 
 
+<a id="%E5%85%A5%E5%8F%A3%E5%87%BD%E6%95%B0%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"></a>
 ### 入口函数（重要）
 
 原生 js 的入口函数指的是：`window.onload = function() {};` 如下：
@@ -236,6 +279,7 @@ PS：开发版本一般用1.10以上。
 
 文档加载的顺序：从上往下，边解析边执行。
 
+<a id="jquery%E7%9A%84%24%E7%AC%A6%E5%8F%B7"></a>
 ### jQuery的`$`符号
 
 jQuery 使用 `$` 符号原因：书写简洁、相对于其他字符与众不同、容易被记住。
@@ -283,8 +327,10 @@ jQuery占用了我们两个变量：`$` 和 jQuery。当我们在代码中打印
 
 jQuery这个js库，除了` $` 之外，还提供了另外一个函数：jQuery。jQuery函数跟 `$` 函数的关系：`jQuery === $`。
 
+<a id="js%E4%B8%AD%E7%9A%84dom%E5%AF%B9%E8%B1%A1-%E5%92%8C-jquery%E5%AF%B9%E8%B1%A1-%E6%AF%94%E8%BE%83%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%8C%E9%9A%BE%E7%82%B9%EF%BC%89"></a>
 ##  js中的DOM对象 和 jQuery对象 比较（重点，难点）
 
+<a id="%E4%BA%8C%E8%80%85%E7%9A%84%E5%8C%BA%E5%88%AB"></a>
 ### 二者的区别
 
 通过 jQuery 获取的元素是一个**数组**，数组中包含着原生JS中的DOM对象。举例：
@@ -324,6 +370,7 @@ jQuery这个js库，除了` $` 之外，还提供了另外一个函数：jQuery�
 
 **总结**：jQuery 就是把 DOM 对象重新包装了一下，让其具有了 jQuery 方法。
 
+<a id="%E4%BA%8C%E8%80%85%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2"></a>
 ### 二者的相互转换
 
 **1、 DOM 对象 转为 jQuery对象**：
@@ -361,6 +408,7 @@ jQuery对象转换成了 DOM 对象之后，可以直接调用 DOM 提供的一�
 
 **总结**：如果想要用哪种方式设置属性或方法，必须转换成该类型。
 
+<a id="%E4%B8%BE%E4%BE%8B%EF%BC%9A%E9%9A%94%E8%A1%8C%E5%8F%98%E8%89%B2"></a>
 ### 举例：隔行变色
 
 代码如下：
@@ -405,6 +453,7 @@ jQuery对象转换成了 DOM 对象之后，可以直接调用 DOM 提供的一�
 
 ![](http://img.smyhvae.com/20180204_2111.png)
 
+<a id="jquery-%E9%80%89%E6%8B%A9%E5%99%A8"></a>
 ## jQuery 选择器
 
 我们以前在CSS中学习的选择器有：
@@ -415,6 +464,7 @@ jQuery对象转换成了 DOM 对象之后，可以直接调用 DOM 提供的一�
 
 jQuery选择器是jQuery强大的体现，它提供了一组方法，让我们更加方便的获取到页面中的元素。
 
+<a id="1%E3%80%81jquery-%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E5%99%A8"></a>
 ### 1、jQuery 的基本选择器
 
 ![](http://img.smyhvae.com/20180204_2125.png)
@@ -472,6 +522,7 @@ jQuery选择器是jQuery强大的体现，它提供了一组方法，让我们�
 
 ![](http://img.smyhvae.com/20180204_2133.png)
 
+<a id="2%E3%80%81%E5%B1%82%E7%BA%A7%E9%80%89%E6%8B%A9%E5%99%A8"></a>
 ### 2、层级选择器
 
 ![](http://img.smyhvae.com/20180204_2138.png)
@@ -522,6 +573,7 @@ jQuery选择器是jQuery强大的体现，它提供了一组方法，让我们�
 
 ![](http://img.smyhvae.com/20180204_2145.png)
 
+<a id="3%E3%80%81%E5%9F%BA%E6%9C%AC%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8"></a>
 ### 3、基本过滤选择器
 
 ![](http://img.smyhvae.com/20180204_2150.png)
@@ -561,10 +613,12 @@ jQuery选择器是jQuery强大的体现，它提供了一组方法，让我们�
     </script>
 ```
 
+<a id="4%E3%80%81%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8"></a>
 ### 4、属性选择器
 
 ![](http://img.smyhvae.com/20180204_2155.png)
 
+<a id="5%E3%80%81%E7%AD%9B%E9%80%89%E9%80%89%E6%8B%A9%E5%99%A8"></a>
 ### 5、筛选选择器
 
 ![](http://img.smyhvae.com/20180204_2200.png)
@@ -633,8 +687,10 @@ jQuery选择器是jQuery强大的体现，它提供了一组方法，让我们�
 ![](http://img.smyhvae.com/20180204_2203.png)
 
 
+<a id="%E4%B8%BE%E4%BE%8B"></a>
 ## 举例
 
+<a id="%E4%B8%BE%E4%BE%8B1%EF%BC%9A%E9%BC%A0%E6%A0%87%E6%82%AC%E5%81%9C%E6%97%B6%EF%BC%8C%E5%BC%B9%E5%87%BA%E4%B8%8B%E6%8B%89%E8%8F%9C%E5%8D%95%E3%80%90%E9%87%8D%E8%A6%81%E3%80%91"></a>
 ### 举例1：鼠标悬停时，弹出下拉菜单【重要】
 
 完整版代码：
@@ -783,6 +839,7 @@ jQuery选择器是jQuery强大的体现，它提供了一组方法，让我们�
 
 两张图的对比，可以看出this的作用：谁正在调用函数，this就指的是谁。
 
+<a id="%E4%B8%BE%E4%BE%8B2%EF%BC%9A%E9%BC%A0%E6%A0%87%E6%82%AC%E5%81%9C%E6%97%B6%E5%8F%98%E8%89%B2"></a>
 ### 举例2：鼠标悬停时变色
 
 完整版代码如下：
@@ -835,6 +892,7 @@ jQuery选择器是jQuery强大的体现，它提供了一组方法，让我们�
 
 ![](http://img.smyhvae.com/20180205_1100.gif)
 
+<a id="%E4%B8%BE%E4%BE%8B3%EF%BC%9A%E7%AA%81%E5%87%BA%E6%98%BE%E7%A4%BA"></a>
 ### 举例3：突出显示
 
 要求：鼠标悬停时，突出显示这个li，让其他的li都半透明。
@@ -928,6 +986,7 @@ jQuery选择器是jQuery强大的体现，它提供了一组方法，让我们�
 - [2018-02-05-突出显示.rar]()
 
 
+<a id="%E4%B8%BE%E4%BE%8B4%EF%BC%9A%E6%89%8B%E9%A3%8E%E7%90%B4%E6%95%88%E6%9E%9C"></a>
 ### 举例4：手风琴效果
 
 完整版代码：
@@ -1014,6 +1073,7 @@ jQuery选择器是jQuery强大的体现，它提供了一组方法，让我们�
 
 注意这里的 选择器的用法：parent、next
 
+<a id="%E4%B8%BE%E4%BE%8B5%EF%BC%9A%E6%B7%98%E5%AE%9D%E7%B2%BE%E5%93%81%E6%9C%8D%E9%A5%B0%E5%B9%BF%E5%91%8A"></a>
 ### 举例5：淘宝精品服饰广告
 
 完整版代码：
