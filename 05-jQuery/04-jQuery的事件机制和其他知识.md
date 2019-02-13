@@ -1,5 +1,27 @@
+<!-- MarkdownTOC -->
+
+- [jQuery 设置宽度和高度](#jquery-%E8%AE%BE%E7%BD%AE%E5%AE%BD%E5%BA%A6%E5%92%8C%E9%AB%98%E5%BA%A6)
+- [jQuery 的坐标操作](#jquery-%E7%9A%84%E5%9D%90%E6%A0%87%E6%93%8D%E4%BD%9C)
+    - [offset\(\)方法](#offset%E6%96%B9%E6%B3%95)
+    - [position\(\)方法](#position%E6%96%B9%E6%B3%95)
+    - [scrollTop\(\)方法](#scrolltop%E6%96%B9%E6%B3%95)
+    - [scrollLeft\(\)方法](#scrollleft%E6%96%B9%E6%B3%95)
+- [jQuery的事件机制](#jquery%E7%9A%84%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6)
+    - [常见的事件绑定](#%E5%B8%B8%E8%A7%81%E7%9A%84%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A)
+    - [on方式绑定事件](#on%E6%96%B9%E5%BC%8F%E7%BB%91%E5%AE%9A%E4%BA%8B%E4%BB%B6)
+    - [off方式解绑事件](#off%E6%96%B9%E5%BC%8F%E8%A7%A3%E7%BB%91%E4%BA%8B%E4%BB%B6)
+- [jQuery的事件对象](#jquery%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1)
+- [jQuery 的两大特点](#jquery-%E7%9A%84%E4%B8%A4%E5%A4%A7%E7%89%B9%E7%82%B9)
+- [each的用法](#each%E7%9A%84%E7%94%A8%E6%B3%95)
+- [多库共存](#%E5%A4%9A%E5%BA%93%E5%85%B1%E5%AD%98)
+- [jQuery 的插件机制](#jquery-%E7%9A%84%E6%8F%92%E4%BB%B6%E6%9C%BA%E5%88%B6)
+    - [插件之改变颜色](#%E6%8F%92%E4%BB%B6%E4%B9%8B%E6%94%B9%E5%8F%98%E9%A2%9C%E8%89%B2)
+    - [插件之懒加载](#%E6%8F%92%E4%BB%B6%E4%B9%8B%E6%87%92%E5%8A%A0%E8%BD%BD)
+
+<!-- /MarkdownTOC -->
 
 
+<a id="jquery-%E8%AE%BE%E7%BD%AE%E5%AE%BD%E5%BA%A6%E5%92%8C%E9%AB%98%E5%BA%A6"></a>
 ## jQuery 设置宽度和高度
 
 宽度操作：
@@ -32,8 +54,10 @@
 如上方代码所示，`$("div").height();`返回的是number类型，常用于数学计算。
 
 
+<a id="jquery-%E7%9A%84%E5%9D%90%E6%A0%87%E6%93%8D%E4%BD%9C"></a>
 ## jQuery 的坐标操作
 
+<a id="offset%E6%96%B9%E6%B3%95"></a>
 ### offset()方法
 
 
@@ -50,6 +74,7 @@
 
 注意：设置offset后，如果元素没有定位(默认值：static)，则被修改为relative。
 
+<a id="position%E6%96%B9%E6%B3%95"></a>
 ### position()方法
 
 ```javascript
@@ -60,6 +85,7 @@
 
 注意：只能获取，不能设置。
 
+<a id="scrolltop%E6%96%B9%E6%B3%95"></a>
 ### scrollTop()方法
 
 ```javascript
@@ -74,6 +100,7 @@
 - 有参数：表示设置偏移，参数为数值类型。
 
 
+<a id="scrollleft%E6%96%B9%E6%B3%95"></a>
 ### scrollLeft()方法
 
 ```javascript
@@ -173,8 +200,10 @@
 </html>
 ```
 
+<a id="jquery%E7%9A%84%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6"></a>
 ## jQuery的事件机制
 
+<a id="%E5%B8%B8%E8%A7%81%E7%9A%84%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A"></a>
 ### 常见的事件绑定
 
 - click(handler) 				单击事件。
@@ -195,6 +224,7 @@
 
 参考链接：<http://www.w3school.com.cn/jquery/jquery_ref_events.asp>
 
+<a id="on%E6%96%B9%E5%BC%8F%E7%BB%91%E5%AE%9A%E4%BA%8B%E4%BB%B6"></a>
 ### on方式绑定事件
 
 最早采用的是 bind、delegate等方式绑定的。jQuery 1.7版本后，jQuery用on统一了所有的事件处理的方法，此方法兼容zepto(移动端类似于jQuery的一个库)。
@@ -228,6 +258,7 @@
     });
 ```
 
+<a id="off%E6%96%B9%E5%BC%8F%E8%A7%A3%E7%BB%91%E4%BA%8B%E4%BB%B6"></a>
 ### off方式解绑事件
 
 ```javascript
@@ -238,6 +269,7 @@
     $(selector).off( "click", "**" );   // 解绑所有代理的click事件，元素本身的事件不会被解绑
 ```
 
+<a id="jquery%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1"></a>
 ## jQuery的事件对象
 
 event.data                  传递给事件处理程序的额外数据
@@ -434,6 +466,7 @@ event.keyCode               键盘按键代码
 ```
 
 
+<a id="jquery-%E7%9A%84%E4%B8%A4%E5%A4%A7%E7%89%B9%E7%82%B9"></a>
 ## jQuery 的两大特点
 
 （1）**链式编程**：比如`.show()`和`.html()`可以连写成`.show().html()`。
@@ -539,6 +572,7 @@ event.keyCode               键盘按键代码
 
 ![](http://img.smyhvae.com/20180206_1100.gif)
 
+<a id="each%E7%9A%84%E7%94%A8%E6%B3%95"></a>
 ## each的用法
 
 大部分情况下是不需要使用each方法的，因为jQuery的隐式迭代特性。
@@ -615,6 +649,7 @@ event.keyCode               键盘按键代码
 
 ![](http://img.smyhvae.com/20180206_1110.png)
 
+<a id="%E5%A4%9A%E5%BA%93%E5%85%B1%E5%AD%98"></a>
 ## 多库共存
 
 **多库共存**指的是：jQuery占用了 `$` 和 `jQuery` 这两个变量。当在同一个页面中引用了 jQuery 库以及其他的库（或者其他版本的jQuery库），恰好其他的库中也用到了 `$` 或者`jQuery`变量.那么，要保证每个库都能正常使用，就产生了多库共存的问题。
@@ -650,6 +685,7 @@ event.keyCode               键盘按键代码
 ![](http://img.smyhvae.com/20180206_1133.png)
 
 
+<a id="jquery-%E7%9A%84%E6%8F%92%E4%BB%B6%E6%9C%BA%E5%88%B6"></a>
 ## jQuery 的插件机制
 
 jQuery 库，虽然功能强大，但也不是面面俱到。jQuery 是通过插件的方式，来扩展它的功能：
@@ -659,6 +695,7 @@ jQuery 库，虽然功能强大，但也不是面面俱到。jQuery 是通过插
 - 当你不再需要这个插件，那你就可以从jQuery上“卸载”它。
 
 
+<a id="%E6%8F%92%E4%BB%B6%E4%B9%8B%E6%94%B9%E5%8F%98%E9%A2%9C%E8%89%B2"></a>
 ### 插件之改变颜色
 
 jQuery的自定义动画方法animate()，在执行动画时，是不支持设置背景色这个属性的。这个时候可以借助`jQuery.color.js`这个插件。
@@ -712,6 +749,7 @@ jQuery的自定义动画方法animate()，在执行动画时，是不支持设�
 否则的话，在动画执行的过程中，是无法设置背景色的。
 
 
+<a id="%E6%8F%92%E4%BB%B6%E4%B9%8B%E6%87%92%E5%8A%A0%E8%BD%BD"></a>
 ### 插件之懒加载
 
 懒加载：当打开一个网页时，只有当我看到某个部分，再加载那个部分；而不是一下子全部加载完毕。这样可以优化打开的速度。
