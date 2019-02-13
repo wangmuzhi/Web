@@ -1,5 +1,27 @@
+<!-- MarkdownTOC -->
+
+- [文本主要内容](#%E6%96%87%E6%9C%AC%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9)
+- [样式操作和类操作](#%E6%A0%B7%E5%BC%8F%E6%93%8D%E4%BD%9C%E5%92%8C%E7%B1%BB%E6%93%8D%E4%BD%9C)
+    - [样式操作](#%E6%A0%B7%E5%BC%8F%E6%93%8D%E4%BD%9C)
+    - [类操作（className）](#%E7%B1%BB%E6%93%8D%E4%BD%9C%EF%BC%88classname%EF%BC%89)
+    - [样式操作和类操作的比较](#%E6%A0%B7%E5%BC%8F%E6%93%8D%E4%BD%9C%E5%92%8C%E7%B1%BB%E6%93%8D%E4%BD%9C%E7%9A%84%E6%AF%94%E8%BE%83)
+- [jQuery 的节点操作](#jquery-%E7%9A%84%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C)
+    - [动态创建元素](#%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%83%E7%B4%A0)
+    - [添加元素](#%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0)
+    - [清空元素](#%E6%B8%85%E7%A9%BA%E5%85%83%E7%B4%A0)
+    - [复制元素](#%E5%A4%8D%E5%88%B6%E5%85%83%E7%B4%A0)
+    - [总结](#%E6%80%BB%E7%BB%93)
+    - [案例：选择水果](#%E6%A1%88%E4%BE%8B%EF%BC%9A%E9%80%89%E6%8B%A9%E6%B0%B4%E6%9E%9C)
+    - [案例：动态添加表格项](#%E6%A1%88%E4%BE%8B%EF%BC%9A%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E8%A1%A8%E6%A0%BC%E9%A1%B9)
+    - [将上一个案例进一步提升：点击按钮，添加数据](#%E5%B0%86%E4%B8%8A%E4%B8%80%E4%B8%AA%E6%A1%88%E4%BE%8B%E8%BF%9B%E4%B8%80%E6%AD%A5%E6%8F%90%E5%8D%87%EF%BC%9A%E7%82%B9%E5%87%BB%E6%8C%89%E9%92%AE%EF%BC%8C%E6%B7%BB%E5%8A%A0%E6%95%B0%E6%8D%AE)
+- [jQuery 设置和获取属性](#jquery-%E8%AE%BE%E7%BD%AE%E5%92%8C%E8%8E%B7%E5%8F%96%E5%B1%9E%E6%80%A7)
+    - [属性操作](#%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C)
+    - [val\(\)方法和 text\(\)方法](#val%E6%96%B9%E6%B3%95%E5%92%8C-text%E6%96%B9%E6%B3%95)
+
+<!-- /MarkdownTOC -->
 
 
+<a id="%E6%96%87%E6%9C%AC%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9"></a>
 ## 文本主要内容
 
 - 样式和类操作
@@ -7,10 +29,12 @@
 - 节点操作
 
 
+<a id="%E6%A0%B7%E5%BC%8F%E6%93%8D%E4%BD%9C%E5%92%8C%E7%B1%BB%E6%93%8D%E4%BD%9C"></a>
 ## 样式操作和类操作
 
 作用：设置或获取元素的样式属性值。
 
+<a id="%E6%A0%B7%E5%BC%8F%E6%93%8D%E4%BD%9C"></a>
 ### 样式操作
 
 **1、设置样式：**
@@ -40,6 +64,7 @@
 
 ![](http://img.smyhvae.com/20180205_1315.png)
 
+<a id="%E7%B1%BB%E6%93%8D%E4%BD%9C%EF%BC%88classname%EF%BC%89"></a>
 ### 类操作（className）
 
 **1、添加类样式：**
@@ -181,6 +206,7 @@ $(selector).toggleClass(“liItem”);    //为指定元素切换类 className�
 
 ![](http://img.smyhvae.com/20180205_1330.gif)
 
+<a id="%E6%A0%B7%E5%BC%8F%E6%93%8D%E4%BD%9C%E5%92%8C%E7%B1%BB%E6%93%8D%E4%BD%9C%E7%9A%84%E6%AF%94%E8%BE%83"></a>
 ### 样式操作和类操作的比较
 
 - 操作的样式非常少，那么可以通过`.css()`实现。
@@ -318,9 +344,11 @@ $(selector).toggleClass(“liItem”);    //为指定元素切换类 className�
 
 
 
+<a id="jquery-%E7%9A%84%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C"></a>
 ## jQuery 的节点操作
 
 
+<a id="%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%85%83%E7%B4%A0"></a>
 ### 动态创建元素
 
 原生 js 有[三种动态创建元素](07-DOM操作练习：innerHTML的方式创建元素.md)的方式。这里我们学一下 jQuery 动态创建元素。**注意，创建的是  jQuery 对象**。
@@ -353,6 +381,7 @@ $(selector).toggleClass(“liItem”);    //为指定元素切换类 className�
 ```
 
 
+<a id="%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0"></a>
 ### 添加元素
 
 jQuery 添加元素的方法非常多，最重要的方法是`append()`。格式如下：
@@ -453,6 +482,7 @@ $(selector).append('<div></div>');  //参数是 htmlString
 作用：在被选元素之前，作为**兄弟元素**插入内容或节点。
 
 
+<a id="%E6%B8%85%E7%A9%BA%E5%85%83%E7%B4%A0"></a>
 ### 清空元素
 
 方式一：没有参数
@@ -477,6 +507,7 @@ $(selector).append('<div></div>');  //参数是 htmlString
 
 解释：“自杀” 。把自己以及所有的内部元素从文档中删除掉。
 
+<a id="%E5%A4%8D%E5%88%B6%E5%85%83%E7%B4%A0"></a>
 ### 复制元素
 
 
@@ -489,10 +520,12 @@ $(selector).append('<div></div>');  //参数是 htmlString
 
 解释：复制$(selector)这个元素。是深层复制。
 
+<a id="%E6%80%BB%E7%BB%93"></a>
 ### 总结
 
 推荐使用 `html("<span></span>")` 方法来创建元素或者 `html("")` 清空元素。
 
+<a id="%E6%A1%88%E4%BE%8B%EF%BC%9A%E9%80%89%E6%8B%A9%E6%B0%B4%E6%9E%9C"></a>
 ### 案例：选择水果
 
 完整版代码：
@@ -569,6 +602,7 @@ $(selector).append('<div></div>');  //参数是 htmlString
 ![](http://img.smyhvae.com/20180205_2040.gif)
 
 
+<a id="%E6%A1%88%E4%BE%8B%EF%BC%9A%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E8%A1%A8%E6%A0%BC%E9%A1%B9"></a>
 ### 案例：动态添加表格项
 
 代码如下：
@@ -689,14 +723,17 @@ $(selector).append('<div></div>');  //参数是 htmlString
 代码解释：每次生成字符串str之前，记得先把之前的str清空，不然每次点击按钮，都会继续添加表格项。
 
 
+<a id="%E5%B0%86%E4%B8%8A%E4%B8%80%E4%B8%AA%E6%A1%88%E4%BE%8B%E8%BF%9B%E4%B8%80%E6%AD%A5%E6%8F%90%E5%8D%87%EF%BC%9A%E7%82%B9%E5%87%BB%E6%8C%89%E9%92%AE%EF%BC%8C%E6%B7%BB%E5%8A%A0%E6%95%B0%E6%8D%AE"></a>
 ### 将上一个案例进一步提升：点击按钮，添加数据
 
 暂略。
 
+<a id="jquery-%E8%AE%BE%E7%BD%AE%E5%92%8C%E8%8E%B7%E5%8F%96%E5%B1%9E%E6%80%A7"></a>
 ## jQuery 设置和获取属性
 
 jQuery 无法直接操作节点的属性和src等，我们需要借助attr()方法。下面介绍。
 
+<a id="%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C"></a>
 ### 属性操作
 
 **（1）设置属性：**
@@ -935,6 +972,7 @@ prop方法通常用来影响DOM元素的动态状态，而不是改变的HTML属
 ```
 
 
+<a id="val%E6%96%B9%E6%B3%95%E5%92%8C-text%E6%96%B9%E6%B3%95"></a>
 ### val()方法和 text()方法
 
 
