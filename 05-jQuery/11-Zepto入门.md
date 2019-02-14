@@ -1,7 +1,24 @@
+<!-- MarkdownTOC -->
+
+- [Zepto 的介绍](#zepto-%E7%9A%84%E4%BB%8B%E7%BB%8D)
+    - [什么是 Zepto](#%E4%BB%80%E4%B9%88%E6%98%AF-zepto)
+    - [zepto的特点](#zepto%E7%9A%84%E7%89%B9%E7%82%B9)
+    - [相关网址](#%E7%9B%B8%E5%85%B3%E7%BD%91%E5%9D%80)
+- [Zepto 与 jQuery 的前世今生](#zepto-%E4%B8%8E-jquery-%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F)
+    - [相同点](#%E7%9B%B8%E5%90%8C%E7%82%B9)
+    - [不同点](#%E4%B8%8D%E5%90%8C%E7%82%B9)
+- [Zepto 的初体验](#zepto-%E7%9A%84%E5%88%9D%E4%BD%93%E9%AA%8C)
+- [Zepto 和 jQuery 相同的  api](#zepto-%E5%92%8C-jquery-%E7%9B%B8%E5%90%8C%E7%9A%84-api)
+    - [jQuery 的主要特性](#jquery-%E7%9A%84%E4%B8%BB%E8%A6%81%E7%89%B9%E6%80%A7)
+    - [代码举例](#%E4%BB%A3%E7%A0%81%E4%B8%BE%E4%BE%8B)
+
+<!-- /MarkdownTOC -->
 
 
+<a id="zepto-%E7%9A%84%E4%BB%8B%E7%BB%8D"></a>
 ## Zepto 的介绍
 
+<a id="%E4%BB%80%E4%B9%88%E6%98%AF-zepto"></a>
 ### 什么是 Zepto
 
 zepto是轻量级的JavaScript库，专门为移动端定制的框架。
@@ -10,6 +27,7 @@ zepto是轻量级的JavaScript库，专门为移动端定制的框架。
 
 
 
+<a id="zepto%E7%9A%84%E7%89%B9%E7%82%B9"></a>
 ### zepto的特点
 
 - 针对移动端
@@ -23,6 +41,7 @@ zepto是轻量级的JavaScript库，专门为移动端定制的框架。
 - 目前API完善的框架中体积最小的一个
 
 
+<a id="%E7%9B%B8%E5%85%B3%E7%BD%91%E5%9D%80"></a>
 ### 相关网址
 
 - 官网：<http://zeptojs.com/>
@@ -30,8 +49,10 @@ zepto是轻量级的JavaScript库，专门为移动端定制的框架。
 - GitHub：<https://github.com/madrobby/zepto>
 
 
+<a id="zepto-%E4%B8%8E-jquery-%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F"></a>
 ## Zepto 与 jQuery 的前世今生
 
+<a id="%E7%9B%B8%E5%90%8C%E7%82%B9"></a>
 ### 相同点
 
 - 都是优秀的js函数库
@@ -43,9 +64,11 @@ zepto是轻量级的JavaScript库，专门为移动端定制的框架。
 - 同jQuery一样，都是以`$`符号为核心函数。
 
 
+<a id="%E4%B8%8D%E5%90%8C%E7%82%B9"></a>
 ### 不同点
 
 
+<a id="zepto-%E7%9A%84%E5%88%9D%E4%BD%93%E9%AA%8C"></a>
 ## Zepto 的初体验
 
 （1）Zepto 库的下载：
@@ -110,11 +133,13 @@ zepto是轻量级的JavaScript库，专门为移动端定制的框架。
 
 注意，我们要将浏览器切换到手机模式，才能看到`touchstart`事件的效果；否则，在浏览器上点来点去，是没有反应的。
 
+<a id="zepto-%E5%92%8C-jquery-%E7%9B%B8%E5%90%8C%E7%9A%84-api"></a>
 ## Zepto 和 jQuery 相同的  api
 
 > 意思是，jQuery 和 Zepto 有哪些共同点。
 
 
+<a id="jquery-%E7%9A%84%E4%B8%BB%E8%A6%81%E7%89%B9%E6%80%A7"></a>
 ###  jQuery 的主要特性
 
 下面来讲一下 jQuery 的主要特性（jQuery 的核心函数`$`、jQuery 对象），它们对 Zepto 来说，同样适用。
@@ -151,6 +176,7 @@ zepto是轻量级的JavaScript库，专门为移动端定制的框架。
 
 - find()
 
+<a id="%E4%BB%A3%E7%A0%81%E4%B8%BE%E4%BE%8B"></a>
 ### 代码举例
 
 1、`$.each()`方法举例：（遍历数组）
