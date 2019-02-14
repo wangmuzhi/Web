@@ -1,21 +1,6 @@
-<!-- MarkdownTOC -->
 
-- [this](#this)
-    - [this的作用](#this%E7%9A%84%E4%BD%9C%E7%94%A8)
-    - [全局作用域中的this](#%E5%85%A8%E5%B1%80%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%AD%E7%9A%84this)
-- [this的定律](#this%E7%9A%84%E5%AE%9A%E5%BE%8B)
-    - [函数赋值给变量时，this指向window](#%E5%87%BD%E6%95%B0%E8%B5%8B%E5%80%BC%E7%BB%99%E5%8F%98%E9%87%8F%E6%97%B6%EF%BC%8Cthis%E6%8C%87%E5%90%91window)
-    - [以函数形式调用时，this永远都是window](#%E4%BB%A5%E5%87%BD%E6%95%B0%E5%BD%A2%E5%BC%8F%E8%B0%83%E7%94%A8%E6%97%B6%EF%BC%8Cthis%E6%B0%B8%E8%BF%9C%E9%83%BD%E6%98%AFwindow)
-    - [以方法的形式调用时，this是调用方法的对象](#%E4%BB%A5%E6%96%B9%E6%B3%95%E7%9A%84%E5%BD%A2%E5%BC%8F%E8%B0%83%E7%94%A8%E6%97%B6%EF%BC%8Cthis%E6%98%AF%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95%E7%9A%84%E5%AF%B9%E8%B1%A1)
-- [解决闭包中的this指向问题](#%E8%A7%A3%E5%86%B3%E9%97%AD%E5%8C%85%E4%B8%AD%E7%9A%84this%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98)
-    - [当this遇到一些特殊的函数时](#%E5%BD%93this%E9%81%87%E5%88%B0%E4%B8%80%E4%BA%9B%E7%89%B9%E6%AE%8A%E7%9A%84%E5%87%BD%E6%95%B0%E6%97%B6)
-
-<!-- /MarkdownTOC -->
-
-<a id="this"></a>
 ## this
 
-<a id="this%E7%9A%84%E4%BD%9C%E7%94%A8"></a>
 ### this的作用
 
 - this可以帮我们简化很多代码。比如`xiaoming.name`、`xiaoming.age`可以直接写成`this.name`、`this.age`。
@@ -101,18 +86,15 @@
 
 PS：顺便提醒一下，上面的代码中，如果把`var i`改成`let i`，效果又完全不同了。参考链接：[let和var在for循环中的表现](http://blog.csdn.net/stopllL/article/details/64130664)
 
-<a id="%E5%85%A8%E5%B1%80%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%AD%E7%9A%84this"></a>
 ### 全局作用域中的this
 
 当一段代码在浏览器中执行时，所有的全局变量和对象都是在window对象上定义的。换而言之，所有的全局变量和对象都属于window对象。
 
 
-<a id="this%E7%9A%84%E5%AE%9A%E5%BE%8B"></a>
 ## this的定律
 
 this关键字永远指向函数（方法）运行时的**所有者**。
 
-<a id="%E5%87%BD%E6%95%B0%E8%B5%8B%E5%80%BC%E7%BB%99%E5%8F%98%E9%87%8F%E6%97%B6%EF%BC%8Cthis%E6%8C%87%E5%90%91window"></a>
 ### 函数赋值给变量时，this指向window
 
 
@@ -129,15 +111,12 @@ foo2();
 
 this都是指向window。
 
-<a id="%E4%BB%A5%E5%87%BD%E6%95%B0%E5%BD%A2%E5%BC%8F%E8%B0%83%E7%94%A8%E6%97%B6%EF%BC%8Cthis%E6%B0%B8%E8%BF%9C%E9%83%BD%E6%98%AFwindow"></a>
 ### 以函数形式调用时，this永远都是window
 
 
-<a id="%E4%BB%A5%E6%96%B9%E6%B3%95%E7%9A%84%E5%BD%A2%E5%BC%8F%E8%B0%83%E7%94%A8%E6%97%B6%EF%BC%8Cthis%E6%98%AF%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95%E7%9A%84%E5%AF%B9%E8%B1%A1"></a>
 ### 以方法的形式调用时，this是调用方法的对象
 
 
-<a id="%E8%A7%A3%E5%86%B3%E9%97%AD%E5%8C%85%E4%B8%AD%E7%9A%84this%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98"></a>
 ## 解决闭包中的this指向问题
 
 
@@ -147,7 +126,6 @@ this都是指向window。
 
 方式二：如果不知道父函数的名字，在父函数里加一句`_this = this`，此时`_this`相当于父函数的名字。
 
-<a id="%E5%BD%93this%E9%81%87%E5%88%B0%E4%B8%80%E4%BA%9B%E7%89%B9%E6%AE%8A%E7%9A%84%E5%87%BD%E6%95%B0%E6%97%B6"></a>
 ### 当this遇到一些特殊的函数时
 
 
