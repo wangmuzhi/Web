@@ -1,11 +1,34 @@
+<!-- MarkdownTOC -->
+
+- [前言](#%E5%89%8D%E8%A8%80)
+- [for循环](#for%E5%BE%AA%E7%8E%AF)
+    - [for循环的语法](#for%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%AF%AD%E6%B3%95)
+    - [for循环举例](#for%E5%BE%AA%E7%8E%AF%E4%B8%BE%E4%BE%8B)
+- [while循环语句](#while%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5)
+    - [while循环](#while%E5%BE%AA%E7%8E%AF)
+    - [do...while循环](#dowhile%E5%BE%AA%E7%8E%AF)
+    - [while循环和 do...while循环的区别](#while%E5%BE%AA%E7%8E%AF%E5%92%8C-dowhile%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%8C%BA%E5%88%AB)
+    - [while循环举例](#while%E5%BE%AA%E7%8E%AF%E4%B8%BE%E4%BE%8B)
+- [break 和 continue](#break-%E5%92%8C-continue)
+    - [break](#break)
+    - [continue](#continue)
+- [各种练习](#%E5%90%84%E7%A7%8D%E7%BB%83%E4%B9%A0)
+    - [练习一：质数相关](#%E7%BB%83%E4%B9%A0%E4%B8%80%EF%BC%9A%E8%B4%A8%E6%95%B0%E7%9B%B8%E5%85%B3)
+    - [练习二：质数相关](#%E7%BB%83%E4%B9%A0%E4%BA%8C%EF%BC%9A%E8%B4%A8%E6%95%B0%E7%9B%B8%E5%85%B3)
+    - [练习三：99乘法表](#%E7%BB%83%E4%B9%A0%E4%B8%89%EF%BC%9A99%E4%B9%98%E6%B3%95%E8%A1%A8)
+
+<!-- /MarkdownTOC -->
 
 
+<a id="%E5%89%8D%E8%A8%80"></a>
 ## 前言
 
 循环语句：通过循环语句可以反复的执行一段代码多次。
 
+<a id="for%E5%BE%AA%E7%8E%AF"></a>
 ## for循环
 
+<a id="for%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%AF%AD%E6%B3%95"></a>
 ### for循环的语法
 
 语法：
@@ -43,6 +66,7 @@ for循环举例：
 ![](http://img.smyhvae.com/20180117_2248.png)
 
 
+<a id="for%E5%BE%AA%E7%8E%AF%E4%B8%BE%E4%BE%8B"></a>
 ### for循环举例
 
 
@@ -118,8 +142,10 @@ for循环举例：
 
 
 
+<a id="while%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"></a>
 ## while循环语句
 
+<a id="while%E5%BE%AA%E7%8E%AF"></a>
 ### while循环
 
 语法：
@@ -146,6 +172,7 @@ while语句在执行时，先对条件表达式进行求值判断：
 **如果有必要的话，我们可以使用 break 来终止循环**。
 
 
+<a id="dowhile%E5%BE%AA%E7%8E%AF"></a>
 ### do...while循环
 
 
@@ -171,6 +198,7 @@ while语句在执行时，先对条件表达式进行求值判断：
 ```
 
 
+<a id="while%E5%BE%AA%E7%8E%AF%E5%92%8C-dowhile%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%8C%BA%E5%88%AB"></a>
 ### while循环和 do...while循环的区别
 
 这两个语句的功能类似，不同的是：
@@ -179,6 +207,7 @@ while语句在执行时，先对条件表达式进行求值判断：
 
 也就是说，do...while可以保证循环体至少执行一次，而while不能。
 
+<a id="while%E5%BE%AA%E7%8E%AF%E4%B8%BE%E4%BE%8B"></a>
 ### while循环举例
 
 
@@ -250,11 +279,13 @@ while语句在执行时，先对条件表达式进行求值判断：
 ```
 
 
+<a id="break-%E5%92%8C-continue"></a>
 ## break 和 continue
 
 > 这个知识点非常重要。
 
 
+<a id="break"></a>
 ### break
 
 - break可以用来退出switch语句或**整个**循环语句（循环语句包括for、while。不包括if。if里不能用 break 和 continue，否则会报错）。
@@ -308,6 +339,7 @@ i的值:2
 
 
 
+<a id="continue"></a>
 ### continue
 
 - continue可以用来跳过**当次**循环。
@@ -316,9 +348,11 @@ i的值:2
 
 
 
+<a id="%E5%90%84%E7%A7%8D%E7%BB%83%E4%B9%A0"></a>
 ## 各种练习
 
 
+<a id="%E7%BB%83%E4%B9%A0%E4%B8%80%EF%BC%9A%E8%B4%A8%E6%95%B0%E7%9B%B8%E5%85%B3"></a>
 ### 练习一：质数相关
 
 **题目**：在页面中接收一个用户输入的数字，并判断该数是否是质数。
@@ -380,6 +414,7 @@ i的值:2
 ```
 
 
+<a id="%E7%BB%83%E4%B9%A0%E4%BA%8C%EF%BC%9A%E8%B4%A8%E6%95%B0%E7%9B%B8%E5%85%B3"></a>
 ### 练习二：质数相关
 
 **题目**：打印1~100之间的所有质数
@@ -439,6 +474,7 @@ i的值:2
 ![](http://img.smyhvae.com/20181229_1415.png)
 
 
+<a id="%E7%BB%83%E4%B9%A0%E4%B8%89%EF%BC%9A99%E4%B9%98%E6%B3%95%E8%A1%A8"></a>
 ### 练习三：99乘法表
 
 代码实现：
