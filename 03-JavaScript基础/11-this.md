@@ -1,5 +1,15 @@
+<!-- MarkdownTOC -->
+
+- [this](#this)
+- [类数组 arguments](#%E7%B1%BB%E6%95%B0%E7%BB%84-arguments)
+    - [1、返回函数**实参**的个数：arguments.length](#1%E3%80%81%E8%BF%94%E5%9B%9E%E5%87%BD%E6%95%B0%E5%AE%9E%E5%8F%82%E7%9A%84%E4%B8%AA%E6%95%B0%EF%BC%9Aargumentslength)
+    - [2、返回正在执行的函数：arguments.callee](#2%E3%80%81%E8%BF%94%E5%9B%9E%E6%AD%A3%E5%9C%A8%E6%89%A7%E8%A1%8C%E7%9A%84%E5%87%BD%E6%95%B0%EF%BC%9Aargumentscallee)
+    - [3、arguments可以修改元素](#3%E3%80%81arguments%E5%8F%AF%E4%BB%A5%E4%BF%AE%E6%94%B9%E5%85%83%E7%B4%A0)
+
+<!-- /MarkdownTOC -->
 
 
+<a id="this"></a>
 ## this
 
 解析器在调用函数每次都会向函数内部传递进一个隐含的参数，这个隐含的参数就是this，this指向的是一个对象，这个对象我们称为函数执行的 上下文对象。
@@ -89,6 +99,7 @@
 
 ES6中的箭头函数并不会使用上面四条标准的绑定规则，而是会继承外层函数调用的this绑定（无论this绑定到什么）。
 
+<a id="%E7%B1%BB%E6%95%B0%E7%BB%84-arguments"></a>
 ## 类数组 arguments
 
 > 这部分，小白可能看不懂。所以，这一段，暂时可以忽略。
@@ -122,6 +133,7 @@ arguments是一个类数组对象，它可以通过索引来操作数据，也�
 
 
 
+<a id="1%E3%80%81%E8%BF%94%E5%9B%9E%E5%87%BD%E6%95%B0%E5%AE%9E%E5%8F%82%E7%9A%84%E4%B8%AA%E6%95%B0%EF%BC%9Aargumentslength"></a>
 ### 1、返回函数**实参**的个数：arguments.length
 
 
@@ -149,6 +161,7 @@ arguments.length可以用来获取**实参的长度**。
 
 我们即使不定义形参，也可以通过arguments来使用实参（只不过比较麻烦）：arguments[0] 表示第一个实参、arguments[1] 表示第二个实参...
 
+<a id="2%E3%80%81%E8%BF%94%E5%9B%9E%E6%AD%A3%E5%9C%A8%E6%89%A7%E8%A1%8C%E7%9A%84%E5%87%BD%E6%95%B0%EF%BC%9Aargumentscallee"></a>
 ### 2、返回正在执行的函数：arguments.callee
 
 arguments里边有一个属性叫做callee，这个属性对应一个函数对象，就是当前正在指向的函数对象。
@@ -164,6 +177,7 @@ arguments里边有一个属性叫做callee，这个属性对应一个函数对�
 
 在使用函数**递归**调用时，推荐使用arguments.callee代替函数名本身。
 
+<a id="3%E3%80%81arguments%E5%8F%AF%E4%BB%A5%E4%BF%AE%E6%94%B9%E5%85%83%E7%B4%A0"></a>
 ### 3、arguments可以修改元素
 
 之所以说arguments是伪数组，是因为：**arguments可以修改元素，但不能改变数组的长短**。举例：
