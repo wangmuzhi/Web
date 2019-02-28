@@ -1,6 +1,19 @@
+<!-- MarkdownTOC -->
+
+- [前言](#%E5%89%8D%E8%A8%80)
+- [offset 家族的组成](#offset-%E5%AE%B6%E6%97%8F%E7%9A%84%E7%BB%84%E6%88%90)
+    - [1、offsetWidth 和 offsetHight](#1%E3%80%81offsetwidth-%E5%92%8C-offsethight)
+    - [2、offsetLeft 和 offsetTop](#2%E3%80%81offsetleft-%E5%92%8C-offsettop)
+    - [3、offsetParent](#3%E3%80%81offsetparent)
+    - [offsetLeft和style.left区别](#offsetleft%E5%92%8Cstyleleft%E5%8C%BA%E5%88%AB)
+- [动画的种类](#%E5%8A%A8%E7%94%BB%E7%9A%84%E7%A7%8D%E7%B1%BB)
+- [匀速动画的封装：每间隔30ms，移动盒子10px【重要】](#%E5%8C%80%E9%80%9F%E5%8A%A8%E7%94%BB%E7%9A%84%E5%B0%81%E8%A3%85%EF%BC%9A%E6%AF%8F%E9%97%B4%E9%9A%9430ms%EF%BC%8C%E7%A7%BB%E5%8A%A8%E7%9B%92%E5%AD%9010px%E3%80%90%E9%87%8D%E8%A6%81%E3%80%91)
+- [代码举例：轮播图的实现](#%E4%BB%A3%E7%A0%81%E4%B8%BE%E4%BE%8B%EF%BC%9A%E8%BD%AE%E6%92%AD%E5%9B%BE%E7%9A%84%E5%AE%9E%E7%8E%B0)
+
+<!-- /MarkdownTOC -->
 
 
-
+<a id="%E5%89%8D%E8%A8%80"></a>
 ## 前言
 
 JS动画的主要内容如下：
@@ -17,6 +30,7 @@ JS动画的主要内容如下：
 
 4、正则
 
+<a id="offset-%E5%AE%B6%E6%97%8F%E7%9A%84%E7%BB%84%E6%88%90"></a>
 ## offset 家族的组成
 
 我们知道，三大家族包括：offset/scroll/client。今天来讲一下offset，以及与其相关的匀速动画。
@@ -37,6 +51,7 @@ js中有一套方便的**获取元素尺寸**的办法就是offset家族。offse
 
 下面分别介绍。
 
+<a id="1%E3%80%81offsetwidth-%E5%92%8C-offsethight"></a>
 ### 1、offsetWidth 和 offsetHight
 
 用于检测盒子自身的**宽高+padding+border**，不包括margin。如下：
@@ -80,6 +95,7 @@ js中有一套方便的**获取元素尺寸**的办法就是offset家族。offse
 </html>
 ```
 
+<a id="2%E3%80%81offsetleft-%E5%92%8C-offsettop"></a>
 ### 2、offsetLeft 和 offsetTop
 
 返回距离上级盒子（带有定位）左边的位置；如果父级都没有定位，则以body为准。
@@ -137,6 +153,7 @@ offsetLeft： 从父亲的 padding 开始算，父亲的 border 不算。
 
 在父盒子有定位的情况下，offsetLeft == style.left(去掉px之后)。注意，后者只识别行内样式。但区别不仅仅于此，后面会讲。
 
+<a id="3%E3%80%81offsetparent"></a>
 ### 3、offsetParent
 
 检测父系盒子中带有定位的**父盒子节点**。返回结果是该对象的父级（带有定位）。
@@ -177,6 +194,7 @@ offsetLeft： 从父亲的 padding 开始算，父亲的 border 不算。
 
 ![](http://img.smyhvae.com/20180202_1725.png)
 
+<a id="offsetleft%E5%92%8Cstyleleft%E5%8C%BA%E5%88%AB"></a>
 ### offsetLeft和style.left区别
 
 （1）最大区别在于：
@@ -208,6 +226,7 @@ div.style.left = "100px";
 - offsetLeft：获取值特别方便，而且是现成的number，方便计算。它是只读的，不能赋值。
 
 
+<a id="%E5%8A%A8%E7%94%BB%E7%9A%84%E7%A7%8D%E7%B1%BB"></a>
 ## 动画的种类
 
 - 闪现（基本不用）
@@ -267,6 +286,7 @@ div.style.left = "100px";
 
 ![](http://img.smyhvae.com/20180202_1840.gif)
 
+<a id="%E5%8C%80%E9%80%9F%E5%8A%A8%E7%94%BB%E7%9A%84%E5%B0%81%E8%A3%85%EF%BC%9A%E6%AF%8F%E9%97%B4%E9%9A%9430ms%EF%BC%8C%E7%A7%BB%E5%8A%A8%E7%9B%92%E5%AD%9010px%E3%80%90%E9%87%8D%E8%A6%81%E3%80%91"></a>
 ## 匀速动画的封装：每间隔30ms，移动盒子10px【重要】
 
 
@@ -394,6 +414,7 @@ div.style.left = "100px";
     }
 ```
 
+<a id="%E4%BB%A3%E7%A0%81%E4%B8%BE%E4%BE%8B%EF%BC%9A%E8%BD%AE%E6%92%AD%E5%9B%BE%E7%9A%84%E5%AE%9E%E7%8E%B0"></a>
 ## 代码举例：轮播图的实现
 
 完整版代码如下：（注释已经比较详细）
