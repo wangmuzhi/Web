@@ -1,8 +1,22 @@
+<!-- MarkdownTOC -->
+
+- [client 家族的组成](#client-%E5%AE%B6%E6%97%8F%E7%9A%84%E7%BB%84%E6%88%90)
+    - [clientWidth 和 clientHeight](#clientwidth-%E5%92%8C-clientheight)
+    - [clientX 和 clientY](#clientx-%E5%92%8C-clienty)
+    - [clientTop 和 clientLeft](#clienttop-%E5%92%8C-clientleft)
+- [三大家族 offset/scroll/client 的区别](#%E4%B8%89%E5%A4%A7%E5%AE%B6%E6%97%8F-offsetscrollclient-%E7%9A%84%E5%8C%BA%E5%88%AB)
+    - [区别1：宽高](#%E5%8C%BA%E5%88%AB1%EF%BC%9A%E5%AE%BD%E9%AB%98)
+    - [区别2：上左](#%E5%8C%BA%E5%88%AB2%EF%BC%9A%E4%B8%8A%E5%B7%A6)
+- [函数封装：获取浏览器的宽高（可视区域）](#%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85%EF%BC%9A%E8%8E%B7%E5%8F%96%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AE%BD%E9%AB%98%EF%BC%88%E5%8F%AF%E8%A7%86%E5%8C%BA%E5%9F%9F%EF%BC%89)
+- [获取显示器的分辨率](#%E8%8E%B7%E5%8F%96%E6%98%BE%E7%A4%BA%E5%99%A8%E7%9A%84%E5%88%86%E8%BE%A8%E7%8E%87)
+
+<!-- /MarkdownTOC -->
 
 
-
+<a id="client-%E5%AE%B6%E6%97%8F%E7%9A%84%E7%BB%84%E6%88%90"></a>
 ## client 家族的组成
 
+<a id="clientwidth-%E5%92%8C-clientheight"></a>
 ### clientWidth 和 clientHeight
 
 盒子调用时：
@@ -18,6 +32,7 @@ body/html调用时：
 - clientHeight：获取网页可视区域高度。
 
 
+<a id="clientx-%E5%92%8C-clienty"></a>
 ### clientX 和 clientY
 
 event调用：
@@ -28,6 +43,7 @@ event调用：
 
 
 
+<a id="clienttop-%E5%92%8C-clientleft"></a>
 ### clientTop 和 clientLeft
 
 - clientTop：盒子的上border。
@@ -35,8 +51,10 @@ event调用：
 - clientLeft：盒子的左border。
 
 
+<a id="%E4%B8%89%E5%A4%A7%E5%AE%B6%E6%97%8F-offsetscrollclient-%E7%9A%84%E5%8C%BA%E5%88%AB"></a>
 ## 三大家族 offset/scroll/client 的区别
 
+<a id="%E5%8C%BA%E5%88%AB1%EF%BC%9A%E5%AE%BD%E9%AB%98"></a>
 ### 区别1：宽高
 
 - offsetWidth  = width  + padding + border
@@ -49,6 +67,7 @@ event调用：
 - clientHeight = height + padding
 
 
+<a id="%E5%8C%BA%E5%88%AB2%EF%BC%9A%E4%B8%8A%E5%B7%A6"></a>
 ### 区别2：上左
 
 
@@ -72,6 +91,7 @@ clientY/clientX：
 
 
 
+<a id="%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85%EF%BC%9A%E8%8E%B7%E5%8F%96%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%AE%BD%E9%AB%98%EF%BC%88%E5%8F%AF%E8%A7%86%E5%8C%BA%E5%9F%9F%EF%BC%89"></a>
 ## 函数封装：获取浏览器的宽高（可视区域）
 
 函数封装如下：
@@ -155,6 +175,7 @@ function client() {
 
 
 
+<a id="%E8%8E%B7%E5%8F%96%E6%98%BE%E7%A4%BA%E5%99%A8%E7%9A%84%E5%88%86%E8%BE%A8%E7%8E%87"></a>
 ## 获取显示器的分辨率
 
 比如，我的电脑的显示器分辨率是：1920*1080。
