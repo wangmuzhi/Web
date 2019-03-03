@@ -1,7 +1,30 @@
+<!-- MarkdownTOC -->
+
+- [缓动动画](#%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB)
+    - [三个函数](#%E4%B8%89%E4%B8%AA%E5%87%BD%E6%95%B0)
+    - [缓动动画的原理](#%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB%E7%9A%84%E5%8E%9F%E7%90%86)
+    - [缓慢动画的封装（解决四舍五入的问题）](#%E7%BC%93%E6%85%A2%E5%8A%A8%E7%94%BB%E7%9A%84%E5%B0%81%E8%A3%85%EF%BC%88%E8%A7%A3%E5%86%B3%E5%9B%9B%E8%88%8D%E4%BA%94%E5%85%A5%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%89)
+- [scroll 家族的组成](#scroll-%E5%AE%B6%E6%97%8F%E7%9A%84%E7%BB%84%E6%88%90)
+    - [1、ScrollWidth 和 scrollHeight](#1%E3%80%81scrollwidth-%E5%92%8C-scrollheight)
+    - [2、scrollTop 和 scrollLeft](#2%E3%80%81scrolltop-%E5%92%8C-scrollleft)
+    - [判断是否已经 DTD声明](#%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%B7%B2%E7%BB%8F-dtd%E5%A3%B0%E6%98%8E)
+    - [将 scrollTop 和 scrollLeft封装为 json](#%E5%B0%86-scrolltop-%E5%92%8C-scrollleft%E5%B0%81%E8%A3%85%E4%B8%BA-json)
+- [获取 html 文档的方法](#%E8%8E%B7%E5%8F%96-html-%E6%96%87%E6%A1%A3%E7%9A%84%E6%96%B9%E6%B3%95)
+- [scrollTop 举例：固定导航栏](#scrolltop-%E4%B8%BE%E4%BE%8B%EF%BC%9A%E5%9B%BA%E5%AE%9A%E5%AF%BC%E8%88%AA%E6%A0%8F)
+- [window.scrollTo\(\)方法举例：返回到顶部小火箭](#windowscrollto%E6%96%B9%E6%B3%95%E4%B8%BE%E4%BE%8B%EF%BC%9A%E8%BF%94%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8%E5%B0%8F%E7%81%AB%E7%AE%AD)
+- [window.scrollTo\(\)方法举例：楼层跳跃（暂略）](#windowscrollto%E6%96%B9%E6%B3%95%E4%B8%BE%E4%BE%8B%EF%BC%9A%E6%A5%BC%E5%B1%82%E8%B7%B3%E8%B7%83%EF%BC%88%E6%9A%82%E7%95%A5%EF%BC%89)
+- [缓动框架封装](#%E7%BC%93%E5%8A%A8%E6%A1%86%E6%9E%B6%E5%B0%81%E8%A3%85)
+    - [1、缓动框架封装：同时设置多个属性](#1%E3%80%81%E7%BC%93%E5%8A%A8%E6%A1%86%E6%9E%B6%E5%B0%81%E8%A3%85%EF%BC%9A%E5%90%8C%E6%97%B6%E8%AE%BE%E7%BD%AE%E5%A4%9A%E4%B8%AA%E5%B1%9E%E6%80%A7)
+    - [2、上方的代码改进：清除定时器](#2%E3%80%81%E4%B8%8A%E6%96%B9%E7%9A%84%E4%BB%A3%E7%A0%81%E6%94%B9%E8%BF%9B%EF%BC%9A%E6%B8%85%E9%99%A4%E5%AE%9A%E6%97%B6%E5%99%A8)
+    - [4、对 opacity和 z-index 属性进行单独改进](#4%E3%80%81%E5%AF%B9-opacity%E5%92%8C-z-index-%E5%B1%9E%E6%80%A7%E8%BF%9B%E8%A1%8C%E5%8D%95%E7%8B%AC%E6%94%B9%E8%BF%9B)
+
+<!-- /MarkdownTOC -->
 
 
+<a id="%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB"></a>
 ## 缓动动画
 
+<a id="%E4%B8%89%E4%B8%AA%E5%87%BD%E6%95%B0"></a>
 ### 三个函数
 
 缓慢动画里，我们要用到三个函数，这里先列出来：
@@ -13,6 +36,7 @@
 - Math.round();   四舍五入
 
 
+<a id="%E7%BC%93%E5%8A%A8%E5%8A%A8%E7%94%BB%E7%9A%84%E5%8E%9F%E7%90%86"></a>
 ### 缓动动画的原理
 
 缓动动画的原理就是：在移动的过程中，步长越来越小。
@@ -66,6 +90,7 @@
 ![](http://img.smyhvae.com/20180202_2046.gif)
 
 
+<a id="%E7%BC%93%E6%85%A2%E5%8A%A8%E7%94%BB%E7%9A%84%E5%B0%81%E8%A3%85%EF%BC%88%E8%A7%A3%E5%86%B3%E5%9B%9B%E8%88%8D%E4%BA%94%E5%85%A5%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%89"></a>
 ### 缓慢动画的封装（解决四舍五入的问题）
 
 我们发现一个问题，上图中的盒子最终并没有到达400px的位置，而是只到了396.04px就停住了：
@@ -156,6 +181,7 @@
 ![](http://img.smyhvae.com/20180202_2239.gif)
 
 
+<a id="scroll-%E5%AE%B6%E6%97%8F%E7%9A%84%E7%BB%84%E6%88%90"></a>
 ## scroll 家族的组成
 
 当我们用鼠标滚轮，滚动网页的时候，会触发window.onscroll()方法。效果如下：（注意看控制台的打印结果）
@@ -163,6 +189,7 @@
 
 ![](http://img.smyhvae.com/20180202_2258.gif)
 
+<a id="1%E3%80%81scrollwidth-%E5%92%8C-scrollheight"></a>
 ### 1、ScrollWidth 和 scrollHeight
 
 获取盒子的宽高。调用者为节点元素。不包括 border和margin。如下：
@@ -219,6 +246,7 @@ scrollHeight有一个特点：如果文字超出了盒子，高度为内容的�
 
 ![](http://img.smyhvae.com/20180203_1235.png)
 
+<a id="2%E3%80%81scrolltop-%E5%92%8C-scrollleft"></a>
 ### 2、scrollTop 和 scrollLeft
 
 网页被卷去的头部和左边的部分。
@@ -259,6 +287,7 @@ scrollTop 这个属性的写法要注意兼容性，如下。
     window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
 ```
 
+<a id="%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%B7%B2%E7%BB%8F-dtd%E5%A3%B0%E6%98%8E"></a>
 ### 判断是否已经 DTD声明
 
 方法如下：
@@ -268,6 +297,7 @@ scrollTop 这个属性的写法要注意兼容性，如下。
     document.compatMode === "BackCompat"   // 未声明
 ```
 
+<a id="%E5%B0%86-scrolltop-%E5%92%8C-scrollleft%E5%B0%81%E8%A3%85%E4%B8%BA-json"></a>
 ### 将 scrollTop 和 scrollLeft封装为 json
 
 
@@ -336,6 +366,7 @@ function scroll() {  // 开始封装自己的scrollTop
 }
 ```
 
+<a id="%E8%8E%B7%E5%8F%96-html-%E6%96%87%E6%A1%A3%E7%9A%84%E6%96%B9%E6%B3%95"></a>
 ## 获取 html 文档的方法
 
 获取title、body、head、html标签的方法如下：
@@ -351,6 +382,7 @@ function scroll() {  // 开始封装自己的scrollTop
 `document.documentElement`表示文档的html标签。也就是说，基本结构当中的 `html 标签`而是通过`document.documentElement`访问的，并不是通过 document.html 去访问的。
 
 
+<a id="scrolltop-%E4%B8%BE%E4%BE%8B%EF%BC%9A%E5%9B%BA%E5%AE%9A%E5%AF%BC%E8%88%AA%E6%A0%8F"></a>
 ## scrollTop 举例：固定导航栏
 
 
@@ -483,6 +515,7 @@ function scroll() {  // 开始封装自己的scrollTop
 - 2018-02-03-scrollTop固定导航栏.rar
 
 
+<a id="windowscrollto%E6%96%B9%E6%B3%95%E4%B8%BE%E4%BE%8B%EF%BC%9A%E8%BF%94%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8%E5%B0%8F%E7%81%AB%E7%AE%AD"></a>
 ##  window.scrollTo()方法举例：返回到顶部小火箭
 
 （1）index.html：
@@ -684,11 +717,14 @@ function scroll() {  // 开始封装自己的scrollTop
 
 
 
+<a id="windowscrollto%E6%96%B9%E6%B3%95%E4%B8%BE%E4%BE%8B%EF%BC%9A%E6%A5%BC%E5%B1%82%E8%B7%B3%E8%B7%83%EF%BC%88%E6%9A%82%E7%95%A5%EF%BC%89"></a>
 ##  window.scrollTo()方法举例：楼层跳跃（暂略）
 
 
+<a id="%E7%BC%93%E5%8A%A8%E6%A1%86%E6%9E%B6%E5%B0%81%E8%A3%85"></a>
 ## 缓动框架封装
 
+<a id="1%E3%80%81%E7%BC%93%E5%8A%A8%E6%A1%86%E6%9E%B6%E5%B0%81%E8%A3%85%EF%BC%9A%E5%90%8C%E6%97%B6%E8%AE%BE%E7%BD%AE%E5%A4%9A%E4%B8%AA%E5%B1%9E%E6%80%A7"></a>
 ### 1、缓动框架封装：同时设置多个属性
 
 这里我们通过`window.getComputedStyle`的方式获取属性值。
@@ -773,6 +809,7 @@ function scroll() {  // 开始封装自己的scrollTop
 ![](http://img.smyhvae.com/20180204_1440.gif)
 
 
+<a id="2%E3%80%81%E4%B8%8A%E6%96%B9%E7%9A%84%E4%BB%A3%E7%A0%81%E6%94%B9%E8%BF%9B%EF%BC%9A%E6%B8%85%E9%99%A4%E5%AE%9A%E6%97%B6%E5%99%A8"></a>
 ### 2、上方的代码改进：清除定时器
 
 上方的代码中，我们还需做一下清除定时器的判断：只有所有的参数都到达指定位置了，我们就清除定时器。
@@ -1144,6 +1181,7 @@ function scroll() {  // 开始封装自己的scrollTop
 
 
 
+<a id="4%E3%80%81%E5%AF%B9-opacity%E5%92%8C-z-index-%E5%B1%9E%E6%80%A7%E8%BF%9B%E8%A1%8C%E5%8D%95%E7%8B%AC%E6%94%B9%E8%BF%9B"></a>
 ### 4、对 opacity和 z-index 属性进行单独改进
 
 我们以上的代码中，如果要进行动画参数的设置，是直接把参数放到json里面去的。例如：
