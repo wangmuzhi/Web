@@ -1,15 +1,34 @@
+<!-- MarkdownTOC -->
 
+- [前言](#%E5%89%8D%E8%A8%80)
+- [字体的常见格式](#%E5%AD%97%E4%BD%93%E7%9A%84%E5%B8%B8%E8%A7%81%E6%A0%BC%E5%BC%8F)
+    - [TureTpe格式：\(**.ttf**\)](#turetpe%E6%A0%BC%E5%BC%8F%EF%BC%9Attf)
+    - [OpenType格式：\(**.otf**\)](#opentype%E6%A0%BC%E5%BC%8F%EF%BC%9Aotf)
+    - [Web Open Font Format格式：\(**.woff**\)](#web-open-font-format%E6%A0%BC%E5%BC%8F%EF%BC%9Awoff)
+    - [Embedded Open Type格式：\(**.eot**\)](#embedded-open-type%E6%A0%BC%E5%BC%8F%EF%BC%9Aeot)
+    - [SVG格式：\(**.svg**\)](#svg%E6%A0%BC%E5%BC%8F%EF%BC%9Asvg)
+- [WebFont 的使用步骤](#webfont-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4)
+- [字体图标（阿里的 iconfont 网站举例）](#%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87%EF%BC%88%E9%98%BF%E9%87%8C%E7%9A%84-iconfont-%E7%BD%91%E7%AB%99%E4%B8%BE%E4%BE%8B%EF%BC%89)
+- [其他相相关网站介绍](#%E5%85%B6%E4%BB%96%E7%9B%B8%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99%E4%BB%8B%E7%BB%8D)
+- [360浏览器网站案例](#360%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BD%91%E7%AB%99%E6%A1%88%E4%BE%8B)
+- [使用 Bootstrap 网站的图标字体](#%E4%BD%BF%E7%94%A8-bootstrap-%E7%BD%91%E7%AB%99%E7%9A%84%E5%9B%BE%E6%A0%87%E5%AD%97%E4%BD%93)
+
+<!-- /MarkdownTOC -->
+
+
+<a id="%E5%89%8D%E8%A8%80"></a>
 ## 前言
-
 
 开发人员可以为自已的网页指定特殊的字体（将指定字体提前下载到站点中），无需考虑用户电脑上是否安装了此特殊字体。从此，把特殊字体处理成图片的方式便成为了过去。
 
 支持程度比较好，甚至 IE 低版本的浏览器也能支持。
 
+<a id="%E5%AD%97%E4%BD%93%E7%9A%84%E5%B8%B8%E8%A7%81%E6%A0%BC%E5%BC%8F"></a>
 ## 字体的常见格式
 
 > 不同浏览器所支持的字体格式是不一样的，我们有必要了解一下字体格式的知识。
 
+<a id="turetpe%E6%A0%BC%E5%BC%8F%EF%BC%9Attf"></a>
 #### TureTpe格式：(**.ttf**)
 
 .ttf 字体是Windows和Mac的最常见的字体，是一种RAW格式。
@@ -18,6 +37,7 @@
 
 
 
+<a id="opentype%E6%A0%BC%E5%BC%8F%EF%BC%9Aotf"></a>
 #### OpenType格式：(**.otf**)
 
 .otf 字体被认为是一种原始的字体格式，其内置在TureType的基础上。
@@ -25,17 +45,20 @@
 支持这种字体的浏览器有Firefox3.5+、Chrome4.0+、Safari3.1+、Opera10.0+、iOS Mobile、Safari4.2+。
 
 
+<a id="web-open-font-format%E6%A0%BC%E5%BC%8F%EF%BC%9Awoff"></a>
 #### Web Open Font Format格式：(**.woff**)
 
 woff字体是Web字体中最佳格式，他是一个开放的TrueType/OpenType的压缩版本，同时也支持元数据包的分离。
 
 支持这种字体的浏览器有IE9+、Firefox3.5+、Chrome6+、Safari3.6+、Opera11.1+。
 
+<a id="embedded-open-type%E6%A0%BC%E5%BC%8F%EF%BC%9Aeot"></a>
 #### Embedded Open Type格式：(**.eot**)
 
 .eot字体是IE专用字体，可以从TrueType创建此格式字体，支持这种字体的浏览器有IE4+。
 
 
+<a id="svg%E6%A0%BC%E5%BC%8F%EF%BC%9Asvg"></a>
 #### SVG格式：(**.svg**)
 
 .svg字体是基于SVG字体渲染的一种格式。
@@ -54,6 +77,7 @@ woff字体是Web字体中最佳格式，他是一个开放的TrueType/OpenType�
 - <http://www.youziku.com/>
 
 
+<a id="webfont-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4"></a>
 ## WebFont 的使用步骤
 
 打开网站<http://iconfont.cn/webfont#!/webfont/index>，如下：
@@ -154,6 +178,7 @@ woff字体是Web字体中最佳格式，他是一个开放的TrueType/OpenType�
 - [2018-02-20-WebFont举例.zip](http://download.csdn.net/download/smyhvae/10253565)
 
 
+<a id="%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87%EF%BC%88%E9%98%BF%E9%87%8C%E7%9A%84-iconfont-%E7%BD%91%E7%AB%99%E4%B8%BE%E4%BE%8B%EF%BC%89"></a>
 ## 字体图标（阿里的 iconfont 网站举例）
 
 我们其实可以把图片制作成字体。常见的做法是：把网页中一些小的图标，借助工具生成一个字体包，然后就可以像使用文字一样使用图标了。这样做的优点是：
@@ -297,6 +322,7 @@ woff字体是Web字体中最佳格式，他是一个开放的TrueType/OpenType�
 
 
 
+<a id="%E5%85%B6%E4%BB%96%E7%9B%B8%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99%E4%BB%8B%E7%BB%8D"></a>
 ## 其他相相关网站介绍
 
 - Font Awesome 使用介绍：<http://fontawesome.dashgame.com/>
@@ -314,6 +340,7 @@ SVG素材：
 
 
 
+<a id="360%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BD%91%E7%AB%99%E6%A1%88%E4%BE%8B"></a>
 ## 360浏览器网站案例
 
 暂略。
@@ -325,6 +352,7 @@ SVG素材：
 - 相关说明:http://www.dowebok.com/77.html
 
 
+<a id="%E4%BD%BF%E7%94%A8-bootstrap-%E7%BD%91%E7%AB%99%E7%9A%84%E5%9B%BE%E6%A0%87%E5%AD%97%E4%BD%93"></a>
 ## 使用 Bootstrap 网站的图标字体
 
 打开如下网站：<http://www.bootcss.com/p/font-awesome/>。
