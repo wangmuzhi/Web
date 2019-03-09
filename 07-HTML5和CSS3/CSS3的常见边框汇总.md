@@ -1,12 +1,4 @@
-<!-- MarkdownTOC -->
 
-- [CSS3 常见边框汇总](#css3-%E5%B8%B8%E8%A7%81%E8%BE%B9%E6%A1%86%E6%B1%87%E6%80%BB)
-- [爱心](#%E7%88%B1%E5%BF%83)
-
-<!-- /MarkdownTOC -->
-
-
-<a id="css3-%E5%B8%B8%E8%A7%81%E8%BE%B9%E6%A1%86%E6%B1%87%E6%80%BB"></a>
 ## CSS3 常见边框汇总
 
 ```html
@@ -519,7 +511,6 @@
 ![](http://img.smyhvae.com/20180208_1730.png)
 
 
-<a id="%E7%88%B1%E5%BF%83"></a>
 ## 爱心
 
 ```html
