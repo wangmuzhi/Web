@@ -1,7 +1,29 @@
+<!-- MarkdownTOC -->
+
+- [Bootstrap 介绍](#bootstrap-%E4%BB%8B%E7%BB%8D)
+  - [官网网站](#%E5%AE%98%E7%BD%91%E7%BD%91%E7%AB%99)
+  - [Bootstrap 版本](#bootstrap-%E7%89%88%E6%9C%AC)
+  - [Bootstrap 库的下载](#bootstrap-%E5%BA%93%E7%9A%84%E4%B8%8B%E8%BD%BD)
+  - [Bootstrap 基础模板的介绍](#bootstrap-%E5%9F%BA%E7%A1%80%E6%A8%A1%E6%9D%BF%E7%9A%84%E4%BB%8B%E7%BB%8D)
+- [使用 Bootstrap 搭建项目](#%E4%BD%BF%E7%94%A8-bootstrap-%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE)
+  - [1、工程文件的目录结构](#1%E3%80%81%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)
+  - [2、下载并引入 Bootstrap 库文件](#2%E3%80%81%E4%B8%8B%E8%BD%BD%E5%B9%B6%E5%BC%95%E5%85%A5-bootstrap-%E5%BA%93%E6%96%87%E4%BB%B6)
+  - [3、字符集、Viewport设置、浏览器兼容模式](#3%E3%80%81%E5%AD%97%E7%AC%A6%E9%9B%86%E3%80%81viewport%E8%AE%BE%E7%BD%AE%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%A8%A1%E5%BC%8F)
+  - [4、favicon（站点图标）](#4%E3%80%81favicon%EF%BC%88%E7%AB%99%E7%82%B9%E5%9B%BE%E6%A0%87%EF%BC%89)
+  - [5、引入相应的第三方文件](#5%E3%80%81%E5%BC%95%E5%85%A5%E7%9B%B8%E5%BA%94%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9%E6%96%87%E4%BB%B6)
+  - [6、默认字体](#6%E3%80%81%E9%BB%98%E8%AE%A4%E5%AD%97%E4%BD%93)
+  - [7、完成页面空结构](#7%E3%80%81%E5%AE%8C%E6%88%90%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%BB%93%E6%9E%84)
+- [CSS 样式](#css-%E6%A0%B7%E5%BC%8F)
+  - [布局容器：container 类](#%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8%EF%BC%9Acontainer-%E7%B1%BB)
+  - [栅格参数](#%E6%A0%85%E6%A0%BC%E5%8F%82%E6%95%B0)
+- [组件](#%E7%BB%84%E4%BB%B6)
+- [JS 组件](#js-%E7%BB%84%E4%BB%B6)
+- [博主提供的下载链接](#%E5%8D%9A%E4%B8%BB%E6%8F%90%E4%BE%9B%E7%9A%84%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5)
+
+<!-- /MarkdownTOC -->
 
 
-
-
+<a id="bootstrap-%E4%BB%8B%E7%BB%8D"></a>
 ## Bootstrap 介绍
 
 Bootstrap 是非常流行的前端框架。特点是：灵活简洁、代码优雅、美观大方。它是由Twitter的两名工程师 Mark Otto 和 Jacob Thornton 在2011年开发的。
@@ -10,6 +32,7 @@ Bootstrap 是非常流行的前端框架。特点是：灵活简洁、代码优�
 
 PS：[Amaze UI](http://amazeui.org/) 这个框架其实跟 Bootstrap 很像。
 
+<a id="%E5%AE%98%E7%BD%91%E7%BD%91%E7%AB%99"></a>
 ### 官网网站
 
 - 官方网站：<https://getbootstrap.com/>
@@ -32,6 +55,7 @@ V4版本：
 
 - <http://snappa.io/>
 
+<a id="bootstrap-%E7%89%88%E6%9C%AC"></a>
 ### Bootstrap 版本
 
 目前市面上使用的最多的是 3.x.x 版本。各个版本的介绍：
@@ -65,6 +89,7 @@ V4版本：
 
 - stable 版：稳定版。在开源软件中，都有 stable版本，这个是开源软件的最终发行版，用户可以放心大胆地使用。
 
+<a id="bootstrap-%E5%BA%93%E7%9A%84%E4%B8%8B%E8%BD%BD"></a>
 ### Bootstrap 库的下载
 
 > 这里我们以  Bootstrap V3.3.7 为例。
@@ -84,6 +109,7 @@ PS：`dist`表示编译之后的文件，这在库文件中是很常见的。
 因为 bootstrap.js依赖jQuery，所以要先引用jquery.js 然后引用bootstrap.js。
 
 
+<a id="bootstrap-%E5%9F%BA%E7%A1%80%E6%A8%A1%E6%9D%BF%E7%9A%84%E4%BB%8B%E7%BB%8D"></a>
 ### Bootstrap 基础模板的介绍
 
 [Bootstrap](https://v3.bootcss.com/getting-started/)官网提供了基本模板，如下图所示：
@@ -184,8 +210,10 @@ PS：如果设置了不允许用户缩放，那么最小缩放和最大缩放就
 
 我们可以把上面这三个库文件拷贝到 lib 文件夹中（注意引用的路径要写正确）。
 
+<a id="%E4%BD%BF%E7%94%A8-bootstrap-%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE"></a>
 ## 使用 Bootstrap 搭建项目
 
+<a id="1%E3%80%81%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"></a>
 ### 1、工程文件的目录结构
 
 ```
@@ -199,10 +227,12 @@ PS：如果设置了不允许用户缩放，那么最小缩放和最大缩放就
   └─ /index.html ················· 入口文件
 ```
 
+<a id="2%E3%80%81%E4%B8%8B%E8%BD%BD%E5%B9%B6%E5%BC%95%E5%85%A5-bootstrap-%E5%BA%93%E6%96%87%E4%BB%B6"></a>
 ### 2、下载并引入 Bootstrap 库文件
 
 见上一段的讲解。引入之后，另外还需要引入 html5shiv、respond、jQuery 这三个库文件。
 
+<a id="3%E3%80%81%E5%AD%97%E7%AC%A6%E9%9B%86%E3%80%81viewport%E8%AE%BE%E7%BD%AE%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%A8%A1%E5%BC%8F"></a>
 ### 3、字符集、Viewport设置、浏览器兼容模式
 
 我们将 Bootstrap 的基础模板代码 copy到项目的index.html中，这其中就包括最前面的三个meta标签：
@@ -214,12 +244,14 @@ PS：如果设置了不允许用户缩放，那么最小缩放和最大缩放就
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 ```
 
+<a id="4%E3%80%81favicon%EF%BC%88%E7%AB%99%E7%82%B9%E5%9B%BE%E6%A0%87%EF%BC%89"></a>
 ### 4、favicon（站点图标）
 
 ```html
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 ```
 
+<a id="5%E3%80%81%E5%BC%95%E5%85%A5%E7%9B%B8%E5%BA%94%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9%E6%96%87%E4%BB%B6"></a>
 ### 5、引入相应的第三方文件
 
 ```html
@@ -238,6 +270,7 @@ PS：如果设置了不允许用户缩放，那么最小缩放和最大缩放就
 注意，先引入第三方的文件，再引入我们自己写的文件。
 
 
+<a id="6%E3%80%81%E9%BB%98%E8%AE%A4%E5%AD%97%E4%BD%93"></a>
 ### 6、默认字体
 
 在我们默认的样式表中将默认字体设置为：
@@ -253,6 +286,7 @@ body{
 }
 ```
 
+<a id="7%E3%80%81%E5%AE%8C%E6%88%90%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%BB%93%E6%9E%84"></a>
 ### 7、完成页面空结构
 
 > 先划分好页面中的大容器，然后在具体看每一个容器中单独的情况。
@@ -327,6 +361,7 @@ body{
 
 
 
+<a id="css-%E6%A0%B7%E5%BC%8F"></a>
 ## CSS 样式
 
 全局 CSS 样式在[官网](https://v3.bootcss.com/css/)有介绍：
@@ -337,6 +372,7 @@ body{
 
 我们选部分重要的来讲一下。
 
+<a id="%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8%EF%BC%9Acontainer-%E7%B1%BB"></a>
 ### 布局容器：container 类
 
 截图如下：
@@ -362,6 +398,7 @@ body{
 
 这个 container 类我们自己其实也可以写，通过媒体查询即可实现。
 
+<a id="%E6%A0%85%E6%A0%BC%E5%8F%82%E6%95%B0"></a>
 ### 栅格参数
 
 栅格系统最主要的操作是：利用 css 的响应式去做一套行列布局的预置样式。
@@ -372,6 +409,7 @@ body{
 
 我们尤其要记住各个屏幕的尺寸和**类前缀**。
 
+<a id="%E7%BB%84%E4%BB%B6"></a>
 ## 组件
 
 一个按钮称之为样式；两个按钮在一起，就可以称之为组件。
@@ -382,6 +420,7 @@ body{
 
 我们现在需要关注的不是组件怎么用，而是里面有哪些组件，避免**重复造轮子**：别人已经做得很好了，不需要我们再重复。
 
+<a id="js-%E7%BB%84%E4%BB%B6"></a>
 ## JS 组件
 
 JS 组件在[官网](https://v3.bootcss.com/javascript/)有介绍：
@@ -392,6 +431,7 @@ JS 组件在[官网](https://v3.bootcss.com/javascript/)有介绍：
 
 ![](http://img.smyhvae.com/20180225_1841.png)
 
+<a id="%E5%8D%9A%E4%B8%BB%E6%8F%90%E4%BE%9B%E7%9A%84%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"></a>
 ## 博主提供的下载链接
 
 空结构的工程文件的下载地址：(lib文件夹里包含了Bootstrap相关的各种库和中文文档)
