@@ -1,6 +1,47 @@
+<!-- MarkdownTOC -->
 
+- [C/S架构和B/S架构](#cs%E6%9E%B6%E6%9E%84%E5%92%8Cbs%E6%9E%B6%E6%9E%84)
+    - [C/S架构](#cs%E6%9E%B6%E6%9E%84)
+    - [B/S架构](#bs%E6%9E%B6%E6%9E%84)
+- [服务器分类](#%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%86%E7%B1%BB)
+    - [服务器类型](#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%B1%BB%E5%9E%8B)
+    - [服务器软件](#%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6)
+- [使用 WampServer 搭建 HTTP服务](#%E4%BD%BF%E7%94%A8-wampserver-%E6%90%AD%E5%BB%BA-http%E6%9C%8D%E5%8A%A1)
+    - [集成环境的分类](#%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83%E7%9A%84%E5%88%86%E7%B1%BB)
+    - [WampServer 的安装](#wampserver-%E7%9A%84%E5%AE%89%E8%A3%85)
+    - [测试访问](#%E6%B5%8B%E8%AF%95%E8%AE%BF%E9%97%AE)
+    - [配置网站根目录](#%E9%85%8D%E7%BD%AE%E7%BD%91%E7%AB%99%E6%A0%B9%E7%9B%AE%E5%BD%95)
+- [静态网站和动态网站](#%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E5%92%8C%E5%8A%A8%E6%80%81%E7%BD%91%E7%AB%99)
+- [PHP的常见语法](#php%E7%9A%84%E5%B8%B8%E8%A7%81%E8%AF%AD%E6%B3%95)
+    - [第一段 php 代码](#%E7%AC%AC%E4%B8%80%E6%AE%B5-php-%E4%BB%A3%E7%A0%81)
+    - [注释](#%E6%B3%A8%E9%87%8A)
+    - [变量](#%E5%8F%98%E9%87%8F)
+    - [数据类型](#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)
+    - [运算符](#%E8%BF%90%E7%AE%97%E7%AC%A6)
+    - [函数的定义](#%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89)
+    - [类和对象](#%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1)
+    - [内容输出](#%E5%86%85%E5%AE%B9%E8%BE%93%E5%87%BA)
+    - [循环语句](#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5)
+- [php中的header\(\)函数](#php%E4%B8%AD%E7%9A%84header%E5%87%BD%E6%95%B0)
+- [php中的 get 请求和 post 请求](#php%E4%B8%AD%E7%9A%84-get-%E8%AF%B7%E6%B1%82%E5%92%8C-post-%E8%AF%B7%E6%B1%82)
+    - [get 请求](#get-%E8%AF%B7%E6%B1%82)
+    - [post 请求](#post-%E8%AF%B7%E6%B1%82)
+- [php 中文件相关的操作](#php-%E4%B8%AD%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3%E7%9A%84%E6%93%8D%E4%BD%9C)
+    - [文件上传 `$_FILES`](#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0-%24_files)
+    - [文件保存](#%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98)
+    - [WampServer 中修改上传文件的大小](#wampserver-%E4%B8%AD%E4%BF%AE%E6%94%B9%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E7%9A%84%E5%A4%A7%E5%B0%8F)
+- [HTTP 协议](#http-%E5%8D%8F%E8%AE%AE)
+    - [请求](#%E8%AF%B7%E6%B1%82)
+    - [响应](#%E5%93%8D%E5%BA%94)
+    - [抓包工具](#%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7)
+
+<!-- /MarkdownTOC -->
+
+
+<a id="cs%E6%9E%B6%E6%9E%84%E5%92%8Cbs%E6%9E%B6%E6%9E%84"></a>
 ## C/S架构和B/S架构
 
+<a id="cs%E6%9E%B6%E6%9E%84"></a>
 ### C/S架构
 
 是Client/Server这两个单词的首字母，指的是客户端，服务器。
@@ -22,6 +63,7 @@
 
 
 
+<a id="bs%E6%9E%B6%E6%9E%84"></a>
 ### B/S架构
 
 是Browser/Server的这两个单词的首字母。指的是浏览器、服务器，是WEB兴起之后的一种架构。
@@ -41,6 +83,7 @@
 - 浏览器兼容：处理低版本的浏览器显示问题一直是前端开发人员头痛的问题之一。移动设备兼容性较好，ie6已经越来越少人用了。
 
 
+<a id="%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%86%E7%B1%BB"></a>
 ## 服务器分类
 
 项目开发时，有三套环境：
@@ -55,6 +98,7 @@
 
 三套环境意味着三个服务器。
 
+<a id="%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%B1%BB%E5%9E%8B"></a>
 ### 服务器类型
 
 
@@ -90,6 +134,7 @@
 - Windows服务器等
 
 
+<a id="%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6"></a>
 ### 服务器软件
 
 提供了某种服务的计算器，我们称之为服务器。那么这些赋予计算器各种服务功能的软件主要有哪一些呢？
@@ -105,8 +150,10 @@
 - HTTP 服务器：Apache（免费、开源）、Nginx、IIS（微软的.net服务器）、Tomcat（java编程的服务器）、NodeJS 等。
 
 
+<a id="%E4%BD%BF%E7%94%A8-wampserver-%E6%90%AD%E5%BB%BA-http%E6%9C%8D%E5%8A%A1"></a>
 ## 使用 WampServer 搭建 HTTP服务
 
+<a id="%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83%E7%9A%84%E5%88%86%E7%B1%BB"></a>
 ### 集成环境的分类
 
 - AMP：Apache + Mysql + PHP。
@@ -117,6 +164,7 @@
 
 在windows平台下，如果想要一步到位安装好这些软件，可是使用软件 **WampServer**。
 
+<a id="wampserver-%E7%9A%84%E5%AE%89%E8%A3%85"></a>
 ### WampServer 的安装
 
 去 WampServer 的[官网](http://www.wampserver.com/en/)下载软件。
@@ -126,6 +174,7 @@
 
 安装完成后进行安装。
 
+<a id="%E6%B5%8B%E8%AF%95%E8%AE%BF%E9%97%AE"></a>
 ### 测试访问
 
 打开浏览器输入 `127.0.0.1` 查看显示的内容，如果是第一次安装，默认显示的应该是如下图片：
@@ -152,6 +201,7 @@
 保存，然后重启 wamp 即可。
 
 
+<a id="%E9%85%8D%E7%BD%AE%E7%BD%91%E7%AB%99%E6%A0%B9%E7%9B%AE%E5%BD%95"></a>
 ### 配置网站根目录
 
 网站的根目录默认是在`D:\wamp\www`。如果想修改这个根目录，可以这样改：
@@ -160,6 +210,7 @@
 
 
 
+<a id="%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E5%92%8C%E5%8A%A8%E6%80%81%E7%BD%91%E7%AB%99"></a>
 ## 静态网站和动态网站
 
 静态网站：
@@ -185,6 +236,7 @@
 php 之所以被称为最好的语言，是因为：基本上，我们能够想到的功能，它都帮助我们封装成了方法。十分方便。
 
 
+<a id="php%E7%9A%84%E5%B8%B8%E8%A7%81%E8%AF%AD%E6%B3%95"></a>
 ## PHP的常见语法
 
 **PHP代码执行方式**：
@@ -195,6 +247,7 @@ php 之所以被称为最好的语言，是因为：基本上，我们能够想�
 
 这里只列举常用的PHP语法，更为详细的语法教程可以查阅 [api 文档](http://www.w3school.com.cn/php/index.asp)。
 
+<a id="%E7%AC%AC%E4%B8%80%E6%AE%B5-php-%E4%BB%A3%E7%A0%81"></a>
 ### 第一段 php 代码
 
 将 WampServer 跑起来，在D:\wamp\www下新建一个`1.php`文件，代码如下：
@@ -217,6 +270,7 @@ php 之所以被称为最好的语言，是因为：基本上，我们能够想�
 
 上方代码中，注意php语言的格式，第一行和第三行的格式中，没有空格。代码的编写位置在`<?php 代码写在这里?>`。
 
+<a id="%E6%B3%A8%E9%87%8A"></a>
 ### 注释
 
 php 注释的写法跟 js 一致。
@@ -231,6 +285,7 @@ php 注释的写法跟 js 一致。
 ```
 
 
+<a id="%E5%8F%98%E9%87%8F"></a>
 ### 变量
 
 - 变量以`$`符号开头，其后是变量的名称。大小写敏感。
@@ -244,6 +299,7 @@ php 注释的写法跟 js 一致。
 	$_abc;
 ```
 
+<a id="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"></a>
 ### 数据类型
 
 PHP支持的数据类型包括：
@@ -311,6 +367,7 @@ PHP支持的数据类型包括：
 上方代码中注意，php 中字符串拼接的方式是 `.`。要注意哦。
 
 
+<a id="%E8%BF%90%E7%AE%97%E7%AC%A6"></a>
 ### 运算符
 
 PHP 中的运算符跟 JavaScript 中的基本一致，用法也基本一致。
@@ -334,6 +391,7 @@ PHP 中的运算符跟 JavaScript 中的基本一致，用法也基本一致。
 ?>
 ```
 
+<a id="%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"></a>
 ### 函数的定义
 
 语法格式：
@@ -375,6 +433,7 @@ PHP 中的运算符跟 JavaScript 中的基本一致，用法也基本一致。
 	sum(1,2);// 返回值为1+2 = 3
 ```
 
+<a id="%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1"></a>
 ### 类和对象
 
 PHP中允许使用对象这种**自定义**的数据类型。必须先声明，实例化之后才能够使用。
@@ -420,6 +479,7 @@ PHP中允许使用对象这种**自定义**的数据类型。必须先声明，�
 
 
 
+<a id="%E5%86%85%E5%AE%B9%E8%BE%93%E5%87%BA"></a>
 ### 内容输出
 
 - `echo`：输出字符串。
@@ -453,6 +513,7 @@ PHP中允许使用对象这种**自定义**的数据类型。必须先声明，�
 
 ```
 
+<a id="%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"></a>
 ### 循环语句
 
 这里只列举了`foreach`、`for`循环。
@@ -492,6 +553,7 @@ foreach 循环：
 ```
 
 
+<a id="php%E4%B8%AD%E7%9A%84header%E5%87%BD%E6%95%B0"></a>
 ## php中的header()函数
 
 浏览器访问http服务器，接收到响应时，会根据响应**报文头**的内容进行一些具体的操作。在php中，我们可以根据 **header** 来设置这些内容。
@@ -531,8 +593,10 @@ foreach 循环：
 ```
 
 
+<a id="php%E4%B8%AD%E7%9A%84-get-%E8%AF%B7%E6%B1%82%E5%92%8C-post-%E8%AF%B7%E6%B1%82"></a>
 ## php中的 get 请求和 post 请求
 
+<a id="get-%E8%AF%B7%E6%B1%82"></a>
 ### get 请求
 
 可以通过`$_GET`对象来获取。
@@ -584,6 +648,7 @@ foreach 循环：
 
 ![](http://img.smyhvae.com/20180228_1140.gif)
 
+<a id="post-%E8%AF%B7%E6%B1%82"></a>
 ### post 请求
 
 可以通过`$_POST`对象来获取。
@@ -649,8 +714,10 @@ foreach 循环：
 		?></li>
 ```
 
+<a id="php-%E4%B8%AD%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3%E7%9A%84%E6%93%8D%E4%BD%9C"></a>
 ## php 中文件相关的操作
 
+<a id="%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0-%24_files"></a>
 ### 文件上传 `$_FILES`
 
 上传文件时，需要在html代码中进行如下设置：
@@ -700,6 +767,7 @@ foreach 循环：
 	Array ( [upFile] => Array ( [name] => yangyang.jpg [type] => image/jpeg [tmp_name] => D:\wamp\tmp\phpCC56.tmp [error] => 0 [size] => 18145 ) )
 ```
 
+<a id="%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98"></a>
 ### 文件保存
 
 我们尝试一下，把上面的例子中的`临时目录`下面的文件保存起来。这里需要用到 php 里的 `move_uploaded_file()`函数。[#](http://www.w3school.com.cn/php/func_filesystem_move_uploaded_file.asp)
@@ -729,6 +797,7 @@ foreach 循环：
 暂略。
 
 
+<a id="wampserver-%E4%B8%AD%E4%BF%AE%E6%94%B9%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E7%9A%84%E5%A4%A7%E5%B0%8F"></a>
 ### WampServer 中修改上传文件的大小
 
 （1）打开 WampServer的文件`php.ini`：
@@ -759,8 +828,10 @@ foreach 循环：
 
 
 
+<a id="http-%E5%8D%8F%E8%AE%AE"></a>
 ## HTTP 协议
 
+<a id="%E8%AF%B7%E6%B1%82"></a>
 ### 请求
 
 客户端发出的请求，主要由三个组成部分：请求行、请求头、请求主体。如下图所示：
@@ -817,6 +888,7 @@ Referer：包含一个URL，用户从该URL代表的页面出发访问当前请�
 
 需要注意的是，如果是往服务器提交数据，需要在请求头中设置`Content-Type: application/x-www-form-urlencoded`(在ajax中需要手动设置)。
 
+<a id="%E5%93%8D%E5%BA%94"></a>
 ### 响应
 
 响应报文是服务器返回给客户端的。组成部分有响应行、响应头、响应主体。
@@ -873,6 +945,7 @@ Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1
 
 如果请求的是HTML页面，那么返回的就是HTML代码。如果是JS就是JS代码。
 
+<a id="%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7"></a>
 ### 抓包工具
 
 常见的抓包工具有：Fiddler、Charles。
