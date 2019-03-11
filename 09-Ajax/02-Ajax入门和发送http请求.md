@@ -1,7 +1,36 @@
+<!-- MarkdownTOC -->
+
+- [同步和异步](#%E5%90%8C%E6%AD%A5%E5%92%8C%E5%BC%82%E6%AD%A5)
+    - [同步和异步的概念](#%E5%90%8C%E6%AD%A5%E5%92%8C%E5%BC%82%E6%AD%A5%E7%9A%84%E6%A6%82%E5%BF%B5)
+    - [异步更新网站](#%E5%BC%82%E6%AD%A5%E6%9B%B4%E6%96%B0%E7%BD%91%E7%AB%99)
+- [Ajax](#ajax)
+    - [Ajax 的概念](#ajax-%E7%9A%84%E6%A6%82%E5%BF%B5)
+    - [发送 Ajax 请求的五个步骤](#%E5%8F%91%E9%80%81-ajax-%E8%AF%B7%E6%B1%82%E7%9A%84%E4%BA%94%E4%B8%AA%E6%AD%A5%E9%AA%A4)
+    - [Ajax 请求：get 请求举例](#ajax-%E8%AF%B7%E6%B1%82%EF%BC%9Aget-%E8%AF%B7%E6%B1%82%E4%B8%BE%E4%BE%8B)
+    - [Ajax 请求：post 请求举例](#ajax-%E8%AF%B7%E6%B1%82%EF%BC%9Apost-%E8%AF%B7%E6%B1%82%E4%B8%BE%E4%BE%8B)
+- [XMLHttpRequest 对象详解](#xmlhttprequest-%E5%AF%B9%E8%B1%A1%E8%AF%A6%E8%A7%A3)
+    - [发送请求](#%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82)
+    - [POST请求时注意](#post%E8%AF%B7%E6%B1%82%E6%97%B6%E6%B3%A8%E6%84%8F)
+    - [onreadystatechange 事件](#onreadystatechange-%E4%BA%8B%E4%BB%B6)
+    - [服务器响应的内容](#%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%93%8D%E5%BA%94%E7%9A%84%E5%86%85%E5%AE%B9)
+- [Ajax 传输 XML](#ajax-%E4%BC%A0%E8%BE%93-xml)
+    - [XML 语法](#xml-%E8%AF%AD%E6%B3%95)
+    - [XML 解析](#xml-%E8%A7%A3%E6%9E%90)
+    - [ajax 请求解析xml（举例）](#ajax-%E8%AF%B7%E6%B1%82%E8%A7%A3%E6%9E%90xml%EF%BC%88%E4%B8%BE%E4%BE%8B%EF%BC%89)
+- [Ajax 传输 JSON](#ajax-%E4%BC%A0%E8%BE%93-json)
+    - [JSON 的语法](#json-%E7%9A%84%E8%AF%AD%E6%B3%95)
+    - [JavaScript中：json 字符串  js 对象](#javascript%E4%B8%AD%EF%BC%9Ajson-%E5%AD%97%E7%AC%A6%E4%B8%B2-js-%E5%AF%B9%E8%B1%A1)
+    - [PHP中：json 字符串  js 对象](#php%E4%B8%AD%EF%BC%9Ajson-%E5%AD%97%E7%AC%A6%E4%B8%B2-js-%E5%AF%B9%E8%B1%A1)
+    - [ajax 请求解析 json（举例）](#ajax-%E8%AF%B7%E6%B1%82%E8%A7%A3%E6%9E%90-json%EF%BC%88%E4%B8%BE%E4%BE%8B%EF%BC%89)
+- [jQuery 中的 Ajax](#jquery-%E4%B8%AD%E7%9A%84-ajax)
+
+<!-- /MarkdownTOC -->
 
 
+<a id="%E5%90%8C%E6%AD%A5%E5%92%8C%E5%BC%82%E6%AD%A5"></a>
 ## 同步和异步
 
+<a id="%E5%90%8C%E6%AD%A5%E5%92%8C%E5%BC%82%E6%AD%A5%E7%9A%84%E6%A6%82%E5%BF%B5"></a>
 ### 同步和异步的概念
 
 
@@ -15,6 +44,7 @@
 
 - 异步：在排队的时候，可以玩手机。
 
+<a id="%E5%BC%82%E6%AD%A5%E6%9B%B4%E6%96%B0%E7%BD%91%E7%AB%99"></a>
 ### 异步更新网站
 
 我们在访问一个普通的网站时，当浏览器加载完`HTML、CSS、JS`以后，网站的内容就固定了。如果想让网站内容发生更改，就必须**刷新**页面才能够看到更新的内容。
@@ -26,8 +56,10 @@
 web前端里的异步更新，就要用到 Ajax。
 
 
+<a id="ajax"></a>
 ## Ajax
 
+<a id="ajax-%E7%9A%84%E6%A6%82%E5%BF%B5"></a>
 ### Ajax 的概念
 
 在浏览器中，我们可以在不刷新页面的情况下，通过ajax的方式去获取一些新的内容。
@@ -35,6 +67,7 @@ web前端里的异步更新，就要用到 Ajax。
 Ajax：Asynchronous Javascript And XML（异步 JavaScript 和 XML）。它并不是凭空出现的新技术，而是对于现有技术的结合。Ajax 的核心是 js 对象：**XMLHttpRequest**。
 
 
+<a id="%E5%8F%91%E9%80%81-ajax-%E8%AF%B7%E6%B1%82%E7%9A%84%E4%BA%94%E4%B8%AA%E6%AD%A5%E9%AA%A4"></a>
 ### 发送 Ajax 请求的五个步骤
 
 > 其实也就是 使用 XMLHttpRequest 对象的五个步骤。
@@ -61,6 +94,7 @@ Ajax：Asynchronous Javascript And XML（异步 JavaScript 和 XML）。它并�
 
 （5）获取返回的数据。
 
+<a id="ajax-%E8%AF%B7%E6%B1%82%EF%BC%9Aget-%E8%AF%B7%E6%B1%82%E4%B8%BE%E4%BE%8B"></a>
 ###  Ajax 请求：get 请求举例
 
 （1）index.html：
@@ -124,6 +158,7 @@ Ajax：Asynchronous Javascript And XML（异步 JavaScript 和 XML）。它并�
 
 ![](http://img.smyhvae.com/20180228_1605.gif)
 
+<a id="ajax-%E8%AF%B7%E6%B1%82%EF%BC%9Apost-%E8%AF%B7%E6%B1%82%E4%B8%BE%E4%BE%8B"></a>
 ### Ajax 请求：post 请求举例
 
 index.html：
@@ -164,10 +199,12 @@ index.html：
 </html>
 ```
 
+<a id="xmlhttprequest-%E5%AF%B9%E8%B1%A1%E8%AF%A6%E8%A7%A3"></a>
 ## XMLHttpRequest 对象详解
 
 我们在上一段讲解了使用 XMLHttpRequest 对象的五个步骤。本段，我们讲一下注意事项。
 
+<a id="%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82"></a>
 ### 发送请求
 
 发送请求的方法：
@@ -190,6 +227,7 @@ index.html：
 	send(string);
 ```
 
+<a id="post%E8%AF%B7%E6%B1%82%E6%97%B6%E6%B3%A8%E6%84%8F"></a>
 ### POST请求时注意
 
 如果想让 像form 表单提交数据那样使用POST请求，就需要使用 XMLHttpRequest 对象的 setRequestHeader()方法 来添加 HTTP 头。然后在 send() 方法中添加想要发送的数据：
@@ -202,6 +240,7 @@ index.html：
 	xmlhttp.send("name=smyhvae&age=27");
 ```
 
+<a id="onreadystatechange-%E4%BA%8B%E4%BB%B6"></a>
 ### onreadystatechange 事件
 
 注册 onreadystatechange 事件后，每当 readyState 属性改变时，就会调用 onreadystatechange 函数。
@@ -226,6 +265,7 @@ status：
 
 在 onreadystatechange 事件中，**当 readyState 等于 4，且状态码为200时，表示响应已就绪**。
 
+<a id="%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%93%8D%E5%BA%94%E7%9A%84%E5%86%85%E5%AE%B9"></a>
 ### 服务器响应的内容
 
 - responseText：获得字符串形式的响应数据。
@@ -234,8 +274,10 @@ status：
 
 如果响应的是普通字符串，就使用responseText；如果响应的是XML，使用responseXML。
 
+<a id="ajax-%E4%BC%A0%E8%BE%93-xml"></a>
 ## Ajax 传输 XML
 
+<a id="xml-%E8%AF%AD%E6%B3%95"></a>
 ### XML 语法
 
 XML（Extensible Markup Language）：可扩展标记语言。详细语法可以查看：[#](http://www.w3school.com.cn/xml/index.asp)。
@@ -271,6 +313,7 @@ XML中必须要有一个根节点，所有的子节点都放置在根节点下�
 </root1>
 ```
 
+<a id="xml-%E8%A7%A3%E6%9E%90"></a>
 ### XML 解析
 
 因为 XML 就是标签，所以我们可以直接用**解析Dom元素**的方法解析 XML。
@@ -309,6 +352,7 @@ XML中必须要有一个根节点，所有的子节点都放置在根节点下�
 
 ```
 
+<a id="ajax-%E8%AF%B7%E6%B1%82%E8%A7%A3%E6%9E%90xml%EF%BC%88%E4%B8%BE%E4%BE%8B%EF%BC%89"></a>
 ### ajax 请求解析xml（举例）
 
 （1）get_xml.php：（里面包含了xml文件）
@@ -370,8 +414,10 @@ XML中必须要有一个根节点，所有的子节点都放置在根节点下�
 </script>
 ```
 
+<a id="ajax-%E4%BC%A0%E8%BE%93-json"></a>
 ## Ajax 传输 JSON
 
+<a id="json-%E7%9A%84%E8%AF%AD%E6%B3%95"></a>
 ### JSON 的语法
 
 JSON(JavaScript Object Notation)：是ECMAScript的子集。作用是进行数据的交换。语法更为简洁，网络传输、机器解析都更为迅速。
@@ -425,6 +471,7 @@ JSON(JavaScript Object Notation)：是ECMAScript的子集。作用是进行数�
 ]
 ```
 
+<a id="javascript%E4%B8%AD%EF%BC%9Ajson-%E5%AD%97%E7%AC%A6%E4%B8%B2-js-%E5%AF%B9%E8%B1%A1"></a>
 ### JavaScript中：json 字符串 <--> js 对象
 
 基本上，所有的语言都有**将 json 字符串转化为该语言对象**的语法。
@@ -453,6 +500,7 @@ JSON(JavaScript Object Notation)：是ECMAScript的子集。作用是进行数�
 	var jsonStr = JSON.stringify(Obj);
 ```
 
+<a id="php%E4%B8%AD%EF%BC%9Ajson-%E5%AD%97%E7%AC%A6%E4%B8%B2-js-%E5%AF%B9%E8%B1%A1"></a>
 ### PHP中：json 字符串 <--> js 对象
 
 - **json_decode()**方法：将`json`字符串转化为变量。
@@ -485,6 +533,7 @@ JSON(JavaScript Object Notation)：是ECMAScript的子集。作用是进行数�
 
 ```
 
+<a id="ajax-%E8%AF%B7%E6%B1%82%E8%A7%A3%E6%9E%90-json%EF%BC%88%E4%B8%BE%E4%BE%8B%EF%BC%89"></a>
 ### ajax 请求解析 json（举例）
 
 （1）Person.json:
@@ -567,6 +616,7 @@ JSON(JavaScript Object Notation)：是ECMAScript的子集。作用是进行数�
 
 
 
+<a id="jquery-%E4%B8%AD%E7%9A%84-ajax"></a>
 ## jQuery 中的 Ajax
 
 
