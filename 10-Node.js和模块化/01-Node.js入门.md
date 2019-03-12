@@ -1,8 +1,41 @@
+<!-- MarkdownTOC -->
+
+- [Node.js的介绍](#nodejs%E7%9A%84%E4%BB%8B%E7%BB%8D)
+    - [引擎](#%E5%BC%95%E6%93%8E)
+    - [什么是 Node.js](#%E4%BB%80%E4%B9%88%E6%98%AF-nodejs)
+    - [Node 的历史](#node-%E7%9A%84%E5%8E%86%E5%8F%B2)
+    - [国内外的应用情况](#%E5%9B%BD%E5%86%85%E5%A4%96%E7%9A%84%E5%BA%94%E7%94%A8%E6%83%85%E5%86%B5)
+    - [Node.js的主要应用领域](#nodejs%E7%9A%84%E4%B8%BB%E8%A6%81%E5%BA%94%E7%94%A8%E9%A2%86%E5%9F%9F)
+    - [知名度较高的Node.js开源项目](#%E7%9F%A5%E5%90%8D%E5%BA%A6%E8%BE%83%E9%AB%98%E7%9A%84nodejs%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE)
+- [Node.js的特点](#nodejs%E7%9A%84%E7%89%B9%E7%82%B9)
+    - [单线程](#%E5%8D%95%E7%BA%BF%E7%A8%8B)
+- [Node.js 的环境配置](#nodejs-%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE)
+    - [Node.js 安装包（不推荐）](#nodejs-%E5%AE%89%E8%A3%85%E5%8C%85%EF%BC%88%E4%B8%8D%E6%8E%A8%E8%8D%90%EF%BC%89)
+    - [通过 NVM 安装Node.js（推荐）](#%E9%80%9A%E8%BF%87-nvm-%E5%AE%89%E8%A3%85nodejs%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89)
+    - [NVM 的常用命令](#nvm-%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4)
+    - [Node 的常用命令](#node-%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4)
+- [包和 NPM](#%E5%8C%85%E5%92%8C-npm)
+    - [什么是包](#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8C%85)
+    - [包的加载机制](#%E5%8C%85%E7%9A%84%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)
+    - [NPM的概念](#npm%E7%9A%84%E6%A6%82%E5%BF%B5)
+    - [NPM 的安装（不需要单独安装）](#npm-%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E4%B8%8D%E9%9C%80%E8%A6%81%E5%8D%95%E7%8B%AC%E5%AE%89%E8%A3%85%EF%BC%89)
+    - [配置 NPM 的全局目录（暂略）](#%E9%85%8D%E7%BD%AE-npm-%E7%9A%84%E5%85%A8%E5%B1%80%E7%9B%AE%E5%BD%95%EF%BC%88%E6%9A%82%E7%95%A5%EF%BC%89)
+    - [NPM的常用命令](#npm%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4)
+- [NRM的安装\(Win 和 Mac 通用\)](#nrm%E7%9A%84%E5%AE%89%E8%A3%85win-%E5%92%8C-mac-%E9%80%9A%E7%94%A8)
+- [安装cnpm](#%E5%AE%89%E8%A3%85cnpm)
+- [Node 的使用](#node-%E7%9A%84%E4%BD%BF%E7%94%A8)
+- [Mac 下的环境安装](#mac-%E4%B8%8B%E7%9A%84%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85)
+    - [Mac 下安装 NVM](#mac-%E4%B8%8B%E5%AE%89%E8%A3%85-nvm)
+    - [Mac 下安装 Node（通过nvm安装）](#mac-%E4%B8%8B%E5%AE%89%E8%A3%85-node%EF%BC%88%E9%80%9A%E8%BF%87nvm%E5%AE%89%E8%A3%85%EF%BC%89)
+
+<!-- /MarkdownTOC -->
 
 
+<a id="nodejs%E7%9A%84%E4%BB%8B%E7%BB%8D"></a>
 ## Node.js的介绍
 
 
+<a id="%E5%BC%95%E6%93%8E"></a>
 ### 引擎
 
 **引擎的特性**：
@@ -27,6 +60,7 @@ JS的内核即**引擎**。因为引擎有以下特性：
 
 备注：Node是用V8引擎去解析 js，此时，我们不用去考虑浏览器的兼容性问题。
 
+<a id="%E4%BB%80%E4%B9%88%E6%98%AF-nodejs"></a>
 ### 什么是 Node.js
 
 **1、官方解释：**
@@ -62,6 +96,7 @@ Node.js 是一个基于 **Chrome V8** 引擎的 JavaScript 运行环境。 Node.
 ），Node.js跳过了Apache、Naginx、IIS等HTTP服务器，它自己不用建设在任何服务器软件之上。Node.js的许多设计理念与经典架构（LAMP = Linux + Apache + MySQL + PHP）有着很大的不同，可以提供强大的伸缩能力。Node.js没有web容器。
 
 
+<a id="node-%E7%9A%84%E5%8E%86%E5%8F%B2"></a>
 ### Node 的历史
 
 - 2008年左右，随着 AJAX 的逐渐普及，Web 开发逐渐走向复杂化，系统化；
@@ -78,6 +113,7 @@ Node.js 是一个基于 **Chrome V8** 引擎的 JavaScript 运行环境。 Node.
 
 注意：是 Node 选择了 JavaScript，不是 JavaScript 发展出来了一个 Node。
 
+<a id="%E5%9B%BD%E5%86%85%E5%A4%96%E7%9A%84%E5%BA%94%E7%94%A8%E6%83%85%E5%86%B5"></a>
 ### 国内外的应用情况
 
 以下几个项目都用到了 Node：
@@ -104,6 +140,7 @@ Node.js 是一个基于 **Chrome V8** 引擎的 JavaScript 运行环境。 Node.
 
 
 
+<a id="nodejs%E7%9A%84%E4%B8%BB%E8%A6%81%E5%BA%94%E7%94%A8%E9%A2%86%E5%9F%9F"></a>
 ### Node.js的主要应用领域
 
 - RESTFul API
@@ -116,6 +153,7 @@ Node.js 是一个基于 **Chrome V8** 引擎的 JavaScript 运行环境。 Node.
 
 
 
+<a id="%E7%9F%A5%E5%90%8D%E5%BA%A6%E8%BE%83%E9%AB%98%E7%9A%84nodejs%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE"></a>
 ### 知名度较高的Node.js开源项目
 
 ![](http://img.smyhvae.com/20180301_2009.png)
@@ -135,8 +173,10 @@ Node.js 是一个基于 **Chrome V8** 引擎的 JavaScript 运行环境。 Node.
 - mocha：功能强大的 node.js 测试框架。
 
 
+<a id="nodejs%E7%9A%84%E7%89%B9%E7%82%B9"></a>
 ## Node.js的特点
 
+<a id="%E5%8D%95%E7%BA%BF%E7%A8%8B"></a>
 ### 单线程
 
 
@@ -145,8 +185,10 @@ Node.js 是一个基于 **Chrome V8** 引擎的 JavaScript 运行环境。 Node.
 
 
 
+<a id="nodejs-%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"></a>
 ## Node.js 的环境配置
 
+<a id="nodejs-%E5%AE%89%E8%A3%85%E5%8C%85%EF%BC%88%E4%B8%8D%E6%8E%A8%E8%8D%90%EF%BC%89"></a>
 ### Node.js 安装包（不推荐）
 
 去 Node.js 的[官网](https://nodejs.org/en/)下载安装包：
@@ -172,6 +214,7 @@ Node.js 是一个基于 **Chrome V8** 引擎的 JavaScript 运行环境。 Node.
 因此，我们暂时先不用安装 Node.js，稍后用 NVM 的方式来安装 Node.js。
 
 
+<a id="%E9%80%9A%E8%BF%87-nvm-%E5%AE%89%E8%A3%85nodejs%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"></a>
 ### 通过 NVM 安装Node.js（推荐）
 
 **NVM**：node.js version manager，用来管理 node 的版本。安装的步骤如下。
@@ -232,6 +275,7 @@ proxy
 
 如果 node 安装失败，可以参考上面这个链接。
 
+<a id="nvm-%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"></a>
 ### NVM 的常用命令
 
 
@@ -272,6 +316,7 @@ nvm uninstall 版本号
 nvm use 版本号 [arch]
 ```
 
+<a id="node-%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"></a>
 ### Node 的常用命令
 
 查看 node 的版本：
@@ -321,8 +366,10 @@ REPL 的全称：Read、Eval、 Print、Loop。类似于浏览器的控制台。
 
 
 
+<a id="%E5%8C%85%E5%92%8C-npm"></a>
 ## 包和 NPM
 
+<a id="%E4%BB%80%E4%B9%88%E6%98%AF%E5%8C%85"></a>
 ### 什么是包
 
 
@@ -331,6 +378,7 @@ REPL 的全称：Read、Eval、 Print、Loop。类似于浏览器的控制台。
 
 Node 本身并没有太多的功能性 API，所以市面上涌现出大量的第三方人员开发出来的 Package。
 
+<a id="%E5%8C%85%E7%9A%84%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6"></a>
 ### 包的加载机制
 
 如果 Node中自带的包和第三方的包名冲突了，该怎么处理呢？原则是：
@@ -349,6 +397,7 @@ requiere(`fs`)
 那加载的肯定是系统的包。所以，我们尽量不要创建一些和现有的包重名的包。
 
 
+<a id="npm%E7%9A%84%E6%A6%82%E5%BF%B5"></a>
 ### NPM的概念
 
 >包的生态圈一旦繁荣起来，就必须有工具去来管理这些包。NPM 应运而生。
@@ -361,6 +410,7 @@ requiere(`fs`)
 
 - 另一层含义是 Node 默认的模块管理器，是一个命令行下的软件，用来安装和管理 Node 模块。
 
+<a id="npm-%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E4%B8%8D%E9%9C%80%E8%A6%81%E5%8D%95%E7%8B%AC%E5%AE%89%E8%A3%85%EF%BC%89"></a>
 ### NPM 的安装（不需要单独安装）
 
 NPM 不需要单独安装。默认在安装 Node 的时候，会连带一起安装 NPM：
@@ -388,6 +438,7 @@ $ npm install npm -g
 ```
 
 
+<a id="%E9%85%8D%E7%BD%AE-npm-%E7%9A%84%E5%85%A8%E5%B1%80%E7%9B%AE%E5%BD%95%EF%BC%88%E6%9A%82%E7%95%A5%EF%BC%89"></a>
 ### 配置 NPM 的全局目录（暂略）
 
 NPM 默认安装到当前正在使用 Node 版本所在目录下。我们建议重新配置 NPM 的全局目录。
@@ -397,6 +448,7 @@ NPM 默认安装到当前正在使用 Node 版本所在目录下。我们建议�
 ![](http://img.smyhvae.com/20180302_1210.png)
 
 
+<a id="npm%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"></a>
 ### NPM的常用命令
 
 - npm init --yes
@@ -414,6 +466,7 @@ NPM 默认安装到当前正在使用 Node 版本所在目录下。我们建议�
 - npm run [script]
 
 
+<a id="nrm%E7%9A%84%E5%AE%89%E8%A3%85win-%E5%92%8C-mac-%E9%80%9A%E7%94%A8"></a>
 ## NRM的安装(Win 和 Mac 通用)
 
 由于 NPM 的资源都在国外，有时候会被墙，导致无法下载或者很慢。此时可以用到NRM。
@@ -450,6 +503,7 @@ nrm use taobao  // 使用淘宝的镜像
 推荐的国内加速镜像淘宝：<https://npm.taobao.org/>
 
 
+<a id="%E5%AE%89%E8%A3%85cnpm"></a>
 ## 安装cnpm
 
 - 项目地址：<https://npm.taobao.org/>
@@ -475,6 +529,7 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 
 
+<a id="node-%E7%9A%84%E4%BD%BF%E7%94%A8"></a>
 ## Node 的使用
 
 我们可以输入`node`命令，然后在里面写 js 的代码，也可以 通过 node 运行 js 文件。比如，编写好一个 js文件`01.js`，然后在命令行输入：
@@ -486,9 +541,11 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 就可以执行  js 程序。
 
 
+<a id="mac-%E4%B8%8B%E7%9A%84%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85"></a>
 ## Mac 下的环境安装
 
 
+<a id="mac-%E4%B8%8B%E5%AE%89%E8%A3%85-nvm"></a>
 ### Mac 下安装 NVM
 
 （1）打开 终端.app，输入：
@@ -540,6 +597,7 @@ PS：NVM 现在已经不支持 Homebrew 的方式来安装了。
 参考链接：<https://www.jianshu.com/p/a3f8778bc0a1>
 
 
+<a id="mac-%E4%B8%8B%E5%AE%89%E8%A3%85-node%EF%BC%88%E9%80%9A%E8%BF%87nvm%E5%AE%89%E8%A3%85%EF%BC%89"></a>
 ### Mac 下安装 Node（通过nvm安装）
 
 和Windows下一样，也是执行如下命令：
