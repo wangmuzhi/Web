@@ -285,8 +285,3 @@ import $ from 'jQuery';
 然后我们就可以通过`$`这个符号去写jQuery的代码了。
 
 
-
-
-
-
-
