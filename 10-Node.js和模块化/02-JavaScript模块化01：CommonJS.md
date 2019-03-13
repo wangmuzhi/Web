@@ -1,5 +1,33 @@
+<!-- MarkdownTOC -->
+
+- [前言](#%E5%89%8D%E8%A8%80)
+- [模块化的理解](#%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E7%90%86%E8%A7%A3)
+  - [什么是模块化](#%E4%BB%80%E4%B9%88%E6%98%AF%E6%A8%A1%E5%9D%97%E5%8C%96)
+  - [模块化的好处](#%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E5%A5%BD%E5%A4%84)
+- [模块化规范](#%E6%A8%A1%E5%9D%97%E5%8C%96%E8%A7%84%E8%8C%83)
+  - [模块化规范的引入](#%E6%A8%A1%E5%9D%97%E5%8C%96%E8%A7%84%E8%8C%83%E7%9A%84%E5%BC%95%E5%85%A5)
+  - [模块化的概念解读](#%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E6%A6%82%E5%BF%B5%E8%A7%A3%E8%AF%BB)
+  - [模块化规范](#%E6%A8%A1%E5%9D%97%E5%8C%96%E8%A7%84%E8%8C%83-1)
+- [CommonJS 的基本语法](#commonjs-%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95)
+  - [CommonJS 的介绍](#commonjs-%E7%9A%84%E4%BB%8B%E7%BB%8D)
+  - [暴露模块的方式](#%E6%9A%B4%E9%9C%B2%E6%A8%A1%E5%9D%97%E7%9A%84%E6%96%B9%E5%BC%8F)
+  - [引入模块的方式](#%E5%BC%95%E5%85%A5%E6%A8%A1%E5%9D%97%E7%9A%84%E6%96%B9%E5%BC%8F)
+- [CommonJS 在服务器端的实现举例](#commonjs-%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%BE%E4%BE%8B)
+  - [1、初始化项目](#1%E3%80%81%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE)
+  - [2、导入第三方包](#2%E3%80%81%E5%AF%BC%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9%E5%8C%85)
+  - [3、自定义模块](#3%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97)
+- [CommonJS 基于浏览器端的实现举例](#commonjs-%E5%9F%BA%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%AB%AF%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%BE%E4%BE%8B)
+  - [1、初始化项目](#1%E3%80%81%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE-1)
+  - [2、下载第三方包：Browserify](#2%E3%80%81%E4%B8%8B%E8%BD%BD%E7%AC%AC%E4%B8%89%E6%96%B9%E5%8C%85%EF%BC%9Abrowserify)
+  - [3、自定义模块 & 代码运行](#3%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97--%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C)
+- [others](#others)
+  - [SeaJS 的介绍](#seajs-%E7%9A%84%E4%BB%8B%E7%BB%8D)
+  - [RequireJS（AMD）、SeaJS（CDM）、CommonJS、ES6 的对比](#requirejs%EF%BC%88amd%EF%BC%89%E3%80%81seajs%EF%BC%88cdm%EF%BC%89%E3%80%81commonjs%E3%80%81es6-%E7%9A%84%E5%AF%B9%E6%AF%94)
+
+<!-- /MarkdownTOC -->
 
 
+<a id="%E5%89%8D%E8%A8%80"></a>
 ## 前言
 
 网站越来越复杂，js代码、js文件也越来越多，会遇到**一些问题**：
@@ -25,9 +53,11 @@
 
 一次编写，多次使用，才是提高效率的核心。
 
+<a id="%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E7%90%86%E8%A7%A3"></a>
 ## 模块化的理解
 
 
+<a id="%E4%BB%80%E4%B9%88%E6%98%AF%E6%A8%A1%E5%9D%97%E5%8C%96"></a>
 ### 什么是模块化
 
 
@@ -38,6 +68,7 @@
 最早的时候，我们会把所有的代码都写在一个js文件里，那么，耦合性会很高（关联性强），不利于维护；而且会造成全局污染，很容易命名冲突。
 
 
+<a id="%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E5%A5%BD%E5%A4%84"></a>
 ### 模块化的好处
 
 - 避免命名冲突，减少命名空间污染
@@ -53,8 +84,10 @@
 
 
 
+<a id="%E6%A8%A1%E5%9D%97%E5%8C%96%E8%A7%84%E8%8C%83"></a>
 ## 模块化规范
 
+<a id="%E6%A8%A1%E5%9D%97%E5%8C%96%E8%A7%84%E8%8C%83%E7%9A%84%E5%BC%95%E5%85%A5"></a>
 ### 模块化规范的引入
 
 假设我们引入模块化，首先可能会想到的思路是：在一个文件中引入多个js文件。如下：
@@ -80,6 +113,7 @@
 于是，这就引入了模块化规范。
 
 
+<a id="%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E6%A6%82%E5%BF%B5%E8%A7%A3%E8%AF%BB"></a>
 ###  模块化的概念解读
 
 模块化起源于 Node.js。Node.js 中把很多 js 打包成 package，需要的时候直接通过 require 的方式进行调用（CommonJS），这就是模块化的方式。
@@ -88,6 +122,7 @@
 
 
 
+<a id="%E6%A8%A1%E5%9D%97%E5%8C%96%E8%A7%84%E8%8C%83-1"></a>
 ### 模块化规范
 
 服务器端规范：
@@ -129,9 +164,11 @@ PS：面试时，经常会问AMD 和 CMD 的区别。
 这篇文章，我们来讲一下`CommonJS`。
 
 
+<a id="commonjs-%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"></a>
 ## CommonJS 的基本语法
 
 
+<a id="commonjs-%E7%9A%84%E4%BB%8B%E7%BB%8D"></a>
 ### CommonJS 的介绍
 
 
@@ -146,6 +183,7 @@ PS：面试时，经常会问AMD 和 CMD 的区别。
 - 在浏览器端: 模块需要提前编译打包处理。首先，既然同步的，很容易引起阻塞；其次，浏览器不认识`require`语法，因此，需要提前编译打包。
 
 
+<a id="%E6%9A%B4%E9%9C%B2%E6%A8%A1%E5%9D%97%E7%9A%84%E6%96%B9%E5%BC%8F"></a>
 ### 暴露模块的方式
 
 **方式一**：
@@ -174,6 +212,7 @@ PS：暴露的关键词是`exports`，不是`export`。
 
 
 
+<a id="%E5%BC%95%E5%85%A5%E6%A8%A1%E5%9D%97%E7%9A%84%E6%96%B9%E5%BC%8F"></a>
 ### 引入模块的方式
 
 ```
@@ -187,9 +226,11 @@ require(xxx)
 - 自定义模块：xxx为模块文件路径
 
 
+<a id="commonjs-%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%BE%E4%BE%8B"></a>
 ## CommonJS 在服务器端的实现举例
 
 
+<a id="1%E3%80%81%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE"></a>
 ### 1、初始化项目
 
 在工程文件中新建如下目录和文件：
@@ -238,6 +279,7 @@ app.js
 ```
 
 
+<a id="2%E3%80%81%E5%AF%BC%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9%E5%8C%85"></a>
 ### 2、导入第三方包
 
 `uniq`这个第三方包的作用是保证唯一性（我们拿它来举例）。我们在当前工程目录下，输入如下命令进行安装：
@@ -272,6 +314,7 @@ app.js
 
 可以看出，这个包可以起到数组去重的作用。
 
+<a id="3%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97"></a>
 ### 3、自定义模块
 
 （1）module1.js：
@@ -362,9 +405,11 @@ module3 中的 foo2 方法
 ```
 
 
+<a id="commonjs-%E5%9F%BA%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%AB%AF%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%BE%E4%BE%8B"></a>
 ## CommonJS 基于浏览器端的实现举例
 
 
+<a id="1%E3%80%81%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE-1"></a>
 ### 1、初始化项目
 
 在工程文件中新建如下目录和文件：
@@ -414,6 +459,7 @@ index.html    //因为CommonJS是基于浏览器端，js文件要跑在浏览器
 ```
 
 
+<a id="2%E3%80%81%E4%B8%8B%E8%BD%BD%E7%AC%AC%E4%B8%89%E6%96%B9%E5%8C%85%EF%BC%9Abrowserify"></a>
 ### 2、下载第三方包：Browserify
 
 这里需要用到[Browserify](http://browserify.org/)这个工具进行编译打包。Browserify 称为 CommonJS 的浏览器端的打包工具。
@@ -433,6 +479,7 @@ index.html    //因为CommonJS是基于浏览器端，js文件要跑在浏览器
 - 运行依赖：当前这个包，是在生产环境下使用。
 
 
+<a id="3%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97--%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C"></a>
 ### 3、自定义模块 & 代码运行
 
 （1）module1.js：
@@ -536,9 +583,11 @@ module3.foo2();
 
 
 
+<a id="others"></a>
 ## others
 
 
+<a id="seajs-%E7%9A%84%E4%BB%8B%E7%BB%8D"></a>
 ### SeaJS 的介绍
 
 SeaJS：一个基于CMD规范实现的模块化开发解决方案。
@@ -559,6 +608,7 @@ GitHub：<https://github.com/seajs/seajs>
 
 ![](http://img.smyhvae.com/20180303_2107.png)
 
+<a id="requirejs%EF%BC%88amd%EF%BC%89%E3%80%81seajs%EF%BC%88cdm%EF%BC%89%E3%80%81commonjs%E3%80%81es6-%E7%9A%84%E5%AF%B9%E6%AF%94"></a>
 ### RequireJS（AMD）、SeaJS（CDM）、CommonJS、ES6 的对比
 
 1、RequireJS 和 AMD：
@@ -595,19 +645,4 @@ GitHub：<https://github.com/seajs/seajs>
 ES6的特性：export/import
 
 ![](http://img.smyhvae.com/20180303_1704.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
