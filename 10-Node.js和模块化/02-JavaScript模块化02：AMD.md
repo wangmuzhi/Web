@@ -1,7 +1,22 @@
+<!-- MarkdownTOC -->
+
+- [AMD的基本语法](#amd%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95)
+    - [AMD的概念](#amd%E7%9A%84%E6%A6%82%E5%BF%B5)
+    - [暴露模块的方式](#%E6%9A%B4%E9%9C%B2%E6%A8%A1%E5%9D%97%E7%9A%84%E6%96%B9%E5%BC%8F)
+    - [引入模块的方式](#%E5%BC%95%E5%85%A5%E6%A8%A1%E5%9D%97%E7%9A%84%E6%96%B9%E5%BC%8F)
+    - [RequireJS：是AMD的实现](#requirejs%EF%BC%9A%E6%98%AFamd%E7%9A%84%E5%AE%9E%E7%8E%B0)
+- [RequireJS的使用举例（自定义模块）](#requirejs%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%BE%E4%BE%8B%EF%BC%88%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97%EF%BC%89)
+    - [1、创建项目结构](#1%E3%80%81%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84)
+    - [2、下载require.js，并导入](#2%E3%80%81%E4%B8%8B%E8%BD%BDrequirejs%EF%BC%8C%E5%B9%B6%E5%AF%BC%E5%85%A5)
+    - [3、自定义模块](#3%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97)
+
+<!-- /MarkdownTOC -->
 
 
+<a id="amd%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"></a>
 ## AMD的基本语法
 
+<a id="amd%E7%9A%84%E6%A6%82%E5%BF%B5"></a>
 ### AMD的概念
 
 **AMD**（Asynchronous Module Definition）：异步模块定义。AMD专门用于浏览器端，模块的加载是异步的。
@@ -11,6 +26,7 @@
 RequireJS：一个基于AMD规范实现的模块化开发解决方案。
 
 
+<a id="%E6%9A%B4%E9%9C%B2%E6%A8%A1%E5%9D%97%E7%9A%84%E6%96%B9%E5%BC%8F"></a>
 ### 暴露模块的方式
 
 **定义没有依赖的模块**：（参数只有一个 function）
@@ -41,6 +57,7 @@ define(['module1', 'module2'], function (m1, m2) {
 
 - 第二个参数是function，里面带了形参 m1 和 m2，分别代表了 module1 和 module2。这个形参的作用是，前面依赖的模块一旦声明了，就可以一一对应地注入到 function中去，从而在 function 内部使用依赖的模块。这种方式称之为**显式声明依赖注入**。
 
+<a id="%E5%BC%95%E5%85%A5%E6%A8%A1%E5%9D%97%E7%9A%84%E6%96%B9%E5%BC%8F"></a>
 ### 引入模块的方式
 
 在主模块中引入其他的模块：
@@ -55,14 +72,17 @@ require(['module1', 'module2'], function (m1, m2) {
 })
 ```
 
+<a id="requirejs%EF%BC%9A%E6%98%AFamd%E7%9A%84%E5%AE%9E%E7%8E%B0"></a>
 ### RequireJS：是AMD的实现
 
 - <http://www.requirejs.org/>
 
 - <http://www.ruanyifeng.com/blog/2012/11/require_js.html>
 
+<a id="requirejs%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%BE%E4%BE%8B%EF%BC%88%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97%EF%BC%89"></a>
 ## RequireJS的使用举例（自定义模块）
 
+<a id="1%E3%80%81%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"></a>
 ### 1、创建项目结构
 
 在工程文件中新建如下目录：
@@ -85,6 +105,7 @@ index.html
 ![](http://img.smyhvae.com/20180411_1331.png)
 
 
+<a id="2%E3%80%81%E4%B8%8B%E8%BD%BDrequirejs%EF%BC%8C%E5%B9%B6%E5%AF%BC%E5%85%A5"></a>
 ### 2、下载require.js，并导入
 
 - 官网: <http://requirejs.org/docs/download.html>
@@ -99,6 +120,7 @@ index.html
 
 这样的话，就导入成功了。
 
+<a id="3%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97"></a>
 ### 3、自定义模块
 
 （1）dataService.js：
@@ -198,7 +220,5 @@ requirejs(['myAlerter'], function (alerter) {
 ![](http://img.smyhvae.com/20180411_1740.png)
 
 项目源码：[2018-04-11-RequireJSDemo](https://download.csdn.net/download/smyhvae/10341963)
-
-
 
 
