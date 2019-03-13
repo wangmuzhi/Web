@@ -1,8 +1,22 @@
+<!-- MarkdownTOC -->
+
+- [CMD的基本语法](#cmd%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95)
+    - [CMD的概念](#cmd%E7%9A%84%E6%A6%82%E5%BF%B5)
+    - [SeaJS](#seajs)
+    - [暴露模块的方式](#%E6%9A%B4%E9%9C%B2%E6%A8%A1%E5%9D%97%E7%9A%84%E6%96%B9%E5%BC%8F)
+    - [引入模块的方式](#%E5%BC%95%E5%85%A5%E6%A8%A1%E5%9D%97%E7%9A%84%E6%96%B9%E5%BC%8F)
+- [SeaJS的使用举例（自定义模块）](#seajs%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%BE%E4%BE%8B%EF%BC%88%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97%EF%BC%89)
+    - [1、创建项目结构](#1%E3%80%81%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84)
+    - [2、下载SeaJS，并导入](#2%E3%80%81%E4%B8%8B%E8%BD%BDseajs%EF%BC%8C%E5%B9%B6%E5%AF%BC%E5%85%A5)
+    - [3、自定义模块](#3%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97)
+
+<!-- /MarkdownTOC -->
 
 
-
+<a id="cmd%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"></a>
 ## CMD的基本语法
 
+<a id="cmd%E7%9A%84%E6%A6%82%E5%BF%B5"></a>
 ### CMD的概念
 
 **CMD**（Common Module Definition）：同步模块定义。CMD专门用于浏览器端，模块的加载是同步的。模块在使用时才会加载执行。
@@ -10,6 +24,7 @@
 [**CMD规范**]()：是 **[SeaJS](http://seajs.org/)** 在推广过程中对模块化定义的规范化产出。
 
 
+<a id="seajs"></a>
 ### SeaJS
 
 SeaJS：一个基于CMD规范实现的模块化开发解决方案。
@@ -27,6 +42,7 @@ SeaJS：一个基于CMD规范实现的模块化开发解决方案。
 - <http://es6.ruanyifeng.com/#docs/module>
 
 
+<a id="%E6%9A%B4%E9%9C%B2%E6%A8%A1%E5%9D%97%E7%9A%84%E6%96%B9%E5%BC%8F"></a>
 ### 暴露模块的方式
 
 > 不管是定义没有依赖的模块，还是定义有依赖的模块，参数只有一个，那就是 function。
@@ -70,6 +86,7 @@ define(function (require, exports, module) {
 上面的代码可以看到，在引入依赖的模块时，有两种引入的方式：同步和异步。
 
 
+<a id="%E5%BC%95%E5%85%A5%E6%A8%A1%E5%9D%97%E7%9A%84%E6%96%B9%E5%BC%8F"></a>
 ### 引入模块的方式
 
 ```javascript
@@ -86,10 +103,12 @@ define(function (require) {
 
 
 
+<a id="seajs%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%BE%E4%BE%8B%EF%BC%88%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97%EF%BC%89"></a>
 ## SeaJS的使用举例（自定义模块）
 
 
 
+<a id="1%E3%80%81%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"></a>
 ### 1、创建项目结构
 
 
@@ -110,6 +129,7 @@ index.html
 ```
 
 
+<a id="2%E3%80%81%E4%B8%8B%E8%BD%BDseajs%EF%BC%8C%E5%B9%B6%E5%AF%BC%E5%85%A5"></a>
 ### 2、下载SeaJS，并导入
 
 - 官网: <https://seajs.github.io/seajs/docs/#downloads>
@@ -119,6 +139,7 @@ index.html
 在官网下载`sea.js`文件，然后将其拷贝到项目的`js/libs/`目录中。这样的话，就导入成功了。
 
 
+<a id="3%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97"></a>
 ### 3、自定义模块
 
 
