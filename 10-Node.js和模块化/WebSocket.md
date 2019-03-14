@@ -1,7 +1,19 @@
+<!-- MarkdownTOC -->
+
+- [WebSocket 的引入](#websocket-%E7%9A%84%E5%BC%95%E5%85%A5)
+    - [背景分析](#%E8%83%8C%E6%99%AF%E5%88%86%E6%9E%90)
+    - [WebSocket 协议](#websocket-%E5%8D%8F%E8%AE%AE)
+    - [http 长连接和 websocket 的长连接区别](#http-%E9%95%BF%E8%BF%9E%E6%8E%A5%E5%92%8C-websocket-%E7%9A%84%E9%95%BF%E8%BF%9E%E6%8E%A5%E5%8C%BA%E5%88%AB)
+    - [Socket.IO 的引入](#socketio-%E7%9A%84%E5%BC%95%E5%85%A5)
+    - [Socket.IO 的安装](#socketio-%E7%9A%84%E5%AE%89%E8%A3%85)
+
+<!-- /MarkdownTOC -->
 
 
+<a id="websocket-%E7%9A%84%E5%BC%95%E5%85%A5"></a>
 ## WebSocket 的引入
 
+<a id="%E8%83%8C%E6%99%AF%E5%88%86%E6%9E%90"></a>
 ### 背景分析
 
 HTTP协议是无状态的，服务器只会响应来自客户端的请求，但是它与客户端之间不具备持续连接。
@@ -17,6 +29,7 @@ HTTP协议是无状态的，服务器只会响应来自客户端的请求，但�
 
 （2）**长连接**：客户端只请求一次，但是服务器会将连接保持，不会返回结果。当服务器有了新数据时，实时地发给客户端，而一直保持挂起状态。这种做法的也造成了大量的性能浪费。
 
+<a id="websocket-%E5%8D%8F%E8%AE%AE"></a>
 ### WebSocket 协议
 
 最新的 HTML5协议，制定了 WebSocket 协议标准，允许客户端和服务器端以**全双工**的方式进行通信。
@@ -31,6 +44,7 @@ WebSocket协议需要浏览器和服务器都支持才可以使用：
 - 支持WebSocket协议的服务器有：Node 0、Apach7.0.2、Nginx1.3
 
 
+<a id="http-%E9%95%BF%E8%BF%9E%E6%8E%A5%E5%92%8C-websocket-%E7%9A%84%E9%95%BF%E8%BF%9E%E6%8E%A5%E5%8C%BA%E5%88%AB"></a>
 ### http 长连接和 websocket 的长连接区别
 
 HTTP1.1通过使用Connection:keep-alive进行长连接，HTTP 1.1默认进行持久连接。在一次 TCP 连接中可以完成多个 HTTP 请求，但是对每个请求仍然要单独发 header，Keep-Alive不会永久保持连接，它有一个保持时间，可以在不同的服务器软件（如Apache）中设定这个时间。
@@ -39,6 +53,7 @@ websocket是一个真正的全双工。长连接第一次tcp链路建立之后�
 
 keep-alive双方并没有建立正真的连接会话，服务端可以在任何一次请求完成后关闭。WebSocket 它本身就规定了是正真的、双工的长连接，两边都必须要维持住连接的状态。
 
+<a id="socketio-%E7%9A%84%E5%BC%95%E5%85%A5"></a>
 ### Socket.IO 的引入
 
 Node.js上需要写一些程序，来处理TCP请求。
@@ -49,6 +64,7 @@ Socket.IO 是业界良心，新手福音。它屏蔽了所有底层细节，让�
 
 Node的单线程、非阻塞I/O、事件驱动机制，使它非常适合Socket服务器。
 
+<a id="socketio-%E7%9A%84%E5%AE%89%E8%A3%85"></a>
 ### Socket.IO 的安装
 
 Socket.IO 的官网是：<http://socket.io/>
