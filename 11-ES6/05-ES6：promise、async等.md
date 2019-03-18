@@ -1,4 +1,28 @@
+<!-- MarkdownTOC -->
 
+- [前言](#%E5%89%8D%E8%A8%80)
+- [Promise](#promise)
+    - [概述](#%E6%A6%82%E8%BF%B0)
+    - [回调地狱的举例](#%E5%9B%9E%E8%B0%83%E5%9C%B0%E7%8B%B1%E7%9A%84%E4%B8%BE%E4%BE%8B)
+    - [promise对象的3个状态](#promise%E5%AF%B9%E8%B1%A1%E7%9A%843%E4%B8%AA%E7%8A%B6%E6%80%81)
+    - [使用promise的基本步骤](#%E4%BD%BF%E7%94%A8promise%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4)
+    - [ajax请求的举例（涉及到嵌套的回调）](#ajax%E8%AF%B7%E6%B1%82%E7%9A%84%E4%B8%BE%E4%BE%8B%EF%BC%88%E6%B6%89%E5%8F%8A%E5%88%B0%E5%B5%8C%E5%A5%97%E7%9A%84%E5%9B%9E%E8%B0%83%EF%BC%89)
+    - [参考链接](#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5)
+- [Symbol](#symbol)
+    - [概述](#%E6%A6%82%E8%BF%B0-1)
+    - [创建Symbol属性值](#%E5%88%9B%E5%BB%BAsymbol%E5%B1%9E%E6%80%A7%E5%80%BC)
+    - [1、将Symbol作为对象的属性值](#1%E3%80%81%E5%B0%86symbol%E4%BD%9C%E4%B8%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E5%80%BC)
+    - [创建Symbol属性值时，传参作为标识](#%E5%88%9B%E5%BB%BAsymbol%E5%B1%9E%E6%80%A7%E5%80%BC%E6%97%B6%EF%BC%8C%E4%BC%A0%E5%8F%82%E4%BD%9C%E4%B8%BA%E6%A0%87%E8%AF%86)
+    - [定义常量](#%E5%AE%9A%E4%B9%89%E5%B8%B8%E9%87%8F)
+    - [内置的 Symbol 值](#%E5%86%85%E7%BD%AE%E7%9A%84-symbol-%E5%80%BC)
+- [async函数（异步函数）](#async%E5%87%BD%E6%95%B0%EF%BC%88%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0%EF%BC%89)
+    - [概述](#%E6%A6%82%E8%BF%B0-2)
+    - [async、Promise、Generator的对比（async的特点）](#async%E3%80%81promise%E3%80%81generator%E7%9A%84%E5%AF%B9%E6%AF%94%EF%BC%88async%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%89)
+
+<!-- /MarkdownTOC -->
+
+
+<a id="%E5%89%8D%E8%A8%80"></a>
 ## 前言
 
 文本主要内容：
@@ -9,8 +33,10 @@
 
 - async函数
 
+<a id="promise"></a>
 ## Promise
 
+<a id="%E6%A6%82%E8%BF%B0"></a>
 ### 概述
 
 Promise对象: 代表了未来某个将要发生的事件(通常是一个异步操作)。
@@ -19,6 +45,7 @@ Promise对象: 代表了未来某个将要发生的事件(通常是一个异步�
 ES6中的promise对象, 可以**将异步操作以同步的流程表达出来，**很好地解决了**回调地狱**的问题（避免了层层嵌套的回调函数）。在使用ES5的时候，在多层嵌套回调时，写完的代码层次过多，很难进行维护和二次开发。
 
 
+<a id="%E5%9B%9E%E8%B0%83%E5%9C%B0%E7%8B%B1%E7%9A%84%E4%B8%BE%E4%BE%8B"></a>
 ### 回调地狱的举例
 
 假设买菜、做饭、洗碗都是异步的。
@@ -29,6 +56,7 @@ ES6中的promise对象, 可以**将异步操作以同步的流程表达出来，
 ES6的Promise是一个构造函数, 用来生成promise实例。
 
 
+<a id="promise%E5%AF%B9%E8%B1%A1%E7%9A%843%E4%B8%AA%E7%8A%B6%E6%80%81"></a>
 ### promise对象的3个状态
 
 - 初始化状态（等待状态）：pending
@@ -37,6 +65,7 @@ ES6的Promise是一个构造函数, 用来生成promise实例。
 
 - 失败状态：rejected
 
+<a id="%E4%BD%BF%E7%94%A8promise%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"></a>
 ### 使用promise的基本步骤
 
 （1）创建promise对象
@@ -120,6 +149,7 @@ ES6的Promise是一个构造函数, 用来生成promise实例。
 
 
 
+<a id="ajax%E8%AF%B7%E6%B1%82%E7%9A%84%E4%B8%BE%E4%BE%8B%EF%BC%88%E6%B6%89%E5%8F%8A%E5%88%B0%E5%B5%8C%E5%A5%97%E7%9A%84%E5%9B%9E%E8%B0%83%EF%BC%89"></a>
 ### ajax请求的举例（涉及到嵌套的回调）
 
 ```javascript
@@ -170,6 +200,7 @@ ES6的Promise是一个构造函数, 用来生成promise实例。
 
 
 
+<a id="%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"></a>
 ### 参考链接
 
 - [当面试官问你Promise的时候，他究竟想听到什么？](https://zhuanlan.zhihu.com/p/29235579)
@@ -180,8 +211,10 @@ ES6的Promise是一个构造函数, 用来生成promise实例。
 
 
 
+<a id="symbol"></a>
 ## Symbol
 
+<a id="%E6%A6%82%E8%BF%B0-1"></a>
 ### 概述
 
 背景：ES5中对象的属性名都是字符串，容易造成重名，污染环境。
@@ -198,6 +231,7 @@ ES6的Promise是一个构造函数, 用来生成promise实例。
 - for in、for of 遍历时不会遍历Symbol属性。
 
 
+<a id="%E5%88%9B%E5%BB%BAsymbol%E5%B1%9E%E6%80%A7%E5%80%BC"></a>
 ### 创建Symbol属性值
 
 Symbol是函数，但并不是构造函数。创建一个Symbol数据类型：
@@ -215,6 +249,7 @@ Symbol是函数，但并不是构造函数。创建一个Symbol数据类型：
 
 下面来讲一下Symbol的使用。
 
+<a id="1%E3%80%81%E5%B0%86symbol%E4%BD%9C%E4%B8%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E5%80%BC"></a>
 ### 1、将Symbol作为对象的属性值
 
 ```javascript
@@ -261,6 +296,7 @@ Symbol是函数，但并不是构造函数。创建一个Symbol数据类型：
 
 从打印结果中可以看到：for in、for of 遍历时不会遍历Symbol属性。
 
+<a id="%E5%88%9B%E5%BB%BAsymbol%E5%B1%9E%E6%80%A7%E5%80%BC%E6%97%B6%EF%BC%8C%E4%BC%A0%E5%8F%82%E4%BD%9C%E4%B8%BA%E6%A0%87%E8%AF%86"></a>
 ### 创建Symbol属性值时，传参作为标识
 
 如果我通过 Symbol()函数创建了两个值，这两个值是不一样的：
@@ -298,6 +334,7 @@ Symbol是函数，但并不是构造函数。创建一个Symbol数据类型：
 
 ![](http://img.smyhvae.com/20180317_1134.png)
 
+<a id="%E5%AE%9A%E4%B9%89%E5%B8%B8%E9%87%8F"></a>
 ### 定义常量
 
 Symbol 可以用来定义常量：
@@ -308,6 +345,7 @@ Symbol 可以用来定义常量：
 ```
 
 
+<a id="%E5%86%85%E7%BD%AE%E7%9A%84-symbol-%E5%80%BC"></a>
 ### 内置的 Symbol 值
 
 除了定义自己使用的 Symbol 值以外，ES6 还提供了 11 个内置的 Symbol 值，指向语言内部使用的方法。
@@ -317,8 +355,10 @@ Symbol 可以用来定义常量：
 对象的`Symbol.iterator`属性，指向该对象的默认遍历器方法。
 
 
+<a id="async%E5%87%BD%E6%95%B0%EF%BC%88%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0%EF%BC%89"></a>
 ## async函数（异步函数）
 
+<a id="%E6%A6%82%E8%BF%B0-2"></a>
 ### 概述
 
 > async 函数是在 ES2017 引入的。
@@ -342,6 +382,7 @@ async比之前的 Promise、Generator要好用一些。
 我们在普通的函数前面加上 async 关键字，就成了 async 函数。
 
 
+<a id="async%E3%80%81promise%E3%80%81generator%E7%9A%84%E5%AF%B9%E6%AF%94%EF%BC%88async%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%89"></a>
 ###  async、Promise、Generator的对比（async的特点）
 
 1、不需要像Generator去调用next方法，遇到await等待，当前的异步操作完成就往下执行。
