@@ -1,5 +1,35 @@
+<!-- MarkdownTOC -->
+
+- [MVVM模式](#mvvm%E6%A8%A1%E5%BC%8F)
+- [关于框架](#%E5%85%B3%E4%BA%8E%E6%A1%86%E6%9E%B6)
+  - [为什么要学习流行框架](#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E4%B9%A0%E6%B5%81%E8%A1%8C%E6%A1%86%E6%9E%B6)
+  - [框架和库的区别](#%E6%A1%86%E6%9E%B6%E5%92%8C%E5%BA%93%E7%9A%84%E5%8C%BA%E5%88%AB)
+- [前端的各种框架](#%E5%89%8D%E7%AB%AF%E7%9A%84%E5%90%84%E7%A7%8D%E6%A1%86%E6%9E%B6)
+  - [Vue、React、AngularJS](#vue%E3%80%81react%E3%80%81angularjs)
+  - [Vue 和 React 的对比](#vue-%E5%92%8C-react-%E7%9A%84%E5%AF%B9%E6%AF%94)
+  - [Vue 和 React 的相同点](#vue-%E5%92%8C-react-%E7%9A%84%E7%9B%B8%E5%90%8C%E7%82%B9)
+  - [什么是虚拟 DOM](#%E4%BB%80%E4%B9%88%E6%98%AF%E8%99%9A%E6%8B%9F-dom)
+  - [前端框架回顾](#%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E5%9B%9E%E9%A1%BE)
+- [Vue 框架](#vue-%E6%A1%86%E6%9E%B6)
+  - [发展历史](#%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2)
+  - [相关网址](#%E7%9B%B8%E5%85%B3%E7%BD%91%E5%9D%80)
+  - [介绍](#%E4%BB%8B%E7%BB%8D)
+  - [Vue 的特点](#vue-%E7%9A%84%E7%89%B9%E7%82%B9)
+- [Vue 的环境搭建](#vue-%E7%9A%84%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA)
+  - [常见的插件](#%E5%B8%B8%E8%A7%81%E7%9A%84%E6%8F%92%E4%BB%B6)
+  - [引用 Vue.js 文件](#%E5%BC%95%E7%94%A8-vuejs-%E6%96%87%E4%BB%B6)
+  - [安装 vue-cli（命令行工具）](#%E5%AE%89%E8%A3%85-vue-cli%EF%BC%88%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7%EF%BC%89)
+- [利用 vue-cli 新建一个空的项目](#%E5%88%A9%E7%94%A8-vue-cli-%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%A9%BA%E7%9A%84%E9%A1%B9%E7%9B%AE)
+  - [构建一个 simple 项目](#%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA-simple-%E9%A1%B9%E7%9B%AE)
+  - [构建一个 非 simple 项目](#%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA-%E9%9D%9E-simple-%E9%A1%B9%E7%9B%AE)
+- [vue 项目结构分析](#vue-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90)
+  - [图片的base64编码](#%E5%9B%BE%E7%89%87%E7%9A%84base64%E7%BC%96%E7%A0%81)
+- [Vue 基础语法](#vue-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95)
+
+<!-- /MarkdownTOC -->
 
 
+<a id="mvvm%E6%A8%A1%E5%BC%8F"></a>
 ## MVVM模式
 
 ![](http://img.smyhvae.com/20180420_2150.png)
@@ -11,9 +41,11 @@
 - View Model：负责业务逻辑处理（比如Ajax请求等），对数据进行加工后交给视图展示
 
 
+<a id="%E5%85%B3%E4%BA%8E%E6%A1%86%E6%9E%B6"></a>
 ## 关于框架
 
 
+<a id="%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E4%B9%A0%E6%B5%81%E8%A1%8C%E6%A1%86%E6%9E%B6"></a>
 ### 为什么要学习流行框架
 
 **1、企业为了提高开发效率**：在企业中，时间就是效率，效率就是金钱；企业中，使用框架，能够提高开发的效率。
@@ -36,6 +68,7 @@
 
 
 
+<a id="%E6%A1%86%E6%9E%B6%E5%92%8C%E5%BA%93%E7%9A%84%E5%8C%BA%E5%88%AB"></a>
 ### 框架和库的区别
 
 
@@ -62,14 +95,17 @@
 
 
 
+<a id="%E5%89%8D%E7%AB%AF%E7%9A%84%E5%90%84%E7%A7%8D%E6%A1%86%E6%9E%B6"></a>
 ## 前端的各种框架
 
+<a id="vue%E3%80%81react%E3%80%81angularjs"></a>
 ### Vue、React、AngularJS
 
 AngularJS 提供更多的是一套解决方案，更像是一个生态。
 
  Vue 和 React目前都是用了 Virtual Dom。
 
+<a id="vue-%E5%92%8C-react-%E7%9A%84%E5%AF%B9%E6%AF%94"></a>
 ### Vue 和 React 的对比
 
 ![](http://img.smyhvae.com/20180302_1623.png)
@@ -81,12 +117,14 @@ Vue.js 是一套构建用户界面的框架，**只关注视图层**。
 
 
 
+<a id="vue-%E5%92%8C-react-%E7%9A%84%E7%9B%B8%E5%90%8C%E7%82%B9"></a>
 ### Vue 和 React 的相同点
 
 ![](http://img.smyhvae.com/20180302_1636.png)
 
 国内的很多开发者喜欢 Vue；国外的开发者更喜欢 React，适合做大型网站。
 
+<a id="%E4%BB%80%E4%B9%88%E6%98%AF%E8%99%9A%E6%8B%9F-dom"></a>
 ### 什么是虚拟 DOM
 
 传统的web开发，是利用 jQuery操作DOM，这是非常耗资源的。
@@ -97,6 +135,7 @@ Vue.js 是一套构建用户界面的框架，**只关注视图层**。
 Vue1.0没有虚拟DOM，Vue2.0改成了基于虚拟DOM。
 
 
+<a id="%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E5%9B%9E%E9%A1%BE"></a>
 ### 前端框架回顾
 
 ![](http://img.smyhvae.com/20180302_1645.png)
@@ -112,14 +151,17 @@ Vue1.0没有虚拟DOM，Vue2.0改成了基于虚拟DOM。
 Vue框架中，没有控制器。
 
 
+<a id="vue-%E6%A1%86%E6%9E%B6"></a>
 ## Vue 框架
 
+<a id="%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2"></a>
 ### 发展历史
 
 ![](http://img.smyhvae.com/20180302_1655.png)
 
 2016.10发布2.0版本。
 
+<a id="%E7%9B%B8%E5%85%B3%E7%BD%91%E5%9D%80"></a>
 ### 相关网址
 
 - [中文官网](https://cn.vuejs.org/)
@@ -148,6 +190,7 @@ Vue框架中，没有控制器。
 
 
 
+<a id="%E4%BB%8B%E7%BB%8D"></a>
 ### 介绍
 
  Vue 本身并不是一个框架，Vue结合周边生态构成一个灵活的、渐进式的框架。
@@ -161,6 +204,7 @@ Vue框架中，没有控制器。
 - 声明式渲染：当我们在页面里，通过 new 一个 view 的事例时，
 
 
+<a id="vue-%E7%9A%84%E7%89%B9%E7%82%B9"></a>
 ### Vue 的特点
 
 - 模板渲染
@@ -177,10 +221,12 @@ Vue框架中，没有控制器。
 
 ![](http://img.smyhvae.com/20180302_1753.png)
 
+<a id="vue-%E7%9A%84%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"></a>
 ## Vue 的环境搭建
 
 > 我们首先要安装好 NVM、Node.js环境，然后再来做下面的操作。
 
+<a id="%E5%B8%B8%E8%A7%81%E7%9A%84%E6%8F%92%E4%BB%B6"></a>
 ### 常见的插件
 
 - Webpack：代码模块化构建打包工具。
@@ -197,6 +243,7 @@ Vue框架中，没有控制器。
 
 以上这些包，都可以通过 NPM 这个包管理工具来安装。
 
+<a id="%E5%BC%95%E7%94%A8-vuejs-%E6%96%87%E4%BB%B6"></a>
 ### 引用 Vue.js 文件
 
 1、**方式一**：（引用的方式）
@@ -247,6 +294,7 @@ $ cnpm i vue --save
 
 上图中的引入方式，不是很理解。
 
+<a id="%E5%AE%89%E8%A3%85-vue-cli%EF%BC%88%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7%EF%BC%89"></a>
 ### 安装 vue-cli（命令行工具）
 
 Vue 提供一个官方命令行工具，可用于快速搭建大型单页应用。该工具为现代化的前端开发工作流提供了开箱即用的构建配置。只需几分钟即可创建并启动一个带热重载、保存时静态检查以及可用于生产环境的构建配置的项目。
@@ -274,8 +322,10 @@ $ npm install
 $ npm run dev
 ```
 
+<a id="%E5%88%A9%E7%94%A8-vue-cli-%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%A9%BA%E7%9A%84%E9%A1%B9%E7%9B%AE"></a>
 ## 利用 vue-cli 新建一个空的项目
 
+<a id="%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA-simple-%E9%A1%B9%E7%9B%AE"></a>
 ### 构建一个 simple 项目
 
 我们利用 vue-cli 来构建一个 SPA 应用：
@@ -330,6 +380,7 @@ cnpm run dev
 
 如果是在webstorm中开发这个项目，会有点卡，因为依赖的包比较多，重启软件即可。
 
+<a id="%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA-%E9%9D%9E-simple-%E9%A1%B9%E7%9B%AE"></a>
 ### 构建一个 非 simple 项目
 
 
@@ -382,6 +433,7 @@ npm run dev
 
 
 
+<a id="vue-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90"></a>
 ## vue 项目结构分析
 
 ![](http://img.smyhvae.com/20180501_2100.png)
@@ -410,6 +462,7 @@ npm run dev
 
 
 
+<a id="%E5%9B%BE%E7%89%87%E7%9A%84base64%E7%BC%96%E7%A0%81"></a>
 ### 图片的base64编码
 
 默认是10k以下，建议都通过 base64编码。在配置文件`webpack.base.conf.js`中进行修改：
@@ -424,6 +477,7 @@ npm run dev
         }
 ```
 
+<a id="vue-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"></a>
 ## Vue 基础语法
 
 ![](http://img.smyhvae.com/20180303_1130.png)
